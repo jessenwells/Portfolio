@@ -9,12 +9,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'nine', thumb: '/thumbs/sprite-07.jpg'},
+        {project: 'nine', thumb: '/thumbs/sprite-01.jpg'},
         {project: 'ten', thumb: '/thumbs/sprite-02.jpg'},
-        {project: 'eleven', thumb: '/thumbs/sprite-15.jpg'},
-        {project: 'twelve', thumb: '/thumbs/sprite-08.jpg'},
-        {project: 'thirteen', thumb: '/thumbs/sprite-23.jpg'},
-        {project: 'fourteen', thumb: '/thumbs/sprite-16.jpg'}
+        {project: 'eleven', thumb: '/thumbs/sprite-03.jpg'},
+        {project: 'twelve', thumb: '/thumbs/sprite-04.jpg'},
+        {project: 'thirteen', thumb: '/thumbs/sprite-05.jpg'},
+        {project: 'fourteen', thumb: '/thumbs/sprite-06.jpg'}
     ]
     };
   },
