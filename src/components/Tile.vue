@@ -55,11 +55,11 @@ export default {
   justify-content center
   position relative
   text
-    fill lightcyan
+    fill #f3f3f3
   svg
     position absolute
   [id^=frame]
-    fill lightcyan
+    fill #f3f3f3
   [id^=arch]
     fill transparent
   &.empty

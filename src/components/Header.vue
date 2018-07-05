@@ -25,7 +25,7 @@ header
 header
   width 100%
   height 100px
-  background tomato
+  background #33474f
   line-height 100px
   margin-bottom 10px
   nav
@@ -34,7 +34,7 @@ header
      font-size 1.15em
      text-transform uppercase
      a
-       color lightcyan
+       color #f3f3f3
        margin-left 1em
        &:first-child
          margin-right auto
