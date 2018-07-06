@@ -1,6 +1,6 @@
 <template lang="pug">
 #tile-grid
-  tile(v-for="tile in info" :data="tile" :class="tile.project" :key="info.index")
+  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index")
 </template>
 
 <script>

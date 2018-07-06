@@ -1,31 +1,36 @@
 <template lang="pug">
-.tile(v-bind:style="{ backgroundImage: 'url(' + data.thumb + ')' }")
-  svg(:id="id" viewBox="0 0 350 350")
+.tile(:style="detailsThumb")
+  svg(:id='"svg"+id' viewBox="0 0 350 350")
     path(:id='"frame"+id' d="M334,175v154c0,2.8-2.2,5-5,5H175H21c-2.8,0-5-2.2-5-5V175V21c0-2.8,2.2-5,5-5h154h154c2.8,0,5,2.2,5,5V175z M350,0H175H0v175v175h175h175V175V0L350,0L350,0z")
     text
-      textPath.textpath(:xlink:href='"#arch"+id' startOffset="50%" text-anchor="middle") {{data.project}}
+      textPath.textpath(:xlink:href='"#arch"+id' startOffset="50%" text-anchor="middle") {{details.project}}
     path.arch(:id='"arch"+id' d="M25.5,319c0,0,74,0,150,0s150,0,150,0")
 </template>
 
 <script>
 import TweenMax from "gsap/TweenMax";
 import hoverintent from "hoverintent/";
+import Snap from 'snapsvg';
 export default {
-  props: {
-    data: ''
-  },
+  props: ['details'],
+  data () {
+    return {
+      detailsThumb: {
+        backgroundImage: 'url(' + this.details.thumb + ')'
+      }
+      }
+    },
   beforeCreate () {
     this.id = this._uid;
   },
   mounted () {
-    var el = document.getElementById(this.id)
+    var el = document.getElementById('svg' + this.id)
     var svg = Snap(el)
     var path = svg.select('#arch' + this.id)
     var frame = svg.select('#frame' + this.id)
     var opts = { interval: 5 }
     hoverintent(el,
       function() {
-      console.log(path,frame)
         enter()
       }, 
       function() {
@@ -56,7 +61,7 @@ export default {
   position relative
   text
     fill #f3f3f3
-  svg
+  [id^=svg]
     position absolute
   [id^=frame]
     fill #f3f3f3
