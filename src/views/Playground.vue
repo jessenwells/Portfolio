@@ -1,6 +1,6 @@
 <template lang="pug">
 #tile-grid
-  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index")
+  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index" :href="'../here/'+tile.project")
 </template>
 
 <script>
@@ -9,12 +9,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'nine', thumb: '/thumbs/sprite-21.jpg'},
-        {project: 'ten', thumb: '/thumbs/sprite-22.jpg'},
-        {project: 'eleven', thumb: '/thumbs/sprite-23.jpg'},
-        {project: 'twelve', thumb: '/thumbs/sprite-24.jpg'},
-        {project: 'thirteen', thumb: '/thumbs/sprite-25.jpg'},
-        {project: 'fourteen', thumb: '/thumbs/sprite-26.jpg'}
+        {project: 'svg melt', thumb: '/thumbs/sprite-21.jpg', frames: '6'},
+        {project: '3d parallax', thumb: '/thumbs/sprite-22.jpg', frames: 6},
+        {project: 'svg draw path', thumb: '/thumbs/sprite-23.jpg', frames: 6},
+        {project: 'svg morph', thumb: '/thumbs/sprite-24.jpg', frames: 6},
+        {project: 'css draw path', thumb: '/thumbs/sprite-25.jpg', frames: 6},
+        {project: 'sass color mixin', thumb: '/thumbs/sprite-26.jpg', frames: 6}
     ]
     };
   },

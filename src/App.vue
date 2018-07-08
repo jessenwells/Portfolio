@@ -37,7 +37,7 @@ a
   color #f3f3f3
   font-size 2em
   display flex
-  justify-content center
+  justify-content space-evenly
   flex-flow row wrap
 @require 'main.styl'
 </style>
