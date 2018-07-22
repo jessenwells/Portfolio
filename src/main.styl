@@ -1,3 +1,25 @@
+#single-page
+    max-width 780px
+    .catnav
+        width 100%
+        display flex
+        a
+            display block
+            &:nth-child(1)
+                flex 3
+                text-align left
+            &:nth-child(2)
+                flex 3
+                text-align center
+            &:nth-child(3)
+                flex 3
+                text-align right
+.image
+    width 100%
+    height 780px
+    background-repeat no-repeat
+.cp_embed_wrapper
+  width 100%
 
 //nav transition
 .fade-enter-active
@@ -12,25 +34,16 @@
     opacity 0  
 
 
-
+//frame animation
 @keyframes sprite3
   100%
     background-position 0 -1050px
-@keyframes sprite3lg
-  100%
-    background-position 0 -1350px
 @keyframes sprite4
   100%
     background-position 0 -1400px
-@keyframes sprite4lg
-  100%
-    background-position 0 -1800px
 @keyframes sprite6
   100%
     background-position 0 -2100px
-@keyframes sprite6lg
-  100%
-    background-position 0 -2700px
 //dev
 h1
   margin 2.25em

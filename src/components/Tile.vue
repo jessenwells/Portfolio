@@ -1,5 +1,5 @@
 <template lang="pug">
-a(:id='"link"+id')
+router-link(:to="details.link")
   .tile(:style="thumb" :id='"tile"+id' :class='"play"+details.frames')
     svg(:id='"svg"+id' viewBox="0 0 350 350")
       path(:id='"frame"+id' d="M334,175v154c0,2.8-2.2,5-5,5H175H21c-2.8,0-5-2.2-5-5V175V21c0-2.8,2.2-5,5-5h154h154c2.8,0,5,2.2,5,5V175z M350,0H175H0v175v175h175h175V175V0L350,0L350,0z")
@@ -9,7 +9,6 @@ a(:id='"link"+id')
 </template>
 
 <script>
-import TweenMax from "gsap/TweenMax";
 import hoverintent from "hoverintent/";
 import Snap from 'snapsvg';
 
@@ -17,7 +16,7 @@ export default {
   props: ['details'],
   data () {
     return {
-      thumb: { backgroundImage: 'url(' + this.details.thumb + ')', },
+      thumb: { backgroundImage: 'url(' + this.details.thumb + ')' },
       frames: this.details.frames
       }
     },
@@ -25,7 +24,6 @@ export default {
     this.id = this._uid;
   },
   mounted () {
-    var link = document.getElementById('link' + this.id)
     var tile = document.getElementById('tile' + this.id)
     var tileSvg = document.getElementById('svg' + this.id)
     var svg = Snap(tileSvg)
@@ -34,7 +32,7 @@ export default {
     var frames = this.frames
     var opts = { interval: 5 }
     
-    hoverintent(link,
+    hoverintent(tile,
       function() { enter() }, 
       function() { leave() }
     );

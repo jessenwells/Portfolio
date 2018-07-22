@@ -1,6 +1,6 @@
 <template lang="pug">
-#tile-grid
-  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index" :href="'../here/'+tile.project")
+#tile-grid.home
+  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index")
 </template>
 
 <script>
@@ -9,12 +9,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3},
-        {project: 'kigilove identity', thumb: '/thumbs/sprite-02.jpg', frames: 5},
-        {project: 'nyc tourism', thumb: '/thumbs/sprite-15.jpg', frames: 4},
-        {project: 'intel dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3},
-        {project: 'svg animation', thumb: '/thumbs/sprite-23.jpg', frames: 6},
-        {project: 'apparel graphic', thumb: '/thumbs/sprite-16.jpg', frames: 3}
+        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek'},
+        {project: 'kigilove identity', thumb: '/thumbs/sprite-02.jpg', frames: 3, link: '/branding/kigilove'},
+        {project: 'nyc tourism', thumb: '/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline'},
+        {project: 'intel dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard'},
+        {project: 'svg animation', thumb: '/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath'},
+        {project: 'apparel graphic', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown'}
     ]
     };
   },
@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style lang="stylus">
+ #tile-grid.home
+  opacity 0
 @import '../style/mq.styl'
 </style>

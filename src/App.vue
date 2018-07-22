@@ -1,7 +1,8 @@
 <template lang="pug">
   #app
+    Intro
     Header
-    Content
+    content
       transition(name="fade")
         router-view
     Footer
@@ -10,15 +11,18 @@
 <script>
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Intro from './components/Intro'
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    Intro
   }
 }
 </script>
 
 <style lang="stylus">
+@import url('http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans+Condensed:300|Varela+Round')
 html
   overflow-y:scroll
 body
@@ -34,10 +38,19 @@ a
   min-width 550px
   margin 0 auto
   padding 2% 0
-  color #f3f3f3
   font-size 2em
   display flex
-  justify-content space-evenly
+  justify-content center
+  flex-flow row wrap
+#single-page
+  width 80%
+  max-width 1200px
+  min-width 550px
+  margin 0 auto
+  padding 2% 0
+  font-size 2em
+  display flex
+  justify-content center
   flex-flow row wrap
 @require 'main.styl'
 </style>
