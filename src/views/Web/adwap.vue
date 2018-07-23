@@ -33,6 +33,8 @@ data() {
 </script>
 
 <style lang='stylus' scoped>
+a.viewsite
+  width 100%
 .image
   &:first-child
     height 500px
