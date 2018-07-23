@@ -24,7 +24,9 @@ export default {
 <style lang="stylus">
 @import url('http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans+Condensed:300|Varela+Round')
 html
-  overflow-y:scroll
+  overflow-y scroll
+  overflow-x hidden
+  background #f3f3f3
 body
   margin 0
   background #f3f3f3

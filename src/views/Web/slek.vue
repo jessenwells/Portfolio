@@ -2,9 +2,10 @@
 #single-page
   span.catnav
     router-link(to='/branding/rnr') past project
-    a web
+    router-link(to='/sites/slek' target="_blank") view website
     router-link(to='/web/inteldashboard') next project
-  .image
+  router-link(to='/sites/slek' target="_blank" class='viewsite')
+    .image
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -16,7 +17,7 @@
   .image
   span.catnav
     router-link(to='/branding/rnr') past project
-    a web
+    router-link(to='/sites/slek' target="_blank") view website
     router-link(to='/web/inteldashboard') next project
 </template>
 
@@ -33,19 +34,21 @@ data() {
 </script>
 
 <style lang='stylus' scoped>
+a.viewsite
+  width 100%
 .image
   height 780px
-  &:nth-of-type(1)
+  &:first-child
     height 500px
-    background-image url("/web/slek/01.jpg");
+    background-image url("/web/slek/01.jpg") !important
+  &:nth-of-type(1)
+    background-image url("/web/slek/02.jpg")
   &:nth-of-type(2)
-    background-image url("/web/slek/02.jpg");
+    background-image url("/web/slek/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/slek/03.jpg");
+    background-image url("/web/slek/04.jpg")
   &:nth-of-type(4)
-    background-image url("/web/slek/04.jpg");
+    background-image url("/web/slek/05.jpg")
   &:nth-of-type(5)
-    background-image url("/web/slek/05.jpg");
-  &:nth-of-type(6)
-    background-image url("/web/slek/06.jpg");
+    background-image url("/web/slek/06.jpg")
 </style>

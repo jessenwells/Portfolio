@@ -1,19 +1,80 @@
 #single-page
     max-width 780px
+    font-family 'Varela Round', sans-serif
+    font-size 1.2em
+    color #1f2b30
+    line-height 1.5
+    .details
+        h3
+            font-size 1.5em
+            color #415a64
+            line-height 1.2
+        p:first-of-type
+            color #52717f
+            font-style italic
+            margin-bottom 2em
     .catnav
+        position relative
         width 100%
+        background #efefef
+        height 2em
         display flex
-        a
+        align-items center
+        padding 0 0.5em
+        border-radius 8px
+        margin-bottom 2em
+        &:last-child
+            margin-top 1em
+        &:before
+            content ''
             display block
+            float left
+            background-image url('/chevron-left.svg')
+            background-repeat no-repeat
+            width 22px
+            height 16px
+            opacity 0.5
+        &:after
+            content ''
+            display block
+            float left
+            background-image url('/chevron-right.svg')
+            background-repeat no-repeat
+            width 22px
+            height 16px
+            margin-right -6px
+            margin-left 5px
+            opacity 0.5
+        a
+            color #9aadb5
+            display block
+            text-decoration none
+            text-transform uppercase
+            transition all 0.2s ease
             &:nth-child(1)
                 flex 3
                 text-align left
+                opacity 0.5
+                &:hover
+                    opacity 1
             &:nth-child(2)
                 flex 3
                 text-align center
+                border-left 2px solid #e2e8ea
+                border-right 2px solid #e2e8ea
+                &:hover
+                    color #52717f
             &:nth-child(3)
                 flex 3
                 text-align right
+                opacity 0.5
+                &:hover
+                    opacity 1
+    div
+        position relative
+        border-radius 8px
+        overflow hidden
+        margin-bottom 1em
 .image
     width 100%
     height 780px

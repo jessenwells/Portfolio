@@ -46,22 +46,23 @@
           path.l2(d=l2)  
           path.s3(d=s3)
       span.subhead designer + developer
-  #logo
-    svg(viewBox="0 0 500 500")
-      g.logo0
-        line.ln1(x1="91" y1="298.5" x2="91" y2="-100")
-        line.ln2(x1="251" y1="202.5" x2="251" y2="-100")
-        line.ln3(x1="411" y1="202.5" x2="411" y2="-100")
-      g.logo1
-        path.p0(d=p0)
-        path.p1(d=p1)
-        path.p2(d=p2)
-        path.p3(d=p3)
-      g.logo2
-        path.p0(d=p0)
-        path.p1(d=p1)
-        path.p2(d=p2)
-        path.p3(d=p3)
+  router-link(to='/')
+    #logo
+      svg(viewBox="0 0 500 500")
+        g.logo0
+          line.ln1(x1="91" y1="298.5" x2="91" y2="-100")
+          line.ln2(x1="251" y1="202.5" x2="251" y2="-100")
+          line.ln3(x1="411" y1="202.5" x2="411" y2="-100")
+        g.logo1
+          path.p0(d=p0)
+          path.p1(d=p1)
+          path.p2(d=p2)
+          path.p3(d=p3)
+        g.logo2
+          path.p0(d=p0)
+          path.p1(d=p1)
+          path.p2(d=p2)
+          path.p3(d=p3)
 
 </template>
 
@@ -99,14 +100,11 @@ var git = $('#badge')
 var tl = new TimelineMax()
 var tl2 = new TimelineMax()
 
-tl = new TimelineMax();
-tl2 = new TimelineMax();
-
 tl.timeScale(1.3);
 
 if(this.$route.path==='/') {
 TweenMax.delayedCall(1, myFunction);
-TweenMax.set(page, {scale: 0.5})
+TweenMax.set(page, {scale: 0.5,opacity:0})
 function myFunction() {
 tl.to(logo2, 0, {stroke:'#dce4e5', strokeWidth:"38px"});
 tl.to(logo, 0, {opacity:1});
@@ -119,7 +117,6 @@ tl.to(p0, 1, {ease: Power3.easeOut, y:10}, "-=0.7");
 tl.to(p0, 0, {opacity:1}, "-=0.4");
 tl.staggerFrom(lnln, 0.5, {opacity:0,drawSVG:"0% 0%"},0.15);
 
-
 tl2.to(logo, 1.5, {y:50},0.35);
 tl2.to(logo, 0.5, {ease: Power1.easeInOut, top:'-100px',left:'-25px',marginLeft:'0',marginTop:'0',scale:0.5,rotation:22},2);
 tl2.to(logo2, 0.5, {stroke:'#fff', strokeWidth:"34px"},"-=0.5");
@@ -129,7 +126,7 @@ tl2.to(ee, 0.5, {ease: Back.easeInOut.config(3),rotation:-12,x:-5,y:6},4);
 tl2.to(page, 0.25, {opacity:1},'-=0.75');
 tl2.to(page, 0.75, {zIndex:1,scale: 1},'-=0.75');
 tl2.to(head, 0.5, {opacity:1});
-tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},6);
+tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},4.75);
 }
 }
 else {

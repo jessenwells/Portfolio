@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/apparel/nycliberty') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/JdLoGP' target='_blank') view full page
     router-link(to='/playground/3dparallax') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="JdLoGP" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
@@ -12,7 +12,7 @@
   span(data-height="780" data-theme-id="16808" data-slug-hash="JdLoGP" data-default-tab="html" data-user="jessenwells" class="codepen")
   span.catnav
     router-link(to='/apparel/nycliberty') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/JdLoGP' target='_blank') view full page
     router-link(to='/playground/3dparallax') next project
 </template>
 

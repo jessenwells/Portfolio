@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/apparel/crown') past project
-    a apparel
+    router-link(to='/apparel') apparel
     router-link(to='/apparel/pyramid') next project
   .image
   span.details
@@ -14,7 +14,7 @@
   .image
   span.catnav
     router-link(to='/apparel/crown') past project
-    a apparel
+    router-link(to='/apparel') apparel
     router-link(to='/apparel/pyramid') next project
 </template>
 

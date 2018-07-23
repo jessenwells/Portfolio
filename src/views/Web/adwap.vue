@@ -2,9 +2,10 @@
 #single-page
   span.catnav
     router-link(to='/web/energydashboard') past project
-    a web
+    router-link(to='/sites/adwap' target="_blank") view website
     router-link(to='/web/veteranlite') next project
-  .image
+  router-link(to='/sites/adwap' target="_blank" class='viewsite')
+    .image
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -14,7 +15,7 @@
   .image
   span.catnav
     router-link(to='/web/energydashboard') past project
-    a web
+    router-link(to='/sites/adwap' target="_blank") view website
     router-link(to='/web/veteranlite') next project
 
 </template>
@@ -33,13 +34,13 @@ data() {
 
 <style lang='stylus' scoped>
 .image
-  &:nth-of-type(1)
+  &:first-child
     height 500px
-    background-image url("/web/adwap/01.jpg");
+    background-image url("/web/adwap/01.jpg") !important
+  &:nth-of-type(1)
+    background-image url("/web/adwap/02.jpg")
   &:nth-of-type(2)
-    background-image url("/web/adwap/02.jpg");
+    background-image url("/web/adwap/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/adwap/03.jpg");
-  &:nth-of-type(4)
-    background-image url("/web/adwap/04.jpg");
+    background-image url("/web/adwap/04.jpg")
 </style>

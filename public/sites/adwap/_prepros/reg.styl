@@ -1,0 +1,671 @@
+
+/* // REG HEADER // */
+body
+  min-width 450px
+#regtop
+  padding-top 100px
+  background clr1
+  text-align center
+  .row
+    height 160px
+  h1
+    color wh
+    margin 0
+    fnt(300,54)
+    lh(160)
+  h2
+    display none
+    color wh
+    margin 0
+    text-transform uppercase
+    text-align left
+    fnt(300,24)
+    lh(50)
+
+/* // REG FORM // */
+
+.dob label, .gender label:first-child
+  width 100%
+
+.dob input[type="text"]
+  width 24%
+  margin-right 2%
+  &:last-of-type
+    width 46%
+    margin-right 0
+
+.gender, .lastname
+  height 128px
+
+.lastname label
+  color transparent
+
+input[type="text"]
+  height 50px
+  width 100%
+  border 2px solid clr6
+  padding-left 12px
+  fnt(300,24)
+  color #333
+  transition border-color 0.35s ease
+  &:focus
+    border-color clr1
+    outline 0
+    box-shadow none
+  &::placeholder
+    color clr6
+
+.fineprint
+  text-align left
+  margin-top 22px
+  height 50px
+  color #444
+  fnt(300,18)
+
+label.error
+  position absolute
+  width 30%
+  bottom -30px
+  color #bd525e
+  fnt(300,14)
+  text-align left
+
+label#first-error
+  width 100%
+  left 5%
+  bottom -24px
+label#last-error
+  width 100%
+  left 5%
+  bottom -24px
+label#email-error
+  width 100%
+  left 5%
+  bottom -24px
+
+label#bd-year-error
+  width 46%
+  left 55%
+
+label#bd-day-error
+  width 24%
+  left 29%
+
+label#bd-month-error
+  width 24%
+  left 5%
+
+label#zipcode-error
+  width 100%
+  left 5%
+  bottom 58px
+
+label#gender-error
+  bottom -12px
+  left 5%
+
+input.error, input.error:focus
+  border-color #bd525e
+/* // REG STEPS // */
+
+#step
+  padding-bottom 100px
+  text-align center
+  label:first-child
+    fnt(900,20)
+    width 100%
+    padding 26px 0 12px 0
+    text-align left
+    text-transform uppercase
+  h2
+    margin-bottom 0px
+    fnt(700,38)
+    lh(80)
+    color clr1
+    span
+      color #333
+  .btn
+    margin-top 94px
+    height 50px
+    width auto
+    color wh
+    font-size 19px
+    font-weight 700
+    letter-spacing 1.5px
+    line-height 34px
+    padding-right 0
+    span
+      font-weight 300
+    &.log
+      color bl
+      background clr2
+      border-color clr2
+      &:hover
+        background clr4
+    &.join
+      background clr1
+      border-color clr1
+      &:hover
+        background clr3
+    &:after
+      content: " "
+      display block
+      background url(../img/arrw-right.png)
+      background-size cover
+      margin-top -9px
+      width 35px
+      height 50px
+      float right
+  &.two
+    p
+      fnt(300,16)
+      color #333
+      margin-bottom 0
+      margin-top -4px
+    h4
+      fnt(900,20)
+      padding 8px 0 0 0
+      text-align left
+      text-transform uppercase
+      &:nth-of-type(2)
+        padding-top 2px
+    .btn
+      margin-top 35px
+    .featimage
+      padding 0
+      left 1%
+      .img
+        width 280px
+        height 200px
+        background url(../img/charity-1.png) no-repeat
+        background-color wh
+        background-size 94%
+        background-position center
+        cursor pointer
+        position relative
+        margin-bottom 0
+      .selected.btn
+        &:hover
+          background clr1
+    .featdetails
+      text-align left
+      padding-left 2%
+      p
+        fnt(300,16)
+        lh(29.5)
+        color wh
+      h3
+        fnt(700, 18)
+        color wh
+        text-transform uppercase
+    .featcause
+      background clr3
+      padding 12px
+    .allcause
+      background clr1
+      padding-bottom 8px
+      .carousel
+        padding 0
+        margin-top 30px
+        .carousel-inner
+          padding 5px
+          marign-top 5px
+        .row
+          padding-bottom 0
+          img
+            background wh
+            padding 1%
+          .causehover
+            opacity 0
+            width 100%
+            height 100%
+            position absolute
+            background rgba(bg,0.86)
+            display block
+            padding 5%
+            transition 0.3s opacity ease
+            h4
+              color wh
+              fnt(700,16)
+              margin-top 0
+              padding-top 0
+              max-height 18px
+              overflow hidden
+            p
+              fnt(300,16)
+              lh(18)
+              padding 0
+              color wh
+              text-align left
+            .btn
+              fnt(300,16)
+              lh(15)
+              color bg
+              margin-top 6px
+              height 30px
+              text-align center
+              padding-left 0
+              width 90%
+              position absolute
+              left 5%
+              bottom 10px
+              &:after
+                display none
+            &:hover
+              opacity 1
+
+        .carousel-control, .carousel-control.right, .carousel-control.left
+          top -42px
+        .carousel-control.right
+          right -10px
+        .carousel-control.left
+          right 20px
+    .selected.btn
+        fnt(300,16)
+        lh(15)
+        color bg
+        height 30px
+        text-align center
+        padding-left 0
+        width 90%
+        position absolute
+        left 5%
+        bottom 10px
+        &:after
+          display none
+  &.three
+    p
+      fnt(300,16)
+      color #333
+      margin-bottom 0
+      margin-top -8px
+    h4
+      fnt(700,18)
+      padding 0
+      margin 0
+      line-height 30px
+      text-align left
+      text-transform uppercase
+    .star
+      width 30px
+      height 30px
+      float left
+      fill clr2
+      margin-right 18px
+      &:last-child
+        margin-right 0
+    .topics
+      margin-top 85px
+      .row
+        margin-bottom 20px
+    .btn
+      margin-top 45px
+      margin-bottom 50px
+      padding-right 10px
+      width 44%
+      &:after
+        display none
+    .go-profile
+      fnt(500, 18)
+      color #333
+      span
+        color clr1
+
+.vr
+  border-right 1px solid clr1
+  width 48%
+
+.vr + .col-md-6
+  padding-left 2%
+
+.item .col-md-3
+    width 23%
+    margin 1%
+    position relative
+    padding 0
+
+/* // RADIO //*/
+
+[type="radio"]
+  border 0
+  clip rect(0 0 0 0)
+  height 1px margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+  + span
+    fnt(300,24)
+
+[type="radio"] ~ span:before
+  content ' '
+  display inline-block
+  width 18px
+  height 18px
+  border-radius 1em
+  border 3px solid wh
+  box-shadow 0 0 0 0.15em #ccc
+  margin-right 0.75em
+  transition 0.35s ease all
+  fnt(300,18)
+  margin-top -20px
+
+#gender-error + span
+  fnt(300,24)
+
+[type="radio"]:checked ~ span:before
+  background clr1
+
+.radio-inline
+  padding-left 20px
+  cursor pointer
+  width 30%
+  text-align left
+  float left
+  line-height 50px
+
+.radio-inline + .radio-inline
+  padding-left 0
+//
+#step.two .causebox
+  position fixed
+  width 89%
+  margin 0 5.5%
+  height auto
+  left 0
+  z-index 9999
+  top 20%
+  background wh
+  border 3px solid clr1
+  display none
+
+.modal-bg
+  position fixed
+  top 0
+  width 100%
+  height 100%
+  background rgba(bg,0.9)
+  z-index 9998
+  display none
+
+#step.two .causebox
+  h4
+    padding-left 38px
+  h3
+    display block
+    fnt(300,25)
+    color wh
+    text-align left
+    margin-top 0
+    padding 10px 0 14px 18px
+    background clr1
+    &:after
+      content: " "
+      display block
+      background url(../img/close.png)
+      background-size cover
+      margin-right 8px
+      width 32px
+      height 32px
+      float right
+      cursor pointer
+  p
+    width 90%
+    margin 0 5%
+    text-align left
+    fnt(300,22)
+    lh(28px)
+  .btn
+    color #333
+    margin-bottom 38px
+    fnt(300,27)
+    lh(38)
+    width 80%
+    height 55px
+    &:after
+      display none
+  .learnmore
+    display none
+
+.learnmore
+  fnt(500,16)
+  text-transform uppercase
+  display block
+  width 90%
+  cursor pointer
+  position absolute
+  bottom 50px
+
+.featimage
+  position relative
+  .causeselect
+    width 100%
+    margin 0 auto
+    padding 0
+    top 0
+    .selected.btn
+      bottom 0
+
+ul.nav.navbar-nav.signin a
+  padding 0
+
+
+
+
+//
+/* // CAUSE SELECT // */
+
+.causeselect
+  opacity 0
+  width 100%
+  height 100%
+  position absolute
+  display block
+  padding 5%
+  transition 0.3s opacity ease
+  pointer-events none
+
+.causehover
+  h3
+    display none
+
+#step.two .nextstep
+  pointer-events none
+  .btn
+    background #e9e9e9
+    border-color #e9e9e9
+
+input:checked ~
+  #step.two .nextstep
+    pointer-events all
+    .btn
+      background clr1
+      border-color clr1
+      &:hover
+        background clr3
+#select0:checked ~
+  #step.two .featcause .featimage
+    .img
+      outline 6px solid clr1
+    .causeselect
+      opacity 1
+
+#select1:checked ~
+  #step.two .allcause .carousel .page-1 .row:first-child .col-md-3:first-child
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select2:checked ~
+  #step.two .allcause .carousel .page-1 .row:first-child .col-md-3:nth-child(2)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select3:checked ~
+  #step.two .allcause .carousel .page-1 .row:first-child .col-md-3:nth-child(3)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select4:checked ~
+  #step.two .allcause .carousel .page-1 .row:first-child .col-md-3:nth-child(4)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select5:checked ~
+  #step.two .allcause .carousel .page-1 .row:nth-child(2) .col-md-3:first-child
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select6:checked ~
+  #step.two .allcause .carousel .page-1 .row:nth-child(2) .col-md-3:nth-child(2)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select7:checked ~
+  #step.two .allcause .carousel .page-1 .row:nth-child(2) .col-md-3:nth-child(3)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select8:checked ~
+  #step.two .allcause .carousel .page-1 .row:nth-child(2) .col-md-3:nth-child(4)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+////
+#select9:checked ~
+  #step.two .allcause .carousel .page-2 .row:first-child .col-md-3:first-child
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select10:checked ~
+  #step.two .allcause .carousel .page-2 .row:first-child .col-md-3:nth-child(2)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select11:checked ~
+  #step.two .allcause .carousel .page-2 .row:first-child .col-md-3:nth-child(3)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select12:checked ~
+  #step.two .allcause .carousel .page-2 .row:first-child .col-md-3:nth-child(4)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select13:checked ~
+  #step.two .allcause .carousel .page-2 .row:nth-child(2) .col-md-3:first-child
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select14:checked ~
+  #step.two .allcause .carousel .page-2 .row:nth-child(2) .col-md-3:nth-child(2)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select15:checked ~
+  #step.two .allcause .carousel .page-2 .row:nth-child(2) .col-md-3:nth-child(3)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+//
+#select16:checked ~
+  #step.two .allcause .carousel .page-2 .row:nth-child(2) .col-md-3:nth-child(4)
+    img
+      outline 6px solid clr3
+    .causeselect
+      opacity 1
+    .causehover .btn
+      opacity 0
+
+/* // RATINGS // */
+
+.rating:not(:checked) > label
+  width 30px
+  height 30px
+  line-height 30px
+  float right
+  margin-right 18px
+  white-space nowrap
+  cursor pointer
+  font-size 280%
+  color #c0c0c0
+  transition 0.15s all ease
+
+.rating:not(:checked) > label:before
+  content '★ '
+
+.rating > input:checked ~ label
+  color clr4
+  transition 0.15s all ease
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label
+  color clr2
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label
+  color clr4
+
+.rating > label:active
+  transform scale(1.3)
+  color clr2

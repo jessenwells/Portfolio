@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/playground/svgmelt') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/Pqwegj' target='_blank') view full page
     router-link(to='/playground/svgdrawpath') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="Pqwegj" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
@@ -12,7 +12,7 @@
   span(data-height="780" data-theme-id="16808" data-slug-hash="Pqwegj" data-default-tab="html" data-user="jessenwells" class="codepen")
   span.catnav
     router-link(to='/playground/svgmelt') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/Pqwegj' target='_blank') view full page
     router-link(to='/playground/svgdrawpath') next project
 </template>
 

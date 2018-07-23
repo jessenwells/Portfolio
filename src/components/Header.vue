@@ -1,12 +1,12 @@
 <template lang="pug">
 header
-  a(href="" target="_blank")
+  a(href="https://github.com/jessenwells/Portfolio" target="_blank")
     #badge view site code<br> on github
   nav
     template(v-for="view in views")
         router-link(:to="view.link" class='link') {{ view.title }}
           .navselect
-            svg#select(:class='view.title' viewBox='0 0 225 25' preserveAspectRatio="xMidYMin slice")
+            svg#select(:class='view.title' viewBox='0 0 225 25')
               path.dot(:class='view.title' d='M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z')
 
 </template>

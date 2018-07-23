@@ -25,7 +25,5 @@ export default {
 </script>
 
 <style lang="stylus">
- #tile-grid.home
-  opacity 0
 @import '../style/mq.styl'
 </style>

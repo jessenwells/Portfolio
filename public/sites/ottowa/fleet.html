@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- META -->
+<title>Energy Ottowa</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=800">
+<link rel="shortcut icon" href="images/favi.png"  type="image/x-icon" />
+<!-- CSS-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/jqtip.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fleet.css">
+<!--[if lt IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 8]><script type="text/javascript">window.location = "http://whatbrowser.org";</script><![endif]-->
+</head>
+<!-- BODY-->
+<body>  
+<!-- old menu placeholder -->
+<div id="top-menu"></div> 
+<!-- HEADER--> 
+<header class="wrapper clearfix">
+<div id="banner"> 
+<!-- logo -->       
+<div id="logo"><a href="#"><img src="images/logo.png" alt="logo"></a>
+<div class="tagline">Fleet Generation Dashboard</div></div>
+<!-- top info bar -->
+<div class="infowrap">
+<div id="status"><div class="icon"><img class="pulse2" src="images/icon.on.png" /></div><div class="label">Status</div></div>
+<div id="current">
+<div class="time"><span id="time-input">10:25am</span></div><!-- time -->
+<div class="label">at</div>
+<div class="date"><span id="date-input">12.25.2013</span></div><!-- date -->
+<div class="label">Data current as of:</div>
+</div></div>
+</div>
+<!-- NAVIGATION -->
+<nav id="topnav" role="navigation">
+<ul class="srt-menu" id="menu-main-navigation">
+<li><a href="index.html"><img class="icon" src="images/icon1.png" /><span class="label">Smart Grid</span></a></li>
+<li class="current"><a href="#"><img class="icon" src="images/icon2.png" /><span class="label">Fleet</span></a></li>
+<li><a href="#"><img class="icon" src="images/icon3.png" /><span class="label">Performance</span></a></li>
+<li><a href="hydro.html"><img class="icon" src="images/icon4.png" /><span class="label">Hydro</span></a></li>
+<li><a href="landfill.html"><img class="icon" src="images/icon5.png" /><span class="label">Landfill</span></a></li>
+<li><a href="solar.html"><img class="icon" src="images/icon6.png" /><span class="label">Solar</span></a></li>       	
+</ul>     
+</nav>
+<!-- top content box -->
+<div class="topbox"><div class="pagetitle">Fleet View</div>
+<div class="legend"><div class="title">Fleet Legend</div>
+<div class="hydro">Hydro</div><div class="landfill">Landfill</div><div class="solar">Solar</div>
+</div></div>
+</header>
+<!-- END HEADER--> 
+<!-- CONTENT -->
+<div id="main" class="wrapper">
+<div class="mainbox">
+<!-- FLEET MAP -->
+<div id ="fleet">
+<div id="fleetmap"></div>
+<div id="fleetdata">
+<div class="marker hydro p1">5</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">GS2</p>
+<p class="info">100 kWh</p>
+</div>
+<div class="poplink">
+<a href="hydro-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+
+<div class="marker hydro p2">4</div>
+
+<div class="pop off">
+<div class="popcontent">
+<p class="plant">GS4</p>
+<p class="info">121 kWh</p>
+</div>
+<div class="poplink">
+<a href="hydro-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker hydro p3">3</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Grinder</p>
+<p class="info">98 kWh</p>
+</div>
+<div class="poplink">
+<a href="hydro-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker hydro p4">2</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Ottowa 2/3</p>
+<p class="info">111 kWh</p>
+</div>
+<div class="poplink">
+<a href="hydro-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker hydro p5">1</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Gatineau 1</p>
+<p class="info">134 kWh</p>
+</div>
+<div class="poplink">
+<a href="hydro-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker landfill p6">14</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Powertrail</p>
+<p class="info">88 kWh</p>
+</div>
+<div class="poplink">
+<a href="landfill-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker landfill p7">12</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Moose Creek</p>
+<p class="info">39 kWh</p>
+</div>
+<div class="poplink">
+<a href="landfill-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p8">7</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Riverdale</p>
+<p class="info">210 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p9">6</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Florence</p>
+<p class="info">54 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p10">8</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Queen Sub Station</p>
+<p class="info">78 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p11">15</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Barrhaven Sub Station</p>
+<p class="info">201 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p12">13</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Maple Grove</p>
+<p class="info">178 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p13">11</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Bank</p>
+<p class="info">58 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p14">10</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Merivale R/T</p>
+<p class="info">95 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+
+<div class="marker solar p15">9</div>
+
+<div class="pop">
+<div class="popcontent">
+<p class="plant">Merivale P/T</p>
+<p class="info">133 kWh</p>
+</div>
+<div class="poplink">
+<a href="solar-plants.html"><h1>Go To Plant &nbsp; &#9658;</h1></a>
+</div>
+</div>
+</div>
+<div id="table">
+<table>
+<tr>
+<th class="first">Status</th>
+<th>Plant</th>
+<th>Fuel Type</th>
+<th>Number of Units</th>
+<th>Capacity (MW)</th>
+<th>Total Capacity (MW)</th>
+<th class="last">Total KWH</th>
+</tr>
+<tr class="none">
+<td class="none">&nbsp;</td><td class="none">&nbsp;</td><td class="none">&nbsp;</td><td class="none">&nbsp;</td><td class="none">&nbsp;</td><td class="none">&nbsp;</td><td class="none">&nbsp;</td>
+</tr>
+
+<tr class="5">
+<td class="on">1</td>
+<td>Gatineau 1</td>
+<td>Hydro</td>
+<td>3</td>
+<td>7.0</td>
+<td>5.0</td>
+<td>134</td>
+</tr>
+
+<tr class="4">
+<td class="on">2</td>
+<td>Ottowa 2/3</td>
+<td>Hydro</td>
+<td>2</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>111</td>
+</tr>
+
+<tr class="3">
+<td class="on">3</td>
+<td>Grinder</td>
+<td>Hydro</td>
+<td>1</td>
+<td>6.0</td>
+<td>8.0</td>
+<td>98</td>
+</tr>
+
+<tr class="2">
+<td class="off">4</td>
+<td>GS4</td>
+<td>Hydro</td>
+<td>4</td>
+<td>5.0</td>
+<td>3.0</td>
+<td>121</td>
+</tr>
+
+<tr class="1">
+<td class="first on">5</td>
+<td>GS2</td>
+<td>Hydro</td>
+<td>2</td>
+<td>4.0</td>
+<td>8.0</td>
+<td class="last">100</td>
+</tr>
+
+<tr class="9">
+<td class="on">6</td>
+<td>Florence</td>
+<td>Solar</td>
+<td>1</td>
+<td>18.0</td>
+<td>4.0</td>
+<td>75</td>
+</tr>
+
+<tr class="8">
+<td class="on">7</td>
+<td>Riverdale</td>
+<td>Solar</td>
+<td>1</td>
+<td>14.0</td>
+<td>8.0</td>
+<td>64</td>
+</tr>
+
+
+<tr class="10">
+<td class="on">8</td>
+<td>Queen Sub Station</td>
+<td>Solar</td>
+<td>1</td>
+<td>41.0</td>
+<td>7.0</td>
+<td>43</td>
+</tr>
+
+<tr class="15">
+<td class="on">9</td>
+<td>Merivale P/T</td>
+<td>Solar</td>
+<td>1</td>
+<td>12.0</td>
+<td>9.0</td>
+<td>78</td>
+</tr>
+
+<tr class="14">
+<td class="on">10</td>
+<td>Merivale R/T</td>
+<td>Solar</td>
+<td>1</td>
+<td>11.0</td>
+<td>6.0</td>
+<td>54</td>
+</tr>
+
+<tr class="13">
+<td class="on">11</td>
+<td>Bank</td>
+<td>Solar</td>
+<td>1</td>
+<td>12.0</td>
+<td>5.0</td>
+<td>77</td>
+</tr>
+
+<tr class="7">
+<td class="on">12</td>
+<td>Moose Creek</td>
+<td>Landfill</td>
+<td>4</td>
+<td>15.0</td>
+<td>6.0</td>
+<td>43</td>
+</tr>
+
+<tr class="12">
+<td class="on">13</td>
+<td>Maple Grove</td>
+<td>Solar</td>
+<td>1</td>
+<td>21.0</td>
+<td>2.0</td>
+<td>45</td>
+</tr>
+
+<tr class="6">
+<td class="on">14</td>
+<td>Powertrail</td>
+<td>Landfill</td>
+<td>6</td>
+<td>13.0</td>
+<td>5.0</td>
+<td>65</td>
+</tr>
+
+<tr class="11">
+<td class="on">15</td>
+<td>Barrhaven Sub Station</td>
+<td>Solar</td>
+<td>1</td>
+<td>51.0</td>
+<td>3.0</td>
+<td>76</td>
+</tr>
+
+</table>
+</div>
+<div id="showhide"><div class="hideall">Hide All</div><div class="showall">Show All</div></div>
+</div>
+
+<!-- END FLEET MAP -->
+</div><!-- end mainbox -->
+</div><!-- end main -->
+<!-- FOOTER -->    
+<footer><div id="footerlogo"></div></footer>
+<!-- jQuery -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/rotate.js"></script>
+<script type="text/javascript" src="js/jqbar.js"></script>
+<script type="text/javascript" src="js/jqtip.js"></script>
+<script type="text/javascript" src="js/respond.min.js"></script>
+</body>
+</html>

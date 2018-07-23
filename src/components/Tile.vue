@@ -9,8 +9,8 @@ router-link(:to="details.link")
 </template>
 
 <script>
-import hoverintent from "hoverintent/";
-import Snap from 'snapsvg';
+import hoverintent from "hoverintent/"
+import Snap from 'snapsvg'
 
 export default {
   props: ['details'],

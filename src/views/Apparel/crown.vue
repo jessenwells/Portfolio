@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/apparel/nycskyline') past project
-    a apparel
+    router-link(to='/apparel') apparel
     router-link(to='/apparel/nycmap') next project
   .image
   span.details
@@ -13,7 +13,7 @@
   .image
   span.catnav
     router-link(to='/apparel/nycskyline') past project
-    span apparel
+    router-link(to='/apparel') apparel
     router-link(to='/apparel/nycmap') next project
 </template>
 

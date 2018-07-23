@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/playground/svgmorph') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/WvRZYe' target='_blank') view full page
     router-link(to='/playground/sasscolor') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="WvRZYe" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
@@ -12,7 +12,7 @@
   span(data-height="780" data-theme-id="16808" data-slug-hash="WvRZYe" data-default-tab="html" data-user="jessenwells" class="codepen")
   span.catnav
     router-link(to='/playground/svgmorph') past project
-    a playground
+    a(href='http://codepen.io/jessenwells/live/WvRZYe' target='_blank') view full page
     router-link(to='/playground/sasscolor') next project
 </template>
 

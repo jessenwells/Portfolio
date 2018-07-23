@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/branding/kigilove') past project
-    a branding
+    router-link(to='/branding') branding
     router-link(to='/branding/learn&explore') next project
   .image
   span.details
@@ -14,7 +14,7 @@
   .image
   span.catnav
     router-link(to='/branding/kigilove') past project
-    a branding
+    router-link(to='/branding') branding
     router-link(to='/branding/learn&explore') next project
 </template>
 

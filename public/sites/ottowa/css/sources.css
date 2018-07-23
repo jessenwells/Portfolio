@@ -1,0 +1,1271 @@
+
+
+/*////////////////////////////// FUEL SOURCES - HYDRO / LANDFILL / SOLAR */
+
+
+/*////////////////////////////// SIDEBAR */
+/*////////////////////////////// HYDRO */
+/*////////////////////////////// SOLAR */
+/*////////////////////////////// LANDFILL */
+/*////////////////////////////// TABLE */
+/*////////////////////////////// PLANT NUMBER IDS */
+/*////////////////////////////// METRICS DROP DOWN */
+/*////////////////////////////// BACK BUTTON */
+
+
+#hydro, #hydrodata, #landfill, #landfilldata, #solar, #solardata, #numbers {
+opacity: 0;
+}
+
+body { 
+min-width: 1050px;
+}
+
+a {
+text-decoration: none;
+}
+
+
+/*////////////////////////////// SIDEBAR */
+
+
+.sidebar {
+width: 250px;
+float: right;
+height: auto;
+min-height: 550px;
+text-align: center;
+}
+
+.sidebar > div {
+width: 100%;
+background: #edecec;
+margin: 10px 0;
+border-radius: 4px;
+}
+
+.sidebar .power > span {
+display: block;
+background: #E2E2E2;
+width: 105px;
+float: left;
+margin: 10px 6px 10px 10px;
+padding: 2px;
+text-align: center;
+border-radius: 2px;
+color: #ad5910;
+font-weight: 600;
+font-size: 14px;
+}
+
+.sidebar .today {
+color: #ad5910;
+font-weight: 600;
+font-size: 14px;
+}
+
+.sidebar .title {
+background: #dedcdc;
+border-radius: 4px 4px 0 0;
+padding: 10px 46px;
+text-align: center;
+font-weight: 600;
+margin-bottom: 8px;
+}
+
+.sidebar .label {
+color: #444;
+font-weight: 600;
+font-size: 16px;
+text-align: left;
+display: inline;
+padding: 0 10px;
+}
+
+.sidebar .power {
+height: 175px;
+}
+
+.sidebar .produced {
+height: 84px;
+}
+
+.sidebar .metrics {
+height: 380px;
+}
+
+.metrics img {
+float: left;
+clear: both;
+padding-right: 10px;
+}
+
+.metrics .rows {
+padding: 0 20px;
+} 
+
+.metrics .row1, .metrics .row2, .metrics .row3{
+height: auto;
+float: left;
+width: 100%;
+padding: 10px 0px;
+}
+
+.metrics .row1, .metrics .row2 {
+border-bottom: 1px solid #dedcdc;
+}
+
+.metrics .data {
+color: #ad5910;
+font-weight: 600;
+font-size: 16px;
+width: 100%;
+display: block;
+text-align: left;
+letter-spacing: 1px;
+}
+
+.metrics .label {
+text-align: left;
+}
+
+.metrics .label {
+text-align: left;
+display: block;
+}
+
+
+/*////////////////////////////// PULSE */
+
+
+#sourcepulse{
+width: 700px;	
+height: 550px;
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+opacity: 0;
+}
+
+#sourcepulse .grid{
+height: 550px;
+float: left;
+}
+
+#sourcepulse .grid.one {
+width: 330px;	
+}
+
+#sourcepulse .grid.two {
+width: 170px;	
+}
+
+#sourcepulse .grid.three {
+width: 200px;	
+}
+
+#sourcepulse .grid.one.b {
+width: 30px;
+height: 30px;
+margin: 100px 0 0 190px;
+position: absolute;
+background: url(../images/glow.png);
+opacity: 0;
+}
+
+#sourcepulse .grid.two.b {
+width: 30px;
+height: 30px;
+margin: 130px 0 0 40px;
+position: absolute;
+background: url(../images/glow.png);
+opacity: 0;
+}
+
+#sourcepulse .grid.two.c {
+width: 30px;
+height: 30px;
+margin: 145px 0 0 70px;
+position: absolute;
+background: url(../images/glow.png);
+opacity: 0;
+}
+
+#sourcepulse .grid.three.b {
+width: 30px;
+height: 30px;
+margin: 255px 0 0 145px;
+position: absolute;
+background: url(../images/glow.png);
+opacity: 0;
+}
+
+.unitpulse {
+background: url(../images/glow.png);
+height: 30px;
+width: 30px;
+position: absolute;
+top: 160px;
+left: 0;
+}
+
+
+/*////////////////////////////// HYDRO */
+
+
+#hydrograph {
+margin: 40px auto 0 auto;
+width: 932px;
+}
+
+#hydro {
+width: 700px;
+height: 550px;
+background: url(../images/hydrograph.png);
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+}
+
+#hydro.plants {
+background: url(../images/hydrograph-plants.png);
+}
+
+#hydro.units {
+background: url(../images/unitsbg.png);
+height: 350px;
+margin-top: 0;
+}
+
+#hydrodata.unit {
+width: 272px;
+height: 350px;
+margin-left: 198px;
+margin-top: -25px;
+}
+
+#hydrograph.unit .sidebar{
+min-height: 350px;
+}
+
+#hydrodata.unit .grid.three {
+background: url(../images/hydrounit.png);
+}
+
+#hydrodata {
+width: 700px;
+height: 550px;
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+overflow: hidden;
+}
+
+#hydrodata .grid {
+float: left;
+}
+
+#hydrodata .grid.one {
+width: 272px;
+height: 350px;
+
+}
+
+#hydrodata .grid.one.b {
+width: 125px;
+height: 125px;
+margin: 113px 89px 0 58px;
+position: absolute;
+
+}
+
+#hydrodata .grid.one.b {
+width: 125px;
+height: 125px;
+margin: 113px 89px 0 58px;
+position: absolute;
+
+}
+
+#hydrodata .grid.one.c {
+background: url(../images/hydro/1c.png);
+position: absolute;
+background-position: 0px -2px;
+}
+
+#hydrodata .grid.two {
+width: 156px;
+height: 350px;
+}
+
+#hydrodata .grid.two.b {
+background: url(../images/hydro/2b.png);
+position: absolute;
+width: 156px;
+height: 350px;
+
+}
+
+#hydrodata .grid.two.c {
+background: url(../images/hydro/2c.png);
+position: absolute;
+width: 156px;
+height: 350px;
+
+}
+
+#hydrodata .grid.three {
+width: 272px;
+height: 350px;
+}
+
+#hydrodata .grid.three.b {
+width: 63px;
+height: 82px;
+position: absolute;
+margin: 203px 129px 0 80px;
+background: url(../images/hydro/wave.png) repeat-x;
+transform: skewY(30deg); 
+-ms-transform: skewY(30deg); 
+-webkit-transform: skewY(30deg); 
+}
+
+#hydrodata .grid.three.c {
+width: 21px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 81px;
+background: url(../images/hydro/3c.png);
+opacity: 0;
+}
+
+#hydrodata .grid.three.d {
+width: 20px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 102px;
+background: url(../images/hydro/3d.png);
+opacity: 0;
+}
+
+#hydrodata .grid.three.e {
+width: 22px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 122px;
+background: url(../images/hydro/3e.png);
+opacity: 0;
+}
+
+
+#hydrodata .grid.four {
+width: 272px;
+height: 350px;
+}
+
+#hydrodata .grid.five {
+width: 156px;
+height: 350px;
+}
+
+#hydrodata .grid.six {
+width: 272px;
+height: 350px;
+}
+
+#hydrodata .grid.six.b {
+width: 272px;
+height: 350px;
+position: absolute;
+background: url(../images/hydro/6b.png);
+opacity: 0;
+}
+
+
+/*////////////////////////////// SOLAR */
+
+
+#solar {
+width: 700px;
+height: 550px;
+background: url(../images/solargraph.png);
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+}
+
+#solar.plants {
+background: url(../images/solargraph-plants.png);
+}
+
+#solar.units {
+background: url(../images/unitsbg.png);
+height: 350px;
+margin-top: 0;
+}
+
+#solardata.unit {
+width: 272px;
+height: 350px;
+margin-left: 198px;
+margin-top: -25px;
+}
+
+#solardata.unit .grid.three {
+background: url(../images/solarunit.png);
+}
+
+#solardata {
+width: 700px;
+height: 550px;
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+overflow: hidden;
+}
+
+#solardata .grid {
+float: left;
+}
+
+#solardata .grid.one {
+width: 272px;
+height: 350px;
+
+}
+
+#solardata .grid.one.b {
+width: 125px;
+height: 125px;
+margin: 63px 67px 0 80px;
+position: absolute;
+
+}
+
+#solardata .grid.two {
+width: 156px;
+height: 350px;
+}
+
+#solardata .grid.two.b {
+background: url(../images/solar/2b.png);
+position: absolute;
+width: 156px;
+height: 350px;
+opacity:0;
+}
+
+#solardata .grid.two.c {
+background: url(../images/hydro/2c.png);
+position: absolute;
+width: 156px;
+height: 350px;
+
+}
+
+#solardata .grid.three {
+width: 272px;
+height: 350px;
+}
+
+#solardata .grid.three.b {
+width: 63px;
+height: 82px;
+position: absolute;
+margin: 203px 129px 0 80px;
+background: url(../images/hydro/wave.png) repeat-x;
+transform: skewY(30deg); 
+-ms-transform: skewY(30deg); 
+-webkit-transform: skewY(30deg); 
+}
+
+#solardata .grid.three.c {
+width: 21px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 81px;
+background: url(../images/hydro/3c.png);
+opacity: 0;
+}
+
+#solardata .grid.three.d {
+width: 20px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 102px;
+background: url(../images/hydro/3d.png);
+opacity: 0;
+}
+
+#solardata .grid.three.e {
+width: 22px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 122px;
+background: url(../images/hydro/3e.png);
+opacity: 0;
+}
+
+#solardata .grid.four {
+width: 272px;
+height: 350px;
+}
+
+#solardata .grid.five {
+width: 156px;
+height: 350px;
+}
+
+#solardata .grid.six {
+width: 272px;
+height: 350px;
+}
+
+#solardata .grid.six.b {
+width: 272px;
+height: 350px;
+position: absolute;
+background: url(../images/hydro/6b.png);
+opacity: 0;
+}
+
+
+/*////////////////////////////// LANDFILL */
+
+
+#landfill {
+width: 700px;
+height: 550px;
+background: url(../images/landfillgraph.png);
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+}
+
+#landfill.plants {
+background: url(../images/landfillgraph-plants.png);
+}
+
+#landfill.units {
+background: url(../images/unitsbg.png);
+height: 350px;
+margin-top: 0;
+}
+
+#landfilldata.unit {
+width: 272px;
+height: 350px;
+margin-left: 198px;
+margin-top: -25px;
+}
+
+#landfilldata.unit .grid.three {
+background: url(../images/landfillunit.png);
+}
+
+#landfilldata {
+width: 700px;
+height: 550px;
+position: absolute;
+margin-left: -40px;
+margin-top: 80px;
+overflow: hidden;
+}
+
+#landfilldata .grid {
+float: left;
+}
+
+#landfilldata .grid.one {
+width: 272px;
+height: 350px;
+
+}
+
+#landfilldata .grid.one.b {
+position: absolute;
+background: url(../images/landfill/1b.png);
+opacity: 1;
+}
+
+#landfilldata .grid.one.c {
+position: absolute;
+background: url(../images/landfill/1c.png);
+opacity: 0.3;
+margin:-3px 0 0 0;
+}
+
+#landfilldata .grid.two {
+width: 156px;
+height: 350px;
+}
+
+
+#landfilldata .grid.two.b {
+background: url(../images/hydro/2b.png);
+position: absolute;
+width: 156px;
+height: 350px;
+}
+
+#landfilldata .grid.two.c {
+background: url(../images/hydro/2c.png);
+position: absolute;
+width: 156px;
+height: 350px;
+}
+
+
+#landfilldata .grid.three {
+width: 272px;
+height: 350px;
+}
+
+#landfilldata .grid.three.b {
+width: 63px;
+height: 82px;
+position: absolute;
+margin: 203px 129px 0 80px;
+background: url(../images/hydro/wave.png) repeat-x;
+transform: skewY(30deg); 
+-ms-transform: skewY(30deg); 
+-webkit-transform: skewY(30deg); 
+}
+
+#landfilldata .grid.three.c {
+width: 21px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 81px;
+background: url(../images/hydro/3c.png);
+opacity: 0;
+}
+
+#landfilldata .grid.three.d {
+width: 20px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 102px;
+background: url(../images/hydro/3d.png);
+opacity: 0;
+}
+
+#landfilldata .grid.three.e {
+width: 22px;
+height: 166px;
+position: absolute;
+margin: 0 128px 0 122px;
+background: url(../images/hydro/3e.png);
+opacity: 0;
+}
+
+#landfilldata .grid.four {
+width: 272px;
+height: 350px;
+}
+
+#landfilldata .grid.five {
+width: 156px;
+height: 350px;
+}
+
+#landfilldata .grid.six {
+width: 272px;
+height: 350px;
+}
+
+#landfilldata .grid.six.b {
+width: 272px;
+height: 350px;
+position: absolute;
+background: url(../images/hydro/6b.png);
+opacity: 0;
+}
+
+
+/*////////////////////////////// TABLE */
+
+
+#table {
+float: left;
+width: 932px;
+margin: 20px 0 ;
+cursor: pointer;
+}	
+
+table {
+width: 100%;
+border-spacing: 0px;
+text-align: center;
+}
+
+th {
+background: #4e5859;
+padding: 10px 0;
+color: #C5DFE2;
+font-weight: 400;
+letter-spacing: 1px;
+}
+
+th.first {
+border-radius: 4px 0 0 4px;
+}
+
+th.last {
+border-radius: 0 4px 4px 0;
+}
+
+td.first {
+border-radius: 4px 0 0 0;
+}
+
+td.last {
+border-radius: 0 4px 0 0;
+}
+
+tr:hover {
+background: #FFFEDA;
+}
+
+.hover {
+background: #FFFEDA;
+}
+
+.focus {
+background: #FFFEDA;
+}
+
+td.none, tr.none {
+background: none;
+border: 0;
+padding: 0;
+line-height: 10px;
+}
+
+td {
+padding: 10px;
+border: 1px solid #B1B1B1;
+font-size: 14px;
+font-weight: 600;
+}
+
+tr {
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 67%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(67%,#efefef), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#efefef 67%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+}
+
+tr td:first-child {
+padding:0 !important;
+min-width: 65px;
+}
+
+tr td:first-child a {
+padding: 10px !important;
+display: block;
+color: #fff;
+}
+
+.on {
+background: #3cb878;
+border: 2px solid #7ae066;
+box-shadow: inset 0 0 3px #7ae066;
+color: #fff;
+}
+
+td.off {
+background: #b83c3c;
+border: 2px solid #EC4F4F;
+box-shadow: inset 0 0 3px #EC4F4F;
+color: #fff;
+}
+
+.off h1{
+color: #b83c3c;
+}
+
+
+/*////////////////////////////// PLANT NUMBER IDS */
+
+
+#numbers {
+width: 700px;
+height: 550px;
+padding-left: 550px;
+padding-right: 30px;
+position: absolute;
+z-index: 1;
+}
+
+.plant-ids {
+width: 120px;
+height: 550px;
+padding-top: 219px;
+}
+
+.plant-ids.plants {
+width: 120px;
+height: 550px;
+padding-top: 219px;
+}
+
+.plant-id {
+width: 100%;
+line-height: 14px;
+font-size: 14px;
+text-align: right;
+height: 48px;
+padding-top: 36px;
+padding-left: 88px;
+cursor: pointer;
+position: relative;
+background: url(../images/plant-on.png) no-repeat;
+background-repeat: no-repeat;
+}
+
+.plant-id:hover {
+background: url(../images/plant-on-hover.png) no-repeat;
+}
+
+.plant-id.off:hover {
+background: url(../images/plant-off-hover.png) no-repeat;
+}
+
+.plant-id.off {
+background: url(../images/plant-off.png) no-repeat;
+}
+
+.plant-id.plant-1 {
+z-index: 20;
+top: 1px;
+}
+
+.plant-id.plant-2 {
+top: -28px;
+z-index: 19;
+}
+
+.plant-id.plant-3 {
+top: -57px;
+z-index: 18;
+}
+
+.plant-id.plant-4 {
+top: -86px;
+z-index: 17;
+}
+
+.plant-id.plant-5 {
+top: -115px;
+z-index: 16;
+}
+
+.plant-id.plant-6 {
+top: -144px;
+z-index: 15;
+}
+
+.plant-id.plant-7 {
+top: -173px;
+z-index: 14;
+}
+
+.plant-id.plant-8 {
+top: -202px;
+z-index: 13;
+}
+
+.plant-id a {
+color: #555;
+display: block;
+background: #dedcdc;
+width: 30px;
+text-align: center;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+}
+
+.plant-id a:hover {
+color: #111;
+background: #E9E9E9;
+}
+
+.noclick {
+width: 68px;
+height: 120px;
+position: absolute;
+z-index: 22;
+}
+
+@-moz-document url-prefix() {
+.plant-id {
+height: 12px;
+}
+.srt-menu li {
+margin: 0 -2px 0 0;
+}
+}
+
+
+/*////////////////////////////// METRICS DROP DOWN */
+
+
+#drop {
+background: transparent !important;
+}
+
+#drop ul {
+text-align: center;
+padding: 2px 0 2px 0;
+list-style: none;
+border: 1px solid #c0c0c0;
+background: #dedcdc url(../images/dropdown.png);
+border-radius: 4px;
+font-weight: 600;
+}
+
+
+#drop ul li {
+display: inline-block;
+position: relative;
+padding: 8px 0;
+cursor: pointer;
+width: 100%;
+text-align: center;
+border-radius: 4px;
+-webkit-transition: all 0.2s;
+-moz-transition: all 0.2s;
+-ms-transition: all 0.2s;
+-o-transition: all 0.2s;
+transition: all 0.2s;
+}
+
+#drop ul li ul {
+padding: 0;
+position: absolute;
+top: 37px;
+left: -1px;
+width: 250px;
+display: none;
+opacity: 0;
+visibility: hidden;
+text-align: center;
+border: 1px solid #c0c0c0;
+border-radius: 4px;
+-webkit-transiton: opacity 0.2s;
+-moz-transition: opacity 0.2s;
+-ms-transition: opacity 0.2s;
+-o-transition: opacity 0.2s;
+-transition: opacity 0.2s;
+}
+#drop ul li ul li { 
+background: #edecec;
+display: block; 
+color: #444;
+border-top: 1px solid #dedcdc;
+font-weight: 400;
+}
+
+ul li ul li:first-child {
+border-radius: 0 0 4px 4px !important;
+}
+#drop ul li ul li:hover {background: #E2E2E2; }
+
+#drop ul li ul.dropdown {
+display: block;
+opacity: 1;
+visibility: visible;
+}
+
+#drop ul.dropdown {
+border: 1px solid #c0c0c0;
+background: #dedcdc url(../images/dropup.png);
+}
+
+
+/*////////////////////////////// BACK BUTTON */
+
+
+#back {
+width: auto;
+height: 35px;
+float: left;
+text-align: center;
+font-weight: 600;
+line-height: 32px;
+margin: 10px 0;
+z-index: 2;
+position: absolute;
+}
+
+#back:hover {
+opacity: 0.85;
+}
+
+#back2:hover {
+color: #111;
+}
+
+.back1 {
+background: url(../images/back1.png) no-repeat;
+height: 35px;
+width: 20px;
+float: left;
+}
+
+.back2 {
+background: url(../images/back2.png) repeat-x;
+height: 35px;
+width: auto;
+float: left;
+color: #999;
+}
+
+.back3 {
+background: url(../images/back3.png) no-repeat;
+height: 35px;
+width: 20px;
+float: left;
+}
+
+
+
+/*////////////////////////////// UPDATE : 3/15/14 */
+
+
+#hydrodata.unit {
+width: 100%;
+margin-left: 0;
+}
+
+#hydro.units {
+background: url(../images/update/unitsbg.png);
+}
+
+#hydrodata.unit .grid.one {
+width: 180px;
+background: url(../images/update/hydro.png);
+}
+
+#hydrodata.unit .grid.two {
+background: url(../images/update/hydro2.png);
+width: 150px;
+margin-left: 15px;
+}
+
+#hydrodata.unit .grid.two.b {
+background: url(../images/hydro/2b.png);
+margin: 63px 0 0 -18px;
+width: 150px;
+}
+
+#hydrodata.unit .grid.two.c {
+background: url(../images/hydro/2c.png);
+margin: 63px 0 0 -18px;
+width: 150px;
+}
+
+#hydrodata.unit .grid.one.b {
+margin: 155px 0 0 15px;
+background: none;
+}
+
+#hydrodata.unit .grid.one.c {
+background: url(../images/hydro/1c.png);
+margin: 44px 0 0 -38px;
+}
+
+#hydrodata.unit .grid.three {
+width: 185px;
+margin-left: -40px;
+margin-right: 20px;
+}
+
+#hydrodata.unit .grid.three.four {
+background: url(../images/update/hydro3.png);
+}
+
+#hydrodata .grid.three.b {
+width: 63px;
+
+margin: 203px 129px 0 80px;
+}
+
+#hydrodata.unit .grid.three.c {
+width: 21px;
+
+margin: 0 128px 0 81px;
+
+}
+
+#hydrodata.unit .grid.three.d {
+width: 20px;
+
+margin: 0 128px 0 102px;
+
+}
+
+#hydrodata.unit .grid.three.e {
+width: 22px;
+
+margin: 0 128px 0 122px;
+
+}
+
+/*//////*/
+
+#landfilldata.unit {
+width: 100%;
+margin-left: 0;
+}
+
+#landfill.units {
+background: url(../images/update/unitsbg.png);
+}
+
+#landfilldata.unit .grid.one {
+width: 180px;
+background: url(../images/update/landfill.png);
+}
+
+#landfilldata.unit .grid.two {
+background: url(../images/update/hydro2.png);
+width: 150px;
+margin-left: 15px;
+}
+
+#landfilldata.unit .grid.two.b {
+background: url(../images/hydro/2b.png);
+margin: 63px 0 0 -18px;
+width: 150px;
+}
+
+#landfilldata.unit .grid.two.c {
+background: url(../images/hydro/2c.png);
+margin: 63px 0 0 -18px;
+width: 150px;
+}
+
+#landfilldata.unit .grid.one.b {
+background: url(../images/landfill/1b.png);
+background-position: -35px 40px;
+}
+
+#landfilldata.unit .grid.one.c {
+background: url(../images/landfill/1c.png);
+background-position: -35px 40px;
+}
+
+#landfilldata.unit .grid.three {
+width: 185px;
+margin-left: -40px;
+margin-right: 20px;
+}
+
+#landfilldata.unit .grid.three.four {
+background: url(../images/update/hydro3.png);
+}
+
+#landfilldata .grid.three.b {
+width: 63px;
+
+margin: 203px 129px 0 80px;
+}
+
+#landfilldata.unit .grid.three.c {
+width: 21px;
+
+margin: 0 128px 0 81px;
+
+}
+
+#landfilldata.unit .grid.three.d {
+width: 20px;
+
+margin: 0 128px 0 102px;
+
+}
+
+#landfilldata.unit .grid.three.e {
+width: 22px;
+
+margin: 0 128px 0 122px;
+
+}
+
+/*//////*/
+
+#solardata.unit {
+width: 100%;
+margin-left: 0;
+}
+
+#solar.units {
+background: url(../images/update/unitsbg2.png);
+}
+
+#solardata.unit .grid.one {
+width: 180px;
+background: url(../images/update/solar.png);
+}
+
+#solardata.unit .grid.two {
+background: url(../images/update/solar2.png);
+width: 150px;
+margin-left: 15px;
+}
+
+#solardata.unit .grid.two.b {
+background: url(../images/solar/2b.png);
+margin: 48px 0 0 -15px;
+width: 150px;
+}
+
+
+#solardata.unit .grid.one.b {
+margin: 108px 0 0 50px;
+background: none;
+}
+
+#solardata.unit .grid.three {
+width: 185px;
+margin-left: -40px;
+margin-right: 20px;
+}
+
+#solardata.unit .grid.three.four {
+background: url(../images/update/hydro3.png);
+
+}
+
+#solardata .grid.three.b {
+width: 63px;
+
+margin: 203px 129px 0 80px;
+}
+
+#solardata.unit .grid.three.c {
+width: 21px;
+
+margin: 0 128px 0 81px;
+
+}
+
+#solardata.unit .grid.three.d {
+width: 20px;
+
+margin: 0 128px 0 102px;
+
+}
+
+#solardata.unit .grid.three.e {
+width: 22px;
+
+margin: 0 128px 0 122px;
+
+}
