@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/branding/rnr') past project
-    router-link(to='/sites/slek' target="_blank") view website
+    router-link(to='/sites/slek' target="_blank" class="link") view website
     router-link(to='/web/inteldashboard') next project
   router-link(to='/sites/slek' target="_blank" class='viewsite')
     .image
@@ -17,7 +17,7 @@
   .image
   span.catnav
     router-link(to='/branding/rnr') past project
-    router-link(to='/sites/slek' target="_blank") view website
+    router-link(to='/sites/slek' target="_blank" class="link") view website
     router-link(to='/web/inteldashboard') next project
 </template>
 

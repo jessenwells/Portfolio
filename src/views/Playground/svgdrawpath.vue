@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/playground/3dparallax') past project
-    a(href='http://codepen.io/jessenwells/live/pJrJjp' target='_blank') view full page
+    a(href='http://codepen.io/jessenwells/live/pJrJjp' target='_blank' class="link") view full page
     router-link(to='/playground/svgmorph') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="pJrJjp" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
@@ -12,7 +12,7 @@
   span(data-height="780" data-theme-id="16808" data-slug-hash="pJrJjp" data-default-tab="html" data-user="jessenwells" class="codepen")
   span.catnav
     router-link(to='/playground/3dparallax') past project
-    a(href='http://codepen.io/jessenwells/live/pJrJjp' target='_blank') view full page
+    a(href='http://codepen.io/jessenwells/live/pJrJjp' target='_blank' class="link") view full page
     router-link(to='/playground/svgmorph') next project
 </template>
 

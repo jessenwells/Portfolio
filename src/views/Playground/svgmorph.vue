@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/playground/svgdrawpath') past project
-    a(href='http://codepen.io/jessenwells/live/WvORge' target='_blank') view full page
+    a(href='http://codepen.io/jessenwells/live/WvORge' target='_blank' class="link") view full page
     router-link(to='/playground/cssdrawpath') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="WvORge" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
@@ -12,7 +12,7 @@
   span(data-height="780" data-theme-id="16808" data-slug-hash="WvORge" data-default-tab="html" data-user="jessenwells" class="codepen")
   span.catnav
     router-link(to='/playground/svgdrawpath') past project
-    a(href='http://codepen.io/jessenwells/live/WvORge' target='_blank') view full page
+    a(href='http://codepen.io/jessenwells/live/WvORge' target='_blank' class="link") view full page
     router-link(to='/playground/cssdrawpath') next project
 </template>
 
