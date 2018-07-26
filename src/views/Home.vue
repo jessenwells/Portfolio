@@ -6,6 +6,9 @@
 <script>
 import tile from '../components/Tile';
 export default {
+  components: {
+    tile
+  },
   data() {
     return {
       info: [
@@ -17,13 +20,10 @@ export default {
         {project: 'apparel graphic', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown'}
     ]
     };
-  },
-  components: {
-    tile
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../style/mq.styl'
+
 </style>

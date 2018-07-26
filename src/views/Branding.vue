@@ -1,12 +1,14 @@
 <template lang="pug">
 #tile-grid
-  router-view
   tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index")
 </template>
 
 <script>
 import tile from '../components/Tile';
 export default {
+  components: {
+    tile
+  },
   data() {
     return {
       info: [
@@ -18,13 +20,10 @@ export default {
         {project: 'r n r', thumb: '/thumbs/sprite-06.jpg', frames: 4, link: '/branding/rnr'}
     ]
     };
-  },
-  components: {
-    tile
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../style/mq.styl'
+
 </style>

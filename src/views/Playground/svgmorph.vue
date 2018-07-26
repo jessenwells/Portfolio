@@ -24,20 +24,10 @@ export default {
     type: 'Web Animation.',
     synopsis: 'SVG Morphing animation of a transforming star. The points on the path are individually animated with elastic easing functions using Gsap and Snap.svg'
   }
-  },
-  
-  created() {
-    let codepenScript = document.createElement('script')
-    codepenScript.setAttribute('src', '//assets.codepen.io/assets/embed/ei.js')
-    document.head.appendChild(codepenScript)
-    codepenScript.async = true
   }
 }
 </script>
 
 <style lang='stylus' scoped>
-#single-page
-  position relative
-  width 100%
-  max-width 780px
+
 </style>

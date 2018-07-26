@@ -4,7 +4,7 @@ header
     #badge view site code<br> on github
   nav
     template(v-for="view in views")
-        router-link(:to="view.link" class='link') {{ view.title }}
+        router-link(:to="view.link" class='link' :class='view.title') {{ view.title }}
           .navselect
             svg#select(:class='view.title' viewBox='0 0 225 25')
               path.dot(:class='view.title' d='M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z')
@@ -24,28 +24,60 @@ import Snap from 'snapsvg'
         ]
       }
     },
-    created() {
-
-    },
     methods: {
       active: function() {
-        var navSvg = document.getElementById('select')
-        var svg = Snap(navSvg)
-        var dot = svg.select('.dot')
-        if ($('a').hasClass('router-link-active')) {
-          dot.animate({ d: "M224,12.5c0,6.9-4.6,12.5-11.4,12.5c0,0-130,0-130.1,0c0,0-70,0-70,0C5.6,25,1,19.4,1,12.5S5.6,0,12.5,0c0,0,70,0,70,0 c0,0,130,0,130.1,0C219.4,0,224,5.6,224,12.5z"}, 800, mina.bounce);
+        var svg1 = Snap('#select.branding')
+        var svg2 = Snap('#select.web')
+        var svg3 = Snap('#select.apparel')
+        var svg4 = Snap('#select.playground')
+        var link1 = document.querySelector('.link.branding')
+        var link2 = document.querySelector('.link.web')
+        var link3 = document.querySelector('.link.apparel')
+        var link4 = document.querySelector('.link.playground')
+        var dot1 = svg1.select('.dot.branding')
+        var dot2 = svg2.select('.dot.web')
+        var dot3 = svg3.select('.dot.apparel')
+        var dot4 = svg4.select('.dot.playground')
+
+        if ($(link1).hasClass('active')) {
+          dot1.animate({ d: "M224,12.5c0,6.9-4.6,12.5-11.4,12.5c0,0-130,0-130.1,0c0,0-70,0-70,0C5.6,25,1,19.4,1,12.5S5.6,0,12.5,0c0,0,70,0,70,0 c0,0,130,0,130.1,0C219.4,0,224,5.6,224,12.5z"}, 800, mina.bounce);
+          $('.link .dot.branding').css('opacity','1');
         }
         else {
-          dot.animate({ d: "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"}, 800, mina.ease);
+          dot1.animate({ d: "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"}, 400, mina.ease);
+          $('.link .dot.branding').css('opacity','0');
         }
+        if ($(link2).hasClass('active')) {
+          dot2.animate({ d: "M224,12.5c0,6.9-4.6,12.5-11.4,12.5c0,0-130,0-130.1,0c0,0-70,0-70,0C5.6,25,1,19.4,1,12.5S5.6,0,12.5,0c0,0,70,0,70,0 c0,0,130,0,130.1,0C219.4,0,224,5.6,224,12.5z"}, 800, mina.bounce);
+          $('.link .dot.web').css('opacity','1');
+        }
+        else {
+          dot2.animate({ d: "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"}, 400, mina.ease);
+          $('.link .dot.web').css('opacity','0');
+        }
+         if ($(link3).hasClass('active')) {
+          dot3.animate({ d: "M224,12.5c0,6.9-4.6,12.5-11.4,12.5c0,0-130,0-130.1,0c0,0-70,0-70,0C5.6,25,1,19.4,1,12.5S5.6,0,12.5,0c0,0,70,0,70,0 c0,0,130,0,130.1,0C219.4,0,224,5.6,224,12.5z"}, 800, mina.bounce);
+          $('.link .dot.apparel').css('opacity','1');
+        }
+        else {
+          dot3.animate({ d: "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"}, 400, mina.ease);
+          $('.link .dot.apparel').css('opacity','0');
+        } 
+        if ($(link4).hasClass('active')) {
+          dot4.animate({ d: "M224,12.5c0,6.9-4.6,12.5-11.4,12.5c0,0-130,0-130.1,0c0,0-70,0-70,0C5.6,25,1,19.4,1,12.5S5.6,0,12.5,0c0,0,70,0,70,0 c0,0,130,0,130.1,0C219.4,0,224,5.6,224,12.5z"}, 800, mina.bounce);
+          $('.link .dot.playground').css('opacity','1');
+        }
+        else {
+          dot4.animate({ d: "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"}, 400, mina.ease);
+          $('.link .dot.playground').css('opacity','0');
+        } 
       }
     },
-    mounted() {
-
-    },
-    watch: {
-      '$route':'active'
+    watch:{
+    $route (to, from){
+        setTimeout(this.active, 50);
     }
+} 
   }
 </script>
 
@@ -72,8 +104,6 @@ header
       font-weight 600
       letter-spacing 0.05em
       transition color 0.35s ease
-    &:hover .navselect
-      opacity 1
     .navselect
       height 0
       width 60px
@@ -86,6 +116,7 @@ header
       overflow visible
       path
         fill #b6c8ce
+
   #badge
     width 300px
     height 40px
@@ -106,4 +137,11 @@ header
     padding-top 4px
     border-bottom 1px solid darken(#9aadb5,10%)
     box-shadow 2px 2px 3px rgba(31,43,48,0.35)
+.dot
+  &.branding, &.web, &.apparel, &.playground
+    transition opacity 0.5s ease
+    opacity 0
+.link:hover .dot
+  opacity 1 !important
+
 </style>

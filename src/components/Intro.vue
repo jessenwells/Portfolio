@@ -20,6 +20,7 @@
 
 -dot = "M125,12.5c0,6.9-5.6,12.5-12.4,12.5c0,0-30,0-30.1,0c0,0,30,0,30,0c-6.9,0-12.5-5.6-12.5-12.5S105.6,0,112.5,0 c0,0-30,0-30,0c0,0,30,0,30.1,0C119.4,0,125,5.6,125,12.5z"
 #wrap
+  router-link.home(to='/')
   #crop
     #name
       svg(viewBox="0 0 500 100")
@@ -46,23 +47,22 @@
           path.l2(d=l2)  
           path.s3(d=s3)
       span.subhead designer + developer
-  router-link(to='/')
-    #logo
-      svg(viewBox="0 0 500 500")
-        g.logo0
-          line.ln1(x1="91" y1="298.5" x2="91" y2="-100")
-          line.ln2(x1="251" y1="202.5" x2="251" y2="-100")
-          line.ln3(x1="411" y1="202.5" x2="411" y2="-100")
-        g.logo1
-          path.p0(d=p0)
-          path.p1(d=p1)
-          path.p2(d=p2)
-          path.p3(d=p3)
-        g.logo2
-          path.p0(d=p0)
-          path.p1(d=p1)
-          path.p2(d=p2)
-          path.p3(d=p3)
+  #logo
+    svg(viewBox="0 0 500 500")
+      g.logo0
+        line.ln1(x1="91" y1="298.5" x2="91" y2="-100")
+        line.ln2(x1="251" y1="202.5" x2="251" y2="-100")
+        line.ln3(x1="411" y1="202.5" x2="411" y2="-100")
+      g.logo1
+        path.p0(d=p0)
+        path.p1(d=p1)
+        path.p2(d=p2)
+        path.p3(d=p3)
+      g.logo2
+        path.p0(d=p0)
+        path.p1(d=p1)
+        path.p2(d=p2)
+        path.p3(d=p3)
 
 </template>
 
@@ -74,11 +74,7 @@ data() {
 
   }
 },
-  beforeCreate () {
-    this.id = this._uid;
-  },
   mounted () {
-
 var p0 = $('.p0');
 var p1 = $('.p1');
 var p2 = $('.p2');
@@ -144,13 +140,7 @@ tl.set(head, {opacity:1});
 tl.set(git, {right:'-90px',opacity:1});
 }
 
-},
-  created() {
-    let jq = document.createElement('script')
-    jq.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    document.head.appendChild(jq)
-    jq.async = true
-  }
+}
 }
 </script>
 
@@ -190,6 +180,14 @@ Lclr4 = #1f2b30
     margin-top -22px
     text-align right
     padding-right 2px
+a.home
+  position absolute
+  display block
+  width 200px
+  height 125px
+  top 0
+  left 40px
+  z-index 11
 
 #crop
   position absolute
@@ -199,7 +197,8 @@ Lclr4 = #1f2b30
   top 80px
   overflow hidden
   padding 5px 0 0 5px
-  z-index 9999
+  z-index 10
+  pointer-events none
 
 .logo1 path
   fill none

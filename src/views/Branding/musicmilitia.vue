@@ -2,7 +2,7 @@
 #single-page
   span.catnav
     router-link(to='/playground/sasscolor') past project
-    router-link(to='/branding') branding
+    router-link(to='/branding') view branding
     router-link(to='/branding/kigilove') next project
   .image
   span.details
@@ -15,7 +15,7 @@
   .image
   span.catnav
     router-link(to='/playground/sasscolor') past project
-    router-link(to='/branding') branding
+    router-link(to='/branding') view branding
     router-link(to='/branding/kigilove') next project
 </template>
 
@@ -45,4 +45,10 @@ data() {
     background-image url("/branding/musicmilitia/05.jpg");
   &:nth-of-type(6)
     background-image url("/branding/musicmilitia/06.jpg");
+@media (max-width: 900px)
+  .image
+    width 100%
+    background-size cover
+    max-height 380px
+    background-position 50%
 </style>

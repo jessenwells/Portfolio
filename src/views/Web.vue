@@ -6,6 +6,9 @@
 <script>
 import tile from '../components/Tile';
 export default {
+  components: {
+    tile
+  },
   data() {
     return {
       info: [
@@ -22,13 +25,9 @@ export default {
         {project: 'empty', link: ''}
     ]
     };
-  },
-  components: {
-    tile
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../style/mq.styl'
 </style>

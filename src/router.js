@@ -166,5 +166,7 @@ export default new Router({
       component: Playground06
     }
   ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact",
   mode: 'history'
 })

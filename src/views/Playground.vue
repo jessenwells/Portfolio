@@ -6,6 +6,9 @@
 <script>
 import tile from '../components/Tile';
 export default {
+  components: {
+    tile
+  },
   data() {
     return {
       info: [
@@ -17,13 +20,9 @@ export default {
         {project: 'sass color mixin', thumb: '/thumbs/sprite-26.jpg', frames: 6, link: '/playground/sasscolor'}
     ]
     };
-  },
-  components: {
-    tile
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../style/mq.styl'
 </style>

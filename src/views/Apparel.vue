@@ -25,5 +25,5 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../style/mq.styl'
+
 </style>
