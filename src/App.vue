@@ -72,9 +72,28 @@ content
     font-size 1.2em
     color #1f2b30
     line-height 1.5
+    +below(900px)
+        width 580px
+        font-size 1em
+    +below(780px)
+        width 450px
+    +below(650px)
+        width 480px
     .image
       width 100%
       background-repeat no-repeat
+      +below(900px)
+        width 580px
+        height 580px
+        background-size 580px
+      +below(780px)
+        width 450px
+        height 450px
+        background-size 450px
+      +below(650px)
+        width 480px
+        height 480px
+        background-size 480px
     .details
         margin-bottom 5px
         h3
@@ -85,6 +104,13 @@ content
             color #52717f
             font-style italic
             margin-bottom 40px
+        +below(900px)
+            width 580px
+            font-size 1em
+        +below(780px)
+            width 450px
+        +below(650px)
+            width 480px
     .catnav
         position relative
         width 100%
@@ -95,6 +121,8 @@ content
         padding 0 0.5em
         border-radius 8px
         margin-bottom 2em
+        +below(900px)
+            margin-bottom 20px
         &:last-child
             margin-top 1em
         &:before
@@ -165,13 +193,18 @@ content
 @keyframes sprite3
   100%
     background-position 0 -1050px
+    +below(927px)
+        background-position 0 -1350px
 @keyframes sprite4
   100%
     background-position 0 -1400px
+    +below(927px)
+        background-position 0 -1800px
 @keyframes sprite6
   100%
     background-position 0 -2100px
-
+    +below(927px)
+        background-position 0 -2700px
 .cp_embed_wrapper
   width 100%
 </style>

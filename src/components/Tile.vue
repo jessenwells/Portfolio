@@ -96,78 +96,63 @@ export default {
 <style lang="stylus">
 @import '../assets/mq';
 
-.tile {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-size: 350px;
-  background-position: 0 0;
-  animation-play-state: paused;
+.tile 
+  width 350px
+  height 350px
+  display flex
+  align-items center
+  justify-content center
+  position relative
+  background-size 350px
+  background-position 0 0
+  animation-play-state paused
+  +below(927px)
+    width 450px
+    height 450px
+    background-size 450px
+  &.play.play 
+    animation-play-state running
+  &.play3 
+    animation sprite3 2s -0.3s steps(3) infinite
+    animation-play-state paused
+  &.play4 
+    animation sprite4 3s -0.5s steps(4) infinite
+    animation-play-state paused
+  &.play5 
+    animation sprite6 4s -0.4s steps(6) infinite
+    animation-play-state paused
+  &.play6 
+    animation sprite6 1.5s -0.2s steps(6) infinite
+    animation-play-state paused
+  text 
+    font-family 'Quicksand', sans-serif
+    font-size 0.86em
+    text-transform uppercase
+    letter-spacing 0.05em
+    font-weight 400
+    fill #FFF
+  [id^=svg] 
+    position absolute
+    margin -1px
+    width 352px
+    height 352px
+    +below(927px)
+      width 454px
+      height 454px
+  [id^=frame] 
+    fill #f3f3f3
+  [id^=arch] 
+    fill transparent
+.empty 
+  pointer-events none
+  .tile 
+    height 0
+    font-size 0
+    margin-top 0
+    margin-bottom 0
+    svg 
+      display none
+    
+  
 
-  &.play.play {
-    animation-play-state: running;
-  }
-
-  &.play3 {
-    animation: sprite3 2s -0.3s steps(3) infinite;
-    animation-play-state: paused;
-  }
-
-  &.play4 {
-    animation: sprite4 3s -0.5s steps(4) infinite;
-    animation-play-state: paused;
-  }
-
-  &.play5 {
-    animation: sprite6 4s -0.4s steps(6) infinite;
-    animation-play-state: paused;
-  }
-
-  &.play6 {
-    animation: sprite6 1.5s -0.2s steps(6) infinite;
-    animation-play-state: paused;
-  }
-
-  text {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.86em;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 400;
-    fill: #FFF;
-  }
-
-  [id^=svg] {
-    position: absolute;
-    margin: -1px;
-    width: 352px;
-    height: 352px;
-  }
-
-  [id^=frame] {
-    fill: #f3f3f3;
-  }
-
-  [id^=arch] {
-    fill: transparent;
-  }
-}
-
-.empty {
-  pointer-events: none;
-
-  .tile {
-    height: 0;
-    font-size: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    svg {
-      display: none;
-    }
-  }
-}
 </style>

@@ -82,14 +82,20 @@ import Snap from 'snapsvg'
 </script>
 
 <style lang="stylus">
+@import "../assets/mq"
 header
   margin 1em 6em 7em 6em 
   min-width 500px
   opacity 0
+  +below(900px)
+    margin 10.5em 0 1em 0
   nav
     display flex
     justify-content flex-end
     margin-right 8em
+    +below(900px)
+      margin-right 0
+      justify-content center
     a.link
       display block
       color #1f2b30
@@ -116,7 +122,6 @@ header
       overflow visible
       path
         fill #b6c8ce
-
   #badge
     width 300px
     height 40px
@@ -137,6 +142,8 @@ header
     padding-top 4px
     border-bottom 1px solid darken(#9aadb5,10%)
     box-shadow 2px 2px 3px rgba(31,43,48,0.35)
+    +below(650px)
+      display none
 .dot
   &.branding, &.web, &.apparel, &.playground
     transition opacity 0.5s ease
