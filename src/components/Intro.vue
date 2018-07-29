@@ -100,7 +100,7 @@ tl.timeScale(1.3);
 
 if(this.$route.path==='/') {
 TweenMax.delayedCall(1, myFunction);
-TweenMax.set(page, {scale: 0.5,opacity:0})
+TweenMax.set(page, {scale: 0.98,opacity:0})
 function myFunction() {
 tl.to(logo2, 0, {stroke:'#dce4e5', strokeWidth:"38px"});
 tl.to(logo, 0, {opacity:1});
@@ -118,11 +118,11 @@ tl2.to(logo, 0.5, {ease: Power1.easeInOut, top:'-100px',left:'-25px',marginLeft:
 tl2.to(logo2, 0.5, {stroke:'#fff', strokeWidth:"34px"},"-=0.5");
 tl2.staggerFrom(ll, 0.55, {opacity:0},0.06);
 tl2.to(jw, 0.65, {ease: Power3.easeOut, x:'-110%'},2.75);
-tl2.to(ee, 0.5, {ease: Back.easeInOut.config(3),rotation:-12,x:-5,y:6},4);
+tl2.to(ee, 0.25, {ease: Back.easeInOut.config(3),rotation:-12,x:-5,y:6},4.25);
 tl2.to(page, 0.25, {opacity:1},'-=0.75');
 tl2.to(page, 0.75, {zIndex:1,scale: 1},'-=0.75');
 tl2.to(head, 0.5, {opacity:1});
-tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},4.75);
+tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},'-=1');
 }
 }
 else {
@@ -145,11 +145,11 @@ tl.set(git, {right:'-90px',opacity:1});
 </script>
 
 <style lang='stylus'>
-bg0 = #f3f3f3
+bg0 = #f7f7f7
 Lclr = #eceff1
-Lclr1 = #ced9dd
-Lclr2 = #b6c8ce
-Lclr3 = #9aadb5
+Lclr1 = #eceff1
+Lclr2 = #f4f6f7
+Lclr3 = #fafafb
 Lclr4 = #1f2b30
 
 #logo
@@ -161,6 +161,7 @@ Lclr4 = #1f2b30
   top 50%
   margin-left -(@width / 2)
   margin-top -(@height / 2)
+  pointer-events none
   svg
     overflow visible
 
@@ -202,7 +203,7 @@ a.home
 
 .logo1 path
   fill none
-  stroke lighten(Lclr,40%)
+  stroke Lclr
   stroke-width 34
   stroke-linecap round
   stroke-linejoin round
@@ -223,15 +224,15 @@ a.home
   stroke-linejoin round
   stroke-miterlimit 10
   &.ln1
-    stroke lighten(Lclr1,40%)
+    stroke Lclr1
   &.ln2
-    stroke lighten(Lclr2,70%)
+    stroke Lclr2
   &.ln3
-    stroke lighten(Lclr3,90%)
+    stroke Lclr3
 
 .name1 path
-  fill lighten(Lclr,28%)
-  stroke lighten(Lclr,28%)
+  fill #f3f3f3
+  stroke #f3f3f3
   stroke-width 12
 
 .name2 path

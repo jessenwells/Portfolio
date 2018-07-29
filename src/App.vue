@@ -10,21 +10,12 @@
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
+import DrawSvg from './assets/drawSvg.js'
+import CodePen from './assets/codepen.js'
 export default {
   components: {
     Header,
     Intro
-  },
-  created() {
-    let codepenScript = document.createElement('script')
-    codepenScript.setAttribute('src', 'http://assets.codepen.io/assets/embed/ei.js')
-    document.head.appendChild(codepenScript)
-    codepenScript.async = true
-    //
-    let drawsvgScript = document.createElement('script')
-    drawsvgScript.setAttribute('src', 'http://jessewells.com/vendor/drawSvg.js')
-    document.body.appendChild(drawsvgScript)
-    drawsvgScript.async = true
   }
 }
 </script>
@@ -34,7 +25,7 @@ export default {
 @import "assets/mq"
 body
   margin 0
-  background #f3f3f3
+  background #f7f7f7
 a
   text-decoration none
 #app
@@ -50,15 +41,17 @@ content
     width 100%
     min-width 500px
 #tile-grid
-  width 80%
+  width 98%
   max-width 1200px
-  min-width 550px
+  min-width 350px
   margin 0 auto
   padding 2% 0
   font-size 2em
   display flex
   justify-content center
   flex-flow row wrap
+  +below(500px)
+    margin 0 5%
 #single-page
     margin 0 auto
     padding 2% 0
@@ -75,9 +68,7 @@ content
     +below(900px)
         width 580px
         font-size 1em
-    +below(780px)
-        width 450px
-    +below(650px)
+    +below(750px)
         width 480px
     .image
       width 100%
@@ -86,11 +77,7 @@ content
         width 580px
         height 580px
         background-size 580px
-      +below(780px)
-        width 450px
-        height 450px
-        background-size 450px
-      +below(650px)
+      +below(750px)
         width 480px
         height 480px
         background-size 480px
@@ -107,9 +94,7 @@ content
         +below(900px)
             width 580px
             font-size 1em
-        +below(780px)
-            width 450px
-        +below(650px)
+        +below(750px)
             width 480px
     .catnav
         position relative
@@ -123,6 +108,8 @@ content
         margin-bottom 2em
         +below(900px)
             margin-bottom 20px
+        +below(750px)
+            height 3.5em
         &:last-child
             margin-top 1em
         &:before
@@ -133,6 +120,7 @@ content
             background-repeat no-repeat
             width 22px
             height 16px
+            margin-top -1px
             opacity 0.5
         &:after
             content ''
@@ -143,6 +131,7 @@ content
             width 22px
             height 16px
             margin-right -6px
+            margin-top -1px
             margin-left 5px
             opacity 0.5
         a
@@ -165,6 +154,8 @@ content
                 background rgba(255, 255, 255,0.3)
                 &:hover
                     color #52717f
+                +below(750px)
+                    line-height 2.75em
             &:nth-child(3)
                 flex 2.5
                 text-align right
@@ -191,20 +182,15 @@ content
 
 //frame animation
 @keyframes sprite3
-  100%
-    background-position 0 -1050px
-    +below(927px)
-        background-position 0 -1350px
+    100%
+        background-position 0 -1050px
 @keyframes sprite4
-  100%
-    background-position 0 -1400px
-    +below(927px)
-        background-position 0 -1800px
+    100%
+        background-position 0 -1400px
 @keyframes sprite6
-  100%
-    background-position 0 -2100px
-    +below(927px)
-        background-position 0 -2700px
+    100%
+        background-position 0 -2100px
 .cp_embed_wrapper
   width 100%
+  height 730px
 </style>

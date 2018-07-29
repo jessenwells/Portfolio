@@ -84,44 +84,11 @@ import Snap from 'snapsvg'
 <style lang="stylus">
 @import "../assets/mq"
 header
-  margin 1em 6em 7em 6em 
-  min-width 500px
+  margin 1em 6em 5em 6em 
+  min-width 320px
   opacity 0
   +below(900px)
-    margin 10.5em 0 1em 0
-  nav
-    display flex
-    justify-content flex-end
-    margin-right 8em
-    +below(900px)
-      margin-right 0
-      justify-content center
-    a.link
-      display block
-      color #1f2b30
-      margin 0
-      font-family 'Varela Round', sans-serif
-      font-size 15px
-      text-transform uppercase
-      text-align center
-      color lighten(#1f2b30,12%)
-      padding 0px 8px 4px 8px
-      line-height 32px
-      font-weight 600
-      letter-spacing 0.05em
-      transition color 0.35s ease
-    .navselect
-      height 0
-      width 60px
-      margin -18px auto 0 auto
-      text-align center
-      transition opacity 0.5s ease
-    svg#select
-      height 5px
-      position relative
-      overflow visible
-      path
-        fill #b6c8ce
+    margin 11.5em 0 0 0
   #badge
     width 300px
     height 40px
@@ -142,13 +109,53 @@ header
     padding-top 4px
     border-bottom 1px solid darken(#9aadb5,10%)
     box-shadow 2px 2px 3px rgba(31,43,48,0.35)
-    +below(650px)
+    +below(750px)
       display none
-.dot
-  &.branding, &.web, &.apparel, &.playground
-    transition opacity 0.5s ease
-    opacity 0
-.link:hover .dot
-  opacity 1 !important
-
+  nav
+    display flex
+    justify-content flex-end
+    margin-right 8em
+    +below(900px)
+      margin-right 0
+      justify-content center
+      margin-bottom -1.25em
+    .link
+      display block
+      color #1f2b30
+      margin 0
+      font-family 'Varela Round', sans-serif
+      font-size 15px
+      text-transform uppercase
+      text-align center
+      padding 0px 8px 4px 8px
+      height 60px
+      line-height 35px
+      font-weight 600
+      letter-spacing 0.05em
+      transition color 0.35s ease
+      &:hover .dot
+        opacity 1 !important
+      +below(750px)
+        font-size 19px
+        padding 0px 4px 4px 4px
+      +below(350px)
+        padding 0px 2px 4px 2px
+      .navselect
+        height 0
+        width 60px
+        margin -18px auto 0 auto
+        text-align center
+        transition opacity 0.5s ease
+        +below(650px)
+          width 35px
+      svg#select
+        height 5px
+        position relative
+        overflow visible
+        path
+          fill #b6c8ce
+      .dot
+        &.branding, &.web, &.apparel, &.playground
+          transition opacity 0.5s ease
+          opacity 0
 </style>

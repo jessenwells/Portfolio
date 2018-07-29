@@ -2309,7 +2309,7 @@ input#cat-24:checked ~ .col-md-12 .col-sm-4:nth-child(3) label:nth-child(4):afte
   .graphic {
     background: -webkit-linear-gradient(bottom, #cee4eb, #d9eef1);
     background: linear-gradient(bottom, #cee4eb, #d9eef1);
-    max-height: 349px;
+    max-height: 375px;
   }
   .graphic > div {
     width: 100%;

@@ -1,0 +1,89 @@
+@media (max-width: 927px) {
+  .tile {
+    width: 450px;
+    height: 450px;
+    background-size: 450px;
+  }
+  .tile [id^=svg]{
+    width: 454px;
+    height: 454px;
+  }
+@-webkit-keyframes sprite3 {
+    100% {
+      background-position: 0 -1350px;
+    }
+}
+@keyframes sprite3 {
+    100% {
+      background-position: 0 -1350px;
+    }
+}
+@-webkit-keyframes sprite4 {
+    100% {
+      background-position: 0 -1800px;
+    }
+}
+@keyframes sprite4 {
+    100% {
+      background-position: 0 -1800px;
+    }
+}
+@-webkit-keyframes sprite6 {
+    100% {
+      background-position: 0 -2700px;
+    }
+}
+@keyframes sprite6 {
+    100% {
+      background-position: 0 -2700px;
+    }
+}
+}
+
+@media (max-width: 900px) {
+  #single-page, #single-page .details {
+    width: 580px;
+    font-size: 1em;
+  }
+  #single-page .catnav {
+    margin-bottom: 20px;
+  }
+  header {
+    margin: 10.5em 0 1em 0;
+  }
+  header nav {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .image {
+    width: 580px !important;
+    height: 580px !important;
+    background-size: 580px;
+  }
+
+}
+@media (max-width: 780px) {
+  #single-page, #single-page .details {
+    width: 450px;
+  }
+  .image {
+    width: 450px !important;
+    height: 450px !important;
+    background-size: 450px;
+  }
+
+}
+@media (max-width: 650px) {
+  #single-page, #single-page .details {
+    width: 480px;
+  }
+  .image {
+    width: 480px !important;
+    height: 480px !important;
+    background-size: 480px;
+  }
+  #badge {
+    display:none;
+  }
+
+}
