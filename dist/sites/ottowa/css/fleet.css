@@ -1,0 +1,383 @@
+
+
+/*////////////////////////////// FLEET PAGE */
+
+
+body {
+min-width: 1050px;
+}
+
+a {
+text-decoration: none;
+}
+
+.mainbox, .topbox {
+min-width: 953px;
+}
+
+.legend {
+width: 300px;
+float: right;
+margin-right: 5%;
+}
+
+.legend .title {
+text-align: center;
+padding-top: 18px;
+font-size: 18px;
+}
+
+.legend .hydro, .legend .landfill, .legend .solar {
+width: 33%;
+height: 80px;
+float: left;
+text-align: center;
+font-size: 14px;
+margin-top: 15px;
+cursor: pointer;
+}
+
+.legend .hydro {
+background: url(../images/legend.hydro.png) no-repeat center;
+}
+
+.legend .landfill {
+background: url(../images/legend.landfill.png) no-repeat center;
+}
+
+.legend .solar {
+background: url(../images/legend.solar.png) no-repeat center;
+}
+
+#fleet {
+width: 932px;
+margin: 20px auto 10px auto;
+opacity: 0;
+}
+
+#fleetmap {
+width: 932px;
+height: 535px;
+background: url(../images/map.png);
+position: absolute;
+}
+
+#fleetdata {
+width: 932px;
+height: 535px;
+position: absolute;
+}
+
+
+/*////////////////////////////// TABLE */
+
+
+#table {
+margin: 545px 0 20px 0;
+float: left;
+width: 932px;
+cursor: pointer;
+}
+
+table {
+width: 100%;
+border-spacing: 0px;
+text-align: center;
+}
+
+th {
+background: #4e5859;
+padding: 10px 0;
+color: #C5DFE2;
+font-weight: 400;
+letter-spacing: 1px;
+}
+
+th.first {
+border-radius: 4px 0 0 4px;
+}
+
+th.last {
+border-radius: 0 4px 4px 0;
+}
+
+td.first {
+border-radius: 4px 0 0 0;
+}
+
+td.last {
+border-radius: 0 4px 0 0;
+}
+
+tr:hover {
+background: #FFFEDA;
+}
+
+td.none, tr.none {
+background: none;
+border: 0;
+padding: 0;
+line-height: 10px;
+}
+
+td {
+padding: 10px;
+border: 1px solid #B1B1B1;
+font-size: 14px;
+font-weight: 600;
+}
+
+tr {
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 67%, #efefef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(67%,#efefef), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 67%,#efefef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#efefef 67%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+}
+
+tr td:first-child {
+cursor:pointer;
+}
+
+#showhide {
+margin: 0 auto;
+width: 100%;
+float: left;
+height: 50px;
+}
+
+.showall {
+width: 120px;
+height: 50px;
+clear: both;
+line-height: 42px;
+padding-left: 40px;
+background: #fff url(../images/showall.png) no-repeat;
+cursor: pointer;
+color: #666;
+font-weight: 600;
+letter-spacing: 1px;
+position: absolute;
+left: 46%;
+}
+
+.hideall {
+width: 120px;
+height: 50px;
+clear: both;
+line-height: 42px;
+padding-left: 40px;
+background: #fff url(../images/hideall.png) no-repeat;
+cursor: pointer;
+color: #666;
+font-weight: 600;
+letter-spacing: 1px;
+position: absolute;
+left: 46%;
+}
+
+.showall img, .showall a {
+float: left;
+}
+
+.on {
+background: #3cb878;
+border: 2px solid #7ae066;
+box-shadow: inset 0 0 3px #7ae066;
+color: #fff;
+}
+
+td.off {
+background: #b83c3c;
+border: 2px solid #EC4F4F;
+box-shadow: inset 0 0 3px #EC4F4F;
+color: #fff;
+}
+
+.off h1{
+color: #b83c3c;
+}
+
+
+/*////////////////////////////// TOOL TIP */
+
+
+.qtip {
+margin-top: -50px;
+margin-left: -25px;
+}
+
+#qtip-0.qtip, #qtip-1.qtip, #qtip-2.qtip, #qtip-3.qtip, #qtip-4.qtip {
+margin-left: -15px;
+}
+
+.qtip-content {
+padding: 0;
+}
+
+.pop {
+display: none;
+width: 140px;
+}
+
+.poplink h1 {
+color: #83CE98;
+font-size: 16px;
+margin: 10px 0 0 0;
+text-align: center;
+}
+
+
+.pop p {
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+margin: 10px 0 5px 0;
+line-height: 16px;
+}
+
+.popcontent {
+padding: 5px 15px;
+background: #4e5859;
+}
+
+.poplink {
+padding: 0 10px 10px;
+}
+
+/*! Dark tooltip style */
+.qtip-dark{
+background-color: #2e3435;
+border-color: #303030;
+color: #f3f3f3;
+position: fixed;
+}
+
+.qtip-dark .qtip-titlebar{
+background-color: #404040;
+}
+
+.qtip-dark .qtip-icon{
+border-color: #444;
+}
+
+.qtip-dark .qtip-titlebar .ui-state-hover{
+border-color: #303030;
+}
+
+
+/*////////////////////////////// MAP MARKERS */
+
+
+.marker {
+width: 50px;
+height: 50px;
+position: absolute;
+text-align: center;
+line-height: 49px;
+color: #fff;
+font-weight: 600;
+cursor: pointer;
+}
+
+.marker.hydro {
+background: url(../images/marker.hydro.png);
+text-shadow: 0 0 2px #3598C0;
+width: 30px;
+}
+
+.marker.solar {
+background: url(../images/marker.solar.png);
+text-shadow: 0 0 2px #EB9312;
+}
+
+.marker.landfill {
+background: url(../images/marker.landfill.png);
+text-shadow: 0 0 2px #966D26;
+}
+
+/*////////////////////////////// MAP MARKER PLOT POSITIONS */
+
+
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, .p11, .p12, .p13, .p14, .p15 {
+opacity: 0;
+margin-top: -6px;
+}
+
+.p1 {
+left: 650px;
+top: 100px;
+}
+
+.p2 {
+left: 615px;
+top: 120px;
+}
+
+.p3 {
+left: 580px;
+top: 140px;
+}
+
+.p4 {
+left: 625px;
+top: 55px;
+}
+
+.p5 {
+left: 590px;
+top: 75px;
+}
+
+.p6 {
+left: 395px;
+top: 480px;
+}
+
+.p7 {
+left: 50px;
+top: 470px;
+}
+
+.p8 {
+left: 625px;
+top: 235px;
+}
+
+.p9 {
+left: 540px;
+top: 200px;
+}
+
+.p10 {
+left: 710px;
+top: 220px;
+}
+
+.p11  {
+left: 475px;
+top: 450px;
+}
+
+.p12  {
+left: 240px;
+top: 425px;
+}
+
+.p13  {
+left: 775px;
+top: 370px;
+}
+
+.p14  {
+left: 585px;
+top: 370px;
+}
+
+.p15  {
+left: 625px;
+top: 320px;
+}
