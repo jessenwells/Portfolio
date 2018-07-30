@@ -26,7 +26,12 @@ data() {
     type: 'Apparel Graphic.',
     synopsis: 'T-shirt Graphic designed for silkscreen printing created for Fashion Planet. Showing Manhattan neighborhoods in a hand drawn typographical layout.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

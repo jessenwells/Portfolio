@@ -23,12 +23,18 @@ data() {
     project: 'Learn & Explore Logo',
     synopsis: 'Logotype created for Learn & Explore, an early childhood daycare center of excellence.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
 .image
+  height 780px
   &:nth-of-type(1)
     background-image url("/branding/learn&explore/01.jpg");
   &:nth-of-type(2)

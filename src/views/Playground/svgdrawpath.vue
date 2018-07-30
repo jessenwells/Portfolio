@@ -24,6 +24,17 @@ export default {
     type: 'Web Animation.',
     synopsis: 'SVG Path animation based on the album artwork of Joy Division. Inline SVG paths are drawn one after the other using Gsap timeline and Draw.svg'
   }
+  },
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    },
+  beforeCreate() {
+    let codepenScript = document.createElement('script')
+    codepenScript.setAttribute('src', 'https://static.codepen.io/assets/embed/ei.js')
+    document.head.appendChild(codepenScript)
+    codepenScript.async = true
   }
 }
 </script>

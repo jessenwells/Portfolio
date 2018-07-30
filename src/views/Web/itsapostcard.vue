@@ -28,11 +28,17 @@ data() {
     type: 'Front End Design and Development.',
     synopsis: 'Administrative Dashboard including interactive map and infographic animations created for Energy Company. Where employees can monitor energy facility by type and location. View statistics from each plant and specific generating units of each plant.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
+@import "../../assets/mq"
 a.viewsite
   width 100%
 .image
@@ -40,6 +46,8 @@ a.viewsite
   &:first-child
     height 500px
     background-image url("/web/itsapostcard/01.jpg") !important
+    +below(900px)
+      height 350px !important
   &:nth-of-type(1)
     height 525px
     background-image url("/web/itsapostcard/02.jpg")

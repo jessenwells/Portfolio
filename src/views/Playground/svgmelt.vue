@@ -24,6 +24,17 @@ export default {
     type: 'Web Animation.',
     synopsis: 'Melting animation including inline SVG paths and gradients animated using Green Sock Gsap and Snap.svg'
   }
+  },
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    },
+  beforeCreate() {
+    let codepenScript = document.createElement('script')
+    codepenScript.setAttribute('src', 'https://static.codepen.io/assets/embed/ei.js')
+    document.head.appendChild(codepenScript)
+    codepenScript.async = true
   }
 }
 </script>

@@ -1,23 +1,26 @@
 <template lang="pug">
 #tile-grid(@mouseover="ready")
-  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
+  tile(v-for="tile in info" :details="tile" :class="tile.tag" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
 </template>
 
 <script>
-import tile from '../components/Tile';
+import tile from '../components/Tile'
 export default {
   components: {
     tile
   },
+  metaInfo: {
+      title: 'Apparel'
+    },
   data() {
     return {
       info: [
-        {project: 'nyc skyline', thumb: '/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline'},
-        {project: 'relief crown', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown'},
-        {project: 'nyc text map', thumb: '/thumbs/sprite-17.jpg', frames: 4, link: '/apparel/nycmap'},
-        {project: 'distress pyramid', thumb: '/thumbs/sprite-18.jpg', frames: 5, link: '/apparel/pyramid'},
-        {project: 'moody line art', thumb: '/thumbs/sprite-19.jpg', frames: 5, link: '/apparel/moody'},
-        {project: 'nyc liberty', thumb: '/thumbs/sprite-20.jpg', frames: 4, link: '/apparel/nycliberty'}
+        {project: 'nyc skyline', thumb: '/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline', tag: 'sky'},
+        {project: 'relief crown', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown', tag: 'crown'},
+        {project: 'nyc text map', thumb: '/thumbs/sprite-17.jpg', frames: 4, link: '/apparel/nycmap', tag: 'map'},
+        {project: 'distress pyramid', thumb: '/thumbs/sprite-18.jpg', frames: 5, link: '/apparel/pyramid', tag: 'pyramid'},
+        {project: 'moody line art', thumb: '/thumbs/sprite-19.jpg', frames: 5, link: '/apparel/moody', tag: 'moody'},
+        {project: 'nyc liberty', thumb: '/thumbs/sprite-20.jpg', frames: 4, link: '/apparel/nycliberty', tag: 'liberty'}
     ]
     };
   },
@@ -26,7 +29,7 @@ export default {
     linkReady (value) {this.flag2 = value},
     nameReady (value) {this.flag3 = value},
     ready: function() {
-      var tile = document.querySelector(this.join)
+      var tile = document.querySelector('.' + this.flag3 + ' ' + '.tile')
       var route = this.$router
       var flag = this.flag
       var flag2 = this.flag2
@@ -46,13 +49,7 @@ export default {
     }
   },
   mounted() {
-this.active()
-  },
-  computed: {
-    join: function() {
-      var flag3 = this.flag3
-      return '.' + this.flag3.split(' ').join('.') + ' ' + '.tile'
-    }
+    this.active()
   }
 }
 </script>

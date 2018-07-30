@@ -24,6 +24,17 @@ export default {
     type: 'Web Animation.',
     synopsis: 'SVG Morphing animation of a transforming star. The points on the path are individually animated with elastic easing functions using Gsap and Snap.svg'
   }
+  },
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    },
+  beforeCreate() {
+    let codepenScript = document.createElement('script')
+    codepenScript.setAttribute('src', 'https://static.codepen.io/assets/embed/ei.js')
+    document.head.appendChild(codepenScript)
+    codepenScript.async = true
   }
 }
 </script>

@@ -26,7 +26,12 @@ data() {
     type: 'Apparel Graphic.',
     synopsis: 'T-shirt Graphic designed for silkscreen printing created for Fashion Planet. Showing the Statue of Liberty in a rough pastel graphic style. Three color separation.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

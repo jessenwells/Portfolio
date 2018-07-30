@@ -67,7 +67,8 @@
 </template>
 
 <script>
-import {TimelineMax} from "gsap/TweenMax"
+import {TimelineMax} from 'gsap/TweenMax'
+import DrawSvg from '../assets/drawSvg.js'
 export default {
 data() {
   return {

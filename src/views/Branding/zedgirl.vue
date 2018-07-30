@@ -24,12 +24,18 @@ data() {
     project: 'Zed Girl Logo',
     synopsis: 'Logotype created for Zed Girl, makeup and beauty products.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
 .image
+  height 780px
   &:nth-of-type(1)
     background-image url("/branding/zedgirl/01.jpg");
   &:nth-of-type(2)

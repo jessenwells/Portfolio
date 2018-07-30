@@ -10,13 +10,15 @@
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
-import DrawSvg from './assets/drawSvg.js'
-import CodePen from './assets/codepen.js'
 export default {
   components: {
     Header,
     Intro
-  }
+  },
+  metaInfo: {
+      title: 'Portfolio',
+      titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
+    }
 }
 </script>
 

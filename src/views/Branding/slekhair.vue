@@ -25,7 +25,12 @@ data() {
     project: 'Slek Identity',
     synopsis: 'Corporate Identity created for Slek Hair, a hair & beauty maintenance movement, styling bar and online store with subscription based discount human hair and accessories.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

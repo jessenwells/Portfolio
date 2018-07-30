@@ -28,11 +28,17 @@ data() {
     type: 'Complete Design and Development.',
     synopsis: 'Lifestlye Brand Identity, Store and Blog created for Kigi Life. Built on a WordPress backend using Woocommerce and Stripe for online sales.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
+@import "../../assets/mq"
 a.viewsite
   width 100%
 .image
@@ -40,6 +46,8 @@ a.viewsite
   &:first-child
     height 500px
     background-image url("/web/kigilife/01.jpg") !important
+    +below(900px)
+      height 350px !important
   &:nth-of-type(1)
     background-image url("/web/kigilife/02.jpg")
   &:nth-of-type(2)

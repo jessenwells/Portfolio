@@ -25,12 +25,18 @@ data() {
     project: 'RNR Logos',
     synopsis: 'Logotypes created for RNR, RevelatioNoituloveR and RhythmNRace Music.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
 .image
+  height 780px
   &:nth-of-type(1)
     background-image url("/branding/rnr/01.jpg");
   &:nth-of-type(2)

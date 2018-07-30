@@ -1,28 +1,31 @@
 <template lang="pug">
 #tile-grid(@mouseover="ready")
-  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
+  tile(v-for="tile in info" :details="tile" :class="tile.tag" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
 </template>
 
 <script>
-import tile from '../components/Tile';
+import tile from '../components/Tile'
 export default {
   components: {
     tile
   },
+  metaInfo: {
+      title: 'Web'
+    },
   data() {
     return {
       info: [
-        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard'},
-        {project: 'business & blog', thumb: '/thumbs/sprite-09.jpg', frames: 3, link: '/web/kisstofly'},
-        {project: 'user dashboard', thumb: '/thumbs/sprite-10.jpg', frames: 3, link: '/web/itsapostcard'},
-        {project: 'lifestyle store', thumb: '/thumbs/sprite-11.jpg', frames: 3, link: '/web/kigilife'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-12.jpg', frames: 3, link: '/web/energydashboard'},
-        {project: 'app launch site', thumb: '/thumbs/sprite-13.jpg', frames: 3, link: '/web/adwap'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-14.jpg', frames: 3, link: '/web/veteranlite'},
-        {project: 'empty', link: ''},
-        {project: 'empty', link: ''},
-        {project: 'empty', link: ''}
+        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek', tag: 'store'},
+        {project: 'admin dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard', tag: 'admin1'},
+        {project: 'business & blog', thumb: '/thumbs/sprite-09.jpg', frames: 3, link: '/web/kisstofly', tag: 'blog'},
+        {project: 'user dashboard', thumb: '/thumbs/sprite-10.jpg', frames: 3, link: '/web/itsapostcard', tag: 'user'},
+        {project: 'lifestyle store', thumb: '/thumbs/sprite-11.jpg', frames: 3, link: '/web/kigilife', tag: 'life'},
+        {project: 'admin dashboard', thumb: '/thumbs/sprite-12.jpg', frames: 3, link: '/web/energydashboard', tag: 'admin2'},
+        {project: 'app launch site', thumb: '/thumbs/sprite-13.jpg', frames: 3, link: '/web/adwap', tag: 'launch'},
+        {project: 'admin dashboard', thumb: '/thumbs/sprite-14.jpg', frames: 3, link: '/web/veteranlite', tag: 'admin3'},
+        {project: 'empty', link: '', tag: 'empty'},
+        {project: 'empty', link: '', tag: 'empty'},
+        {project: 'empty', link: '', tag: 'empty'}
     ]
     };
   },
@@ -31,7 +34,7 @@ export default {
     linkReady (value) {this.flag2 = value},
     nameReady (value) {this.flag3 = value},
     ready: function() {
-      var tile = document.querySelector(this.join)
+      var tile = document.querySelector('.' + this.flag3 + ' ' + '.tile')
       var route = this.$router
       var flag = this.flag
       var flag2 = this.flag2
@@ -51,13 +54,7 @@ export default {
     }
   },
   mounted() {
-this.active()
-  },
-  computed: {
-    join: function() {
-      var flag3 = this.flag3
-      return '.' + this.flag3.replace(/ &/g,'').split(' ').join('.') + ' ' + '.tile'
-    }
+    this.active()
   }
 }
 </script>

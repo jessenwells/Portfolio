@@ -24,7 +24,12 @@ data() {
     project: 'Kigi Love Identity',
     synopsis: 'Corporate Identity created for Kigi Love, a social community whose mission is to empower a love based society through education, publication, and cultivation.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

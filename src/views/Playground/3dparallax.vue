@@ -17,6 +17,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
   return {
@@ -24,6 +25,17 @@ export default {
     type: 'Web Animation.',
     synopsis: 'Mouse driven parallax using CSS Rotate3D and triggered by Jquery MouseMove.'
   }
+  },
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    },
+  beforeCreate() {
+    let codepenScript = document.createElement('script')
+    codepenScript.setAttribute('src', 'https://static.codepen.io/assets/embed/ei.js')
+    document.head.appendChild(codepenScript)
+    codepenScript.async = true
   }
 }
 </script>

@@ -20,7 +20,7 @@ export default {
       thumb: { backgroundImage: "url(" + this.details.thumb + ")" },
       frames: this.details.frames,
       url: this.details.link,
-      name: this.details.project
+      name: this.details.tag
     };
   },
   beforeCreate() {

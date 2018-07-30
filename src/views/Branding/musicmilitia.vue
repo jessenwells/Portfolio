@@ -26,12 +26,18 @@ data() {
     project: 'Music Militia Identity',
     synopsis: 'Corporate Identity created for The Music Militia, an internet radio service for new and aspiring artists. Logotype inspiration from a military badge.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
 .image
+  height 780px
   &:nth-of-type(1)
     height 500px
     background-image url("/branding/musicmilitia/01.jpg");

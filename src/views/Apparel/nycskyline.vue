@@ -27,7 +27,12 @@ data() {
     type: 'Apparel Graphic.',
     synopsis: 'T-shirt Graphic designed for silkscreen printing created for Fashion Planet. Showing lights and reflection of the New York skyline at night. Three color separation.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

@@ -29,11 +29,17 @@ data() {
     type: 'Complete Design and Development.',
     synopsis: 'Subscription based online store and salon created for Slek Hair. Built on a WordPress backend using Woocommerce and Stripe for all sales, recurring monthly member subscriptions and appointment booking.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
+@import "../../assets/mq"
 a.viewsite
   width 100%
 .image
@@ -41,6 +47,8 @@ a.viewsite
   &:first-child
     height 500px
     background-image url("/web/slek/01.jpg") !important
+    +below(900px)
+      height 350px !important
   &:nth-of-type(1)
     background-image url("/web/slek/02.jpg")
   &:nth-of-type(2)

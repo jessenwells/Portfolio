@@ -25,7 +25,12 @@ data() {
     type: 'Apparel Graphic.',
     synopsis: 'T-shirt Graphic designed for silkscreen printing created for Kigi Life. Done in a hand carved relief print graphic style. Two color separation.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

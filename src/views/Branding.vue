@@ -1,24 +1,26 @@
 <template lang="pug">
 #tile-grid(@mouseover="ready")
-  tile(v-for="tile in info" :details="tile" :class="tile.project.replace(/ &/g,'')" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
+  tile(v-for="tile in info" :details="tile" :class="tile.tag" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
 </template>
 
 <script>
 import tile from '../components/Tile'
-import Snap from 'snapsvg'
 export default {
   components: {
     tile
   },
+  metaInfo: {
+      title: 'Branding'
+    },
   data() {
     return {
       info: [
-        {project: 'music militia', thumb: '/thumbs/sprite-01.jpg', frames: 3, link: '/branding/musicmilitia'},
-        {project: 'kigi love', thumb: '/thumbs/sprite-02.jpg', frames: 3, link: '/branding/kigilove'},
-        {project: 'slek hair', thumb: '/thumbs/sprite-03.jpg', frames: 3, link: '/branding/slekhair'},
-        {project: 'learn & explore', thumb: '/thumbs/sprite-04.jpg', frames: 3, link: '/branding/learn&explore'},
-        {project: 'zed girl', thumb: '/thumbs/sprite-05.jpg', frames: 3, link: '/branding/zedgirl'},
-        {project: 'r n r', thumb: '/thumbs/sprite-06.jpg', frames: 4, link: '/branding/rnr'}
+        {project: 'music militia', thumb: '/thumbs/sprite-01.jpg', frames: 3, link: '/branding/musicmilitia', tag: 'music'},
+        {project: 'kigi love', thumb: '/thumbs/sprite-02.jpg', frames: 3, link: '/branding/kigilove', tag: 'kigi'},
+        {project: 'slek hair', thumb: '/thumbs/sprite-03.jpg', frames: 3, link: '/branding/slekhair', tag: 'slek'},
+        {project: 'learn & explore', thumb: '/thumbs/sprite-04.jpg', frames: 3, link: '/branding/learn&explore', tag: 'learn'},
+        {project: 'zed girl', thumb: '/thumbs/sprite-05.jpg', frames: 3, link: '/branding/zedgirl', tag: 'zed'},
+        {project: 'r n r', thumb: '/thumbs/sprite-06.jpg', frames: 4, link: '/branding/rnr', tag: 'rnr'}
     ]
     };
   },
@@ -27,7 +29,7 @@ export default {
     linkReady (value) {this.flag2 = value},
     nameReady (value) {this.flag3 = value},
     ready: function() {
-      var tile = document.querySelector(this.join)
+      var tile = document.querySelector('.' + this.flag3 + ' ' + '.tile')
       var route = this.$router
       var flag = this.flag
       var flag2 = this.flag2
@@ -47,13 +49,7 @@ export default {
     }
   },
   mounted() {
-this.active()
-  },
-  computed: {
-    join: function() {
-      var flag3 = this.flag3
-      return '.' + this.flag3.replace(/ &/g,'').split(' ').join('.') + ' ' + '.tile'
-    }
+    this.active()
   }
 }
 </script>

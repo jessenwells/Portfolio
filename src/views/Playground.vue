@@ -1,23 +1,26 @@
 <template lang="pug">
 #tile-grid(@mouseover="ready")
-  tile(v-for="tile in info" :details="tile" :class="tile.project" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
+  tile(v-for="tile in info" :details="tile" :class="tile.tag" :key="info.index" @hover="clickReady" @link="linkReady" @name="nameReady")
 </template>
 
 <script>
-import tile from '../components/Tile';
+import tile from '../components/Tile'
 export default {
   components: {
     tile
   },
+  metaInfo: {
+      title: 'Playground'
+    },
   data() {
     return {
       info: [
-        {project: 'svg melt', thumb: '/thumbs/sprite-21.jpg', frames: '6', link: '/playground/svgmelt'},
-        {project: '3d parallax', thumb: '/thumbs/sprite-22.jpg', frames: 6, link: '/playground/3dparallax'},
-        {project: 'svg draw path', thumb: '/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath'},
-        {project: 'svg morph', thumb: '/thumbs/sprite-24.jpg', frames: 6, link: '/playground/svgmorph'},
-        {project: 'css draw path', thumb: '/thumbs/sprite-25.jpg', frames: 6, link: '/playground/cssdrawpath'},
-        {project: 'sass color mixin', thumb: '/thumbs/sprite-26.jpg', frames: 6, link: '/playground/sasscolor'}
+        {project: 'svg melt', thumb: '/thumbs/sprite-21.jpg', frames: '6', link: '/playground/svgmelt', tag: 'melt'},
+        {project: '3d parallax', thumb: '/thumbs/sprite-22.jpg', frames: 6, link: '/playground/3dparallax', tag: 'para'},
+        {project: 'svg draw path', thumb: '/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath', tag: 'svg'},
+        {project: 'svg morph', thumb: '/thumbs/sprite-24.jpg', frames: 6, link: '/playground/svgmorph', tag: 'morph'},
+        {project: 'css draw path', thumb: '/thumbs/sprite-25.jpg', frames: 6, link: '/playground/cssdrawpath', tag: 'css'},
+        {project: 'sass color mixin', thumb: '/thumbs/sprite-26.jpg', frames: 6, link: '/playground/sasscolor', tag: 'sass'}
     ]
     };
   },
@@ -26,7 +29,7 @@ export default {
     linkReady (value) {this.flag2 = value},
     nameReady (value) {this.flag3 = value},
     ready: function() {
-      var tile = document.querySelector(this.join)
+      var tile = document.querySelector('.' + this.flag3 + ' ' + '.tile')
       var route = this.$router
       var flag = this.flag
       var flag2 = this.flag2
@@ -47,12 +50,6 @@ export default {
   },
   mounted() {
 this.active()
-  },
-  computed: {
-    join: function() {
-      var flag3 = this.flag3
-      return '.' + this.flag3.replace(/[0-9]/g, '').split(' ').join('.') + ' ' + '.tile'
-    }
   }
 }
 </script>

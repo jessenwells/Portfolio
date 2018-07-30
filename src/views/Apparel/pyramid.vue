@@ -26,7 +26,12 @@ data() {
     type: 'Apparel Graphic.',
     synopsis: 'T-shirt Graphic designed for silkscreen printing created for Kigi Life. Done in a distressed ink graphic style.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 

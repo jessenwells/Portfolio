@@ -28,17 +28,25 @@ data() {
     type: 'Front End Design and Development.',
     synopsis: 'If you are reading this than you are a thorough person. I will update this description tomorrow.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
+@import "../../assets/mq"
 a.viewsite
   width 100%
 .image
   &:first-child
     height 500px
     background-image url("/web/adwap/01.jpg") !important
+    +below(900px)
+      height 350px !important
   &:nth-of-type(1)
     background-image url("/web/adwap/02.jpg")
   &:nth-of-type(2)

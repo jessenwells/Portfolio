@@ -29,11 +29,17 @@ data() {
     type: 'Front End Design and Development.',
     synopsis: 'Administration Dashboard including interactive map created for Energy Company. Where employees can monitor energy facility emissions and statistics based on location.'
   }
-}
+},
+  metaInfo() {
+    return {
+      title: this.type
+      }
+    }
 }
 </script>
 
 <style lang='stylus' scoped>
+@import "../../assets/mq"
 a.viewsite
   width 100%
 .image
@@ -41,6 +47,8 @@ a.viewsite
   &:first-child
     height 500px
     background-image url("/web/inteldashboard/01.jpg") !important
+    +below(900px)
+      height 350px !important
   &:nth-of-type(1)
     height 575px
     background-image url("/web/inteldashboard/02.jpg")
