@@ -82,6 +82,7 @@ import Snap from 'snapsvg'
 </script>
 
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css?family=Varela+Round')
 @import "../assets/mq"
 header
   margin 1em 6em 5em 6em 
