@@ -40,6 +40,8 @@ import Playground06 from '@/views/Playground/sasscolor'
 Vue.use(Router)
 
 export default new Router({
+  base: '/',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -167,6 +169,5 @@ export default new Router({
     }
   ],
   linkActiveClass: "active",
-  linkExactActiveClass: "exact",
-  mode: 'history'
+  linkExactActiveClass: "exact"
 })
