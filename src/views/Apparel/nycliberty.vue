@@ -39,11 +39,11 @@ data() {
 .image
   height 780px
   &:nth-of-type(1)
-    background-image url("/apparel/nycliberty/01.jpg");
+    background-image url("/assets/apparel/nycliberty/01.jpg");
   &:nth-of-type(2)
-    background-image url("/apparel/nycliberty/02.jpg");
+    background-image url("/assets/apparel/nycliberty/02.jpg");
   &:nth-of-type(3)
-    background-image url("/apparel/nycliberty/03.jpg");
+    background-image url("/assets/apparel/nycliberty/03.jpg");
   &:nth-of-type(4)
-    background-image url("/apparel/nycliberty/04.jpg");
+    background-image url("/assets/apparel/nycliberty/04.jpg");
 </style>

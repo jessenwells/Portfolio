@@ -15,12 +15,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'nyc skyline', thumb: '/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline', tag: 'sky'},
-        {project: 'relief crown', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown', tag: 'crown'},
-        {project: 'nyc text map', thumb: '/thumbs/sprite-17.jpg', frames: 4, link: '/apparel/nycmap', tag: 'map'},
-        {project: 'distress pyramid', thumb: '/thumbs/sprite-18.jpg', frames: 5, link: '/apparel/pyramid', tag: 'pyramid'},
-        {project: 'moody line art', thumb: '/thumbs/sprite-19.jpg', frames: 5, link: '/apparel/moody', tag: 'moody'},
-        {project: 'nyc liberty', thumb: '/thumbs/sprite-20.jpg', frames: 4, link: '/apparel/nycliberty', tag: 'liberty'}
+        {project: 'nyc skyline', thumb: '/assets/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline', tag: 'sky'},
+        {project: 'relief crown', thumb: '/assets/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown', tag: 'crown'},
+        {project: 'nyc text map', thumb: '/assets/thumbs/sprite-17.jpg', frames: 4, link: '/apparel/nycmap', tag: 'map'},
+        {project: 'distress pyramid', thumb: '/assets/thumbs/sprite-18.jpg', frames: 5, link: '/apparel/pyramid', tag: 'pyramid'},
+        {project: 'moody line art', thumb: '/assets/thumbs/sprite-19.jpg', frames: 5, link: '/apparel/moody', tag: 'moody'},
+        {project: 'nyc liberty', thumb: '/assets/thumbs/sprite-20.jpg', frames: 4, link: '/apparel/nycliberty', tag: 'liberty'}
     ]
     };
   },

@@ -36,10 +36,10 @@ data() {
 .image
   height 780px
   &:nth-of-type(1)
-    background-image url("/branding/learn&explore/01.jpg");
+    background-image url("/assets/branding/learn&explore/01.jpg");
   &:nth-of-type(2)
-    background-image url("/branding/learn&explore/02.jpg");
+    background-image url("/assets/branding/learn&explore/02.jpg");
   &:nth-of-type(3)
     height 1200px
-    background-image url("/branding/learn&explore/03.jpg");
+    background-image url("/assets/branding/learn&explore/03.jpg");
 </style>

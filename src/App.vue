@@ -118,7 +118,7 @@ content
             content ''
             display block
             float left
-            background-image url('/chevron-left.svg')
+            background-image url('/assets/chevron-left.svg')
             background-repeat no-repeat
             width 22px
             height 16px
@@ -128,7 +128,7 @@ content
             content ''
             display block
             float left
-            background-image url('/chevron-right.svg')
+            background-image url('/assets/chevron-right.svg')
             background-repeat no-repeat
             width 22px
             height 16px

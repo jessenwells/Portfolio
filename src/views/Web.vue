@@ -15,14 +15,14 @@ export default {
   data() {
     return {
       info: [
-        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek', tag: 'store'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard', tag: 'admin1'},
-        {project: 'business & blog', thumb: '/thumbs/sprite-09.jpg', frames: 3, link: '/web/kisstofly', tag: 'blog'},
-        {project: 'user dashboard', thumb: '/thumbs/sprite-10.jpg', frames: 3, link: '/web/itsapostcard', tag: 'user'},
-        {project: 'lifestyle store', thumb: '/thumbs/sprite-11.jpg', frames: 3, link: '/web/kigilife', tag: 'life'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-12.jpg', frames: 3, link: '/web/energydashboard', tag: 'admin2'},
-        {project: 'app launch site', thumb: '/thumbs/sprite-13.jpg', frames: 3, link: '/web/adwap', tag: 'launch'},
-        {project: 'admin dashboard', thumb: '/thumbs/sprite-14.jpg', frames: 3, link: '/web/veteranlite', tag: 'admin3'},
+        {project: 'salon & store', thumb: '/assets/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek', tag: 'store'},
+        {project: 'admin dashboard', thumb: '/assets/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard', tag: 'admin1'},
+        {project: 'business & blog', thumb: '/assets/thumbs/sprite-09.jpg', frames: 3, link: '/web/kisstofly', tag: 'blog'},
+        {project: 'user dashboard', thumb: '/assets/thumbs/sprite-10.jpg', frames: 3, link: '/web/itsapostcard', tag: 'user'},
+        {project: 'lifestyle store', thumb: '/assets/thumbs/sprite-11.jpg', frames: 3, link: '/web/kigilife', tag: 'life'},
+        {project: 'admin dashboard', thumb: '/assets/thumbs/sprite-12.jpg', frames: 3, link: '/web/energydashboard', tag: 'admin2'},
+        {project: 'app launch site', thumb: '/assets/thumbs/sprite-13.jpg', frames: 3, link: '/web/adwap', tag: 'launch'},
+        {project: 'admin dashboard', thumb: '/assets/thumbs/sprite-14.jpg', frames: 3, link: '/web/veteranlite', tag: 'admin3'},
         {project: 'empty', link: '', tag: 'empty'},
         {project: 'empty', link: '', tag: 'empty'},
         {project: 'empty', link: '', tag: 'empty'}

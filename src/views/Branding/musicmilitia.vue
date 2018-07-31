@@ -40,17 +40,17 @@ data() {
   height 780px
   &:nth-of-type(1)
     height 500px
-    background-image url("/branding/musicmilitia/01.jpg");
+    background-image url("/assets/branding/musicmilitia/01.jpg");
   &:nth-of-type(2)
-    background-image url("/branding/musicmilitia/02.jpg");
+    background-image url("/assets/branding/musicmilitia/02.jpg");
   &:nth-of-type(3)
-    background-image url("/branding/musicmilitia/03.jpg");
+    background-image url("/assets/branding/musicmilitia/03.jpg");
   &:nth-of-type(4)
-    background-image url("/branding/musicmilitia/04.jpg");
+    background-image url("/assets/branding/musicmilitia/04.jpg");
   &:nth-of-type(5)
-    background-image url("/branding/musicmilitia/05.jpg");
+    background-image url("/assets/branding/musicmilitia/05.jpg");
   &:nth-of-type(6)
-    background-image url("/branding/musicmilitia/06.jpg");
+    background-image url("/assets/branding/musicmilitia/06.jpg");
 @media (max-width: 900px)
   .image
     width 100%

@@ -15,12 +15,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'salon & store', thumb: '/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek', tag: 'salon'},
-        {project: 'kigilove identity', thumb: '/thumbs/sprite-02.jpg', frames: 3, link: '/branding/kigilove', tag: 'love'},
-        {project: 'nyc tourism', thumb: '/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline', tag: 'nyc'},
-        {project: 'intel dashboard', thumb: '/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard', tag: 'intel'},
-        {project: 'svg animation', thumb: '/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath', tag: 'anim'},
-        {project: 'apparel graphic', thumb: '/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown', tag: 'apparel'}
+        {project: 'salon & store', thumb: '/assets/thumbs/sprite-07.jpg', frames: 3, link: '/web/slek', tag: 'salon'},
+        {project: 'kigilove identity', thumb: '/assets/thumbs/sprite-02.jpg', frames: 3, link: '/branding/kigilove', tag: 'love'},
+        {project: 'nyc tourism', thumb: '/assets/thumbs/sprite-15.jpg', frames: 4, link: '/apparel/nycskyline', tag: 'nyc'},
+        {project: 'intel dashboard', thumb: '/assets/thumbs/sprite-08.jpg', frames: 3, link: '/web/inteldashboard', tag: 'intel'},
+        {project: 'svg animation', thumb: '/assets/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath', tag: 'anim'},
+        {project: 'apparel graphic', thumb: '/assets/thumbs/sprite-16.jpg', frames: 3, link: '/apparel/crown', tag: 'apparel'}
     ],
     };
   },

@@ -46,17 +46,17 @@ a.viewsite
   height 780px
   &:first-child
     height 500px
-    background-image url("/web/veteranlite/01.jpg") !important
+    background-image url("/assets/web/veteranlite/01.jpg") !important
     +below(900px)
       height 350px !important
   &:nth-of-type(1)
-    background-image url("/web/veteranlite/02.jpg")
+    background-image url("/assets/web/veteranlite/02.jpg")
   &:nth-of-type(2)
-    background-image url("/web/veteranlite/03.jpg")
+    background-image url("/assets/web/veteranlite/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/veteranlite/04.jpg")
+    background-image url("/assets/web/veteranlite/04.jpg")
   &:nth-of-type(4)
-    background-image url("/web/veteranlite/05.jpg")
+    background-image url("/assets/web/veteranlite/05.jpg")
   &:nth-of-type(5)
-    background-image url("/web/veteranlite/06.jpg")
+    background-image url("/assets/web/veteranlite/06.jpg")
 </style>

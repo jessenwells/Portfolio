@@ -39,12 +39,12 @@ data() {
 .image
   height 780px
   &:nth-of-type(1)
-    background-image url("/apparel/pyramid/01.jpg");
+    background-image url("/assets/apparel/pyramid/01.jpg");
   &:nth-of-type(2)
-    background-image url("/apparel/pyramid/02.jpg");
+    background-image url("/assets/apparel/pyramid/02.jpg");
   &:nth-of-type(3)
-    background-image url("/apparel/pyramid/03.jpg");
+    background-image url("/assets/apparel/pyramid/03.jpg");
   &:nth-of-type(4)
-    background-image url("/apparel/pyramid/04.jpg");
+    background-image url("/assets/apparel/pyramid/04.jpg");
 
 </style>

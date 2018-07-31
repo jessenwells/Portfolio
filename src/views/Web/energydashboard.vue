@@ -45,15 +45,15 @@ a.viewsite
   height 580px
   &:first-child
     height 500px
-    background-image url("/web/energydashboard/01.jpg") !important
+    background-image url("/assets/web/energydashboard/01.jpg") !important
     +below(900px)
       height 350px !important
   &:nth-of-type(1)
-    background-image url("/web/energydashboard/02.jpg")
+    background-image url("/assets/web/energydashboard/02.jpg")
   &:nth-of-type(2)
-    background-image url("/web/energydashboard/03.jpg")
+    background-image url("/assets/web/energydashboard/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/energydashboard/04.jpg")
+    background-image url("/assets/web/energydashboard/04.jpg")
   &:nth-of-type(4)
-    background-image url("/web/energydashboard/05.jpg")
+    background-image url("/assets/web/energydashboard/05.jpg")
 </style>

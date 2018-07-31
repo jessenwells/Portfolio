@@ -40,13 +40,13 @@ data() {
 .image
   height 780px
   &:nth-of-type(1)
-    background-image url("/apparel/nycskyline/01.jpg");
+    background-image url("/assets/apparel/nycskyline/01.jpg");
   &:nth-of-type(2)
-    background-image url("/apparel/nycskyline/02.jpg");
+    background-image url("/assets/apparel/nycskyline/02.jpg");
   &:nth-of-type(3)
-    background-image url("/apparel/nycskyline/03.jpg");
+    background-image url("/assets/apparel/nycskyline/03.jpg");
   &:nth-of-type(4)
-    background-image url("/apparel/nycskyline/04.jpg");
+    background-image url("/assets/apparel/nycskyline/04.jpg");
   &:nth-of-type(5)
-    background-image url("/apparel/nycskyline/05.jpg");
+    background-image url("/assets/apparel/nycskyline/05.jpg");
 </style>

@@ -38,13 +38,13 @@ data() {
 .image
   height 780px
   &:nth-of-type(1)
-    background-image url("/branding/rnr/01.jpg");
+    background-image url("/assets/branding/rnr/01.jpg");
   &:nth-of-type(2)
-    background-image url("/branding/rnr/02.jpg");
+    background-image url("/assets/branding/rnr/02.jpg");
   &:nth-of-type(3)
-    background-image url("/branding/rnr/03.jpg");
+    background-image url("/assets/branding/rnr/03.jpg");
   &:nth-of-type(4)
-    background-image url("/branding/rnr/04.jpg");
+    background-image url("/assets/branding/rnr/04.jpg");
   &:nth-of-type(5)
-    background-image url("/branding/rnr/05.jpg");
+    background-image url("/assets/branding/rnr/05.jpg");
 </style>

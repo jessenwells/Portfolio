@@ -45,18 +45,18 @@ a.viewsite
   height 780px
   &:first-child
     height 500px
-    background-image url("/web/itsapostcard/01.jpg") !important
+    background-image url("/assets/web/itsapostcard/01.jpg") !important
     +below(900px)
       height 350px !important
   &:nth-of-type(1)
     height 525px
-    background-image url("/web/itsapostcard/02.jpg")
+    background-image url("/assets/web/itsapostcard/02.jpg")
   &:nth-of-type(2)
     height 520px
-    background-image url("/web/itsapostcard/03.jpg")
+    background-image url("/assets/web/itsapostcard/03.jpg")
   &:nth-of-type(3)
     height 1450px
-    background-image url("/web/itsapostcard/04.jpg")
+    background-image url("/assets/web/itsapostcard/04.jpg")
   &:nth-of-type(4)
-    background-image url("/web/itsapostcard/05.jpg")
+    background-image url("/assets/web/itsapostcard/05.jpg")
 </style>

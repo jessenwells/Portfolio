@@ -15,12 +15,12 @@ export default {
   data() {
     return {
       info: [
-        {project: 'svg melt', thumb: '/thumbs/sprite-21.jpg', frames: '6', link: '/playground/svgmelt', tag: 'melt'},
-        {project: '3d parallax', thumb: '/thumbs/sprite-22.jpg', frames: 6, link: '/playground/3dparallax', tag: 'para'},
-        {project: 'svg draw path', thumb: '/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath', tag: 'svg'},
-        {project: 'svg morph', thumb: '/thumbs/sprite-24.jpg', frames: 6, link: '/playground/svgmorph', tag: 'morph'},
-        {project: 'css draw path', thumb: '/thumbs/sprite-25.jpg', frames: 6, link: '/playground/cssdrawpath', tag: 'css'},
-        {project: 'sass color mixin', thumb: '/thumbs/sprite-26.jpg', frames: 6, link: '/playground/sasscolor', tag: 'sass'}
+        {project: 'svg melt', thumb: '/assets/thumbs/sprite-21.jpg', frames: '6', link: '/playground/svgmelt', tag: 'melt'},
+        {project: '3d parallax', thumb: '/assets/thumbs/sprite-22.jpg', frames: 6, link: '/playground/3dparallax', tag: 'para'},
+        {project: 'svg draw path', thumb: '/assets/thumbs/sprite-23.jpg', frames: 6, link: '/playground/svgdrawpath', tag: 'svg'},
+        {project: 'svg morph', thumb: '/assets/thumbs/sprite-24.jpg', frames: 6, link: '/playground/svgmorph', tag: 'morph'},
+        {project: 'css draw path', thumb: '/assets/thumbs/sprite-25.jpg', frames: 6, link: '/playground/cssdrawpath', tag: 'css'},
+        {project: 'sass color mixin', thumb: '/assets/thumbs/sprite-26.jpg', frames: 6, link: '/playground/sasscolor', tag: 'sass'}
     ]
     };
   },

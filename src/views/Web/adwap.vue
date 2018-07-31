@@ -44,13 +44,13 @@ a.viewsite
 .image
   &:first-child
     height 500px
-    background-image url("/web/adwap/01.jpg") !important
+    background-image url("/assets/web/adwap/01.jpg") !important
     +below(900px)
       height 350px !important
   &:nth-of-type(1)
-    background-image url("/web/adwap/02.jpg")
+    background-image url("/assets/web/adwap/02.jpg")
   &:nth-of-type(2)
-    background-image url("/web/adwap/03.jpg")
+    background-image url("/assets/web/adwap/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/adwap/04.jpg")
+    background-image url("/assets/web/adwap/04.jpg")
 </style>

@@ -46,19 +46,19 @@ a.viewsite
   height 525px
   &:first-child
     height 500px
-    background-image url("/web/inteldashboard/01.jpg") !important
+    background-image url("/assets/web/inteldashboard/01.jpg") !important
     +below(900px)
       height 350px !important
   &:nth-of-type(1)
     height 575px
-    background-image url("/web/inteldashboard/02.jpg")
+    background-image url("/assets/web/inteldashboard/02.jpg")
   &:nth-of-type(2)
     height 780px
-    background-image url("/web/inteldashboard/03.jpg")
+    background-image url("/assets/web/inteldashboard/03.jpg")
   &:nth-of-type(3)
-    background-image url("/web/inteldashboard/04.jpg")
+    background-image url("/assets/web/inteldashboard/04.jpg")
   &:nth-of-type(4)
-    background-image url("/web/inteldashboard/05.jpg")
+    background-image url("/assets/web/inteldashboard/05.jpg")
   &:nth-of-type(5)
-    background-image url("/web/inteldashboard/06.jpg")
+    background-image url("/assets/web/inteldashboard/06.jpg")
 </style>

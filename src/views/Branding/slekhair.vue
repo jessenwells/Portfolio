@@ -38,16 +38,16 @@ data() {
 .image
   &:nth-of-type(1)
     height 600px
-    background-image url("/branding/slekhair/01.jpg");
+    background-image url("/assets/branding/slekhair/01.jpg");
   &:nth-of-type(2)
     height 535px
-    background-image url("/branding/slekhair/02.jpg");
+    background-image url("/assets/branding/slekhair/02.jpg");
   &:nth-of-type(3)
-    background-image url("/branding/slekhair/03.jpg");
+    background-image url("/assets/branding/slekhair/03.jpg");
   &:nth-of-type(4)
-    background-image url("/branding/slekhair/04.jpg");
+    background-image url("/assets/branding/slekhair/04.jpg");
   &:nth-of-type(5)
-    background-image url("/branding/slekhair/05.jpg");
+    background-image url("/assets/branding/slekhair/05.jpg");
 @media (max-width: 900px)
   .image
     width 100%
