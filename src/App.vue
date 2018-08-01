@@ -10,26 +10,24 @@
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
+
+import Branding from './views/Branding'
+import Web from './views/Web'
+import Apparel from './views/Apparel'
+import Playground from './views/Playground'
+
 export default {
   components: {
     Header,
-    Intro
+    Intro,
+    Branding,
+    Web,
+    Apparel,
+    Playground
   },
   metaInfo: {
       title: 'Portfolio',
       titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
-    },
-    mounted() {
-        function preloader() {
-	        if (document.images) {
-                var img1 = new Image();
-                var img2 = new Image();
-                var img3 = new Image();
-                img1.src = "http://domain.tld/path/to/image-001.gif";
-                img2.src = "http://domain.tld/path/to/image-002.gif";
-                img3.src = "http://domain.tld/path/to/image-003.gif";
-	}
-}
     }
 }
 </script>
