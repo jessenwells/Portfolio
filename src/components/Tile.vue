@@ -90,7 +90,7 @@ export default {
   &.play6 
     animation sprite6 1.5s -0.2s steps(6) infinite
     animation-play-state paused
-  +below(1090px)
+  +below(1098px)
     width 450px
     height 450px
     background-size 450px
@@ -106,7 +106,7 @@ export default {
     margin -1px
     width 352px
     height 352px
-    +below(1090px)
+    +below(1098px)
       width 454px
       height 454px
   [id^=frame] 
@@ -122,16 +122,5 @@ export default {
     margin-bottom 0
     svg 
       display none
-+below(1080px)
-    @keyframes sprite3
-        100%
-            background-position 0 -1350px
-    @keyframes sprite4
-        100%
-            background-position 0 -1800px
-    @keyframes sprite6
-        100%
-            background-position 0 -2700px
-  
 
 </style>

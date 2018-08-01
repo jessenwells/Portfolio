@@ -49,7 +49,24 @@ export default {
     }
   },
   mounted() {
-    this.active()
+    var images = [];
+      function preload() {
+          for (var i = 0; i < arguments.length; i++) {
+              images[i] = new Image();
+              images[i].src = preload.arguments[i];
+          }
+}
+
+preload(
+    "/assets/thumbs/sprite-01.jpg",
+    "/assets/thumbs/sprite-02.jpg",
+    "/assets/thumbs/sprite-03.jpg",
+    "/assets/thumbs/sprite-04.jpg",
+    "/assets/thumbs/sprite-05.jpg",
+    "/assets/thumbs/sprite-06.jpg"
+)
+
+  this.active()
   }
 }
 </script>

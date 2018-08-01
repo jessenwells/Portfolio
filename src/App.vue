@@ -11,24 +11,33 @@
 import Header from './components/Header'
 import Intro from './components/Intro'
 
-import Branding from './views/Branding'
-import Web from './views/Web'
-import Apparel from './views/Apparel'
-import Playground from './views/Playground'
-
 export default {
   components: {
     Header,
-    Intro,
-    Branding,
-    Web,
-    Apparel,
-    Playground
+    Intro
   },
   metaInfo: {
       title: 'Portfolio',
       titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
-    }
+    },
+  mounted() {
+    var images = [];
+      function preload() {
+          for (var i = 0; i < arguments.length; i++) {
+              images[i] = new Image();
+              images[i].src = preload.arguments[i];
+          }
+}
+
+preload(
+    "/assets/thumbs/sprite-07.jpg",
+    "/assets/thumbs/sprite-02.jpg",
+    "/assets/thumbs/sprite-15.jpg",
+    "/assets/thumbs/sprite-08.jpg",
+    "/assets/thumbs/sprite-23.jpg",
+    "/assets/thumbs/sprite-16.jpg"
+)
+  }
 }
 </script>
 
@@ -194,15 +203,26 @@ content
     opacity 0  
 
 //frame animation
-@keyframes sprite3
-    100%
-        background-position 0 -1050px
-@keyframes sprite4
-    100%
-        background-position 0 -1400px
-@keyframes sprite6
-    100%
-        background-position 0 -2100px
++above(1098px)
+    @keyframes sprite3
+        100%
+            background-position 0 -1050px
+    @keyframes sprite4
+        100%
+            background-position 0 -1400px
+    @keyframes sprite6
+        100%
+            background-position 0 -2100px
++below(1098px)
+    @keyframes sprite3
+        100%
+            background-position 0 -1350px
+    @keyframes sprite4
+        100%
+            background-position 0 -1800px
+    @keyframes sprite6
+        100%
+            background-position 0 -2700px
 .cp_embed_wrapper
   width 100%
   height 730px
