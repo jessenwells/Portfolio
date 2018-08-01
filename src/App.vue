@@ -18,6 +18,18 @@ export default {
   metaInfo: {
       title: 'Portfolio',
       titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
+    },
+    mounted() {
+        function preloader() {
+	        if (document.images) {
+                var img1 = new Image();
+                var img2 = new Image();
+                var img3 = new Image();
+                img1.src = "http://domain.tld/path/to/image-001.gif";
+                img2.src = "http://domain.tld/path/to/image-002.gif";
+                img3.src = "http://domain.tld/path/to/image-003.gif";
+	}
+}
     }
 }
 </script>
@@ -85,6 +97,7 @@ content
         background-size 480px
     .details
         margin-bottom 5px
+        padding 0 0.5em
         h3
             font-size 1.5em
             color #415a64
