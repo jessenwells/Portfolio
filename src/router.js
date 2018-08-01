@@ -166,6 +166,10 @@ export default new Router({
     {
       path: '/playground/sasscolor',
       component: Playground06
+    },
+    { path: '/portfolio',
+      component: Home,
+      alias: '/portfolio'
     }
   ],
   linkActiveClass: "active",
