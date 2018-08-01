@@ -9,6 +9,7 @@
   "dependencies": {
     "gsap": "^2.0.1",
     "hoverintent": "^2.0.0",
+    "prefetch-image": "^1.1.0",
     "snapsvg": "^0.5.1",
     "vue": "^2.5.16",
     "vue-meta": "^1.5.2",

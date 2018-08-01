@@ -10,6 +10,7 @@
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
+import prefetchImages from 'prefetch-image';
 
 export default {
   components: {
@@ -19,7 +20,12 @@ export default {
   metaInfo: {
       title: 'Portfolio',
       titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
-    }
+    },
+  mounted() {
+        const thumbs = [ "/assets/thumbs/sprite-07.jpg","/assets/thumbs/sprite-02.jpg","/assets/thumbs/sprite-15.jpg","/assets/thumbs/sprite-08.jpg","/assets/thumbs/sprite-23.jpg","/assets/thumbs/sprite-16.jpg","/assets/thumbs/sprite-01.jpg","/assets/thumbs/sprite-02.jpg","/assets/thumbs/sprite-03.jpg","/assets/thumbs/sprite-04.jpg","/assets/thumbs/sprite-05.jpg","/assets/thumbs/sprite-06.jpg","/assets/thumbs/sprite-07.jpg","/assets/thumbs/sprite-08.jpg","/assets/thumbs/sprite-09.jpg","/assets/thumbs/sprite-10.jpg","/assets/thumbs/sprite-11.jpg","/assets/thumbs/sprite-12.jpg","/assets/thumbs/sprite-13.jpg","/assets/thumbs/sprite-14.jpg","/assets/thumbs/sprite-15.jpg","/assets/thumbs/sprite-16.jpg","/assets/thumbs/sprite-17.jpg","/assets/thumbs/sprite-18.jpg","/assets/thumbs/sprite-19.jpg","/assets/thumbs/sprite-20.jpg","/assets/thumbs/sprite-21.jpg","/assets/thumbs/sprite-22.jpg","/assets/thumbs/sprite-23.jpg","/assets/thumbs/sprite-24.jpg","/assets/thumbs/sprite-25.jpg","/assets/thumbs/sprite-26.jpg"
+        ]
+        prefetchImages(thumbs)
+  }
 }
 </script>
 
@@ -175,7 +181,7 @@ content
 //nav transition
 .fade-enter-active
     transition-property opacity
-    transition-duration .25s
+    transition-duration .45s
 .fade-leave-active
     transition-property opacity
     transition-duration .35s
