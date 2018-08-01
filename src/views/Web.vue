@@ -54,25 +54,6 @@ export default {
     }
   },
   mounted() {
-    var images = [];
-      function preload() {
-          for (var i = 0; i < arguments.length; i++) {
-              images[i] = new Image();
-              images[i].src = preload.arguments[i];
-          }
-}
-
-preload(
-    "/assets/thumbs/sprite-07.jpg",
-    "/assets/thumbs/sprite-08.jpg",
-    "/assets/thumbs/sprite-09.jpg",
-    "/assets/thumbs/sprite-10.jpg",
-    "/assets/thumbs/sprite-11.jpg",
-    "/assets/thumbs/sprite-12.jpg",
-    "/assets/thumbs/sprite-13.jpg",
-    "/assets/thumbs/sprite-14.jpg"
-)
-
   this.active()
   }
 }
