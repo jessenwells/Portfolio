@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 //
+import Home from '@/views/Home'
 import Branding from '@/views/Branding'
 import Web from '@/views/Web'
 import Apparel from '@/views/Apparel'
@@ -39,8 +40,14 @@ import Playground06 from '@/views/Playground/sasscolor'
 Vue.use(Router)
 
 export default new Router({
+  base: '/',
   mode: 'history',
   routes: [
+    {
+      path: '/',
+      component: Home,
+      alias: '/portfolio'
+    },
     {
     path: '/branding',
     component: Branding
