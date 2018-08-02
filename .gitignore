@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 .history
+.vscode
+.gitignore
 
 # local env files
 .env.local
