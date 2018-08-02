@@ -45,8 +45,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Home,
-      alias: '/portfolio'
+      component: Home
     },
     {
     path: '/branding',
