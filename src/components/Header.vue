@@ -120,6 +120,12 @@ header
       margin-right 0
       justify-content center
       margin-bottom -1.25em
+      margin 0 2.5%
+    +below(750px)
+      justify-content space-evenly
+      max-width 480px
+      margin 0 auto
+    margin 0 5%
     .link
       display block
       color #1f2b30
@@ -147,8 +153,6 @@ header
         margin -18px auto 0 auto
         text-align center
         transition opacity 0.5s ease
-        +below(650px)
-          width 35px
       svg#select
         height 5px
         position relative

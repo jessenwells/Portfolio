@@ -103,7 +103,7 @@ export default {
     fill #FFF
   [id^=svg] 
     position absolute
-    margin -1px
+    margin -1px 0 0 -1px
     width 352px
     height 352px
     +below(1098px)

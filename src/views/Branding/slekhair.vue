@@ -36,7 +36,7 @@ data() {
 
 <style lang='stylus' scoped>
 .image
-  width 780px
+  height 780px
   &:nth-of-type(1)
     height 600px
     background-image url("/assets/branding/slekhair/01.jpg");

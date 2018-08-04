@@ -5,6 +5,7 @@
     content
       transition(name="fade")
         router-view
+    .snackbar {{ mobileNote }}
 </template>
 
 <script>
@@ -21,10 +22,15 @@ export default {
       title: 'Portfolio',
       titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
     },
+  data() {
+    return {
+        mobileNote: 'click again to view project'
+    }
+},
   mounted() {
-        const thumbs = [ "/assets/thumbs/sprite-07.jpg","/assets/thumbs/sprite-02.jpg","/assets/thumbs/sprite-15.jpg","/assets/thumbs/sprite-08.jpg","/assets/thumbs/sprite-23.jpg","/assets/thumbs/sprite-16.jpg","/assets/thumbs/sprite-01.jpg","/assets/thumbs/sprite-02.jpg","/assets/thumbs/sprite-03.jpg","/assets/thumbs/sprite-04.jpg","/assets/thumbs/sprite-05.jpg","/assets/thumbs/sprite-06.jpg","/assets/thumbs/sprite-07.jpg","/assets/thumbs/sprite-08.jpg","/assets/thumbs/sprite-09.jpg","/assets/thumbs/sprite-10.jpg","/assets/thumbs/sprite-11.jpg","/assets/thumbs/sprite-12.jpg","/assets/thumbs/sprite-13.jpg","/assets/thumbs/sprite-14.jpg","/assets/thumbs/sprite-15.jpg","/assets/thumbs/sprite-16.jpg","/assets/thumbs/sprite-17.jpg","/assets/thumbs/sprite-18.jpg","/assets/thumbs/sprite-19.jpg","/assets/thumbs/sprite-20.jpg","/assets/thumbs/sprite-21.jpg","/assets/thumbs/sprite-22.jpg","/assets/thumbs/sprite-23.jpg","/assets/thumbs/sprite-24.jpg","/assets/thumbs/sprite-25.jpg","/assets/thumbs/sprite-26.jpg"
-        ]
-        prefetchImages(thumbs)
+    const thumbs = [ "/assets/_thumbs/sprite-07.jpg","/assets/_thumbs/sprite-02.jpg","/assets/_thumbs/sprite-15.jpg","/assets/_thumbs/sprite-08.jpg","/assets/_thumbs/sprite-23.jpg","/assets/_thumbs/sprite-16.jpg","/assets/_thumbs/sprite-01.jpg","/assets/_thumbs/sprite-02.jpg","/assets/_thumbs/sprite-03.jpg","/assets/_thumbs/sprite-04.jpg","/assets/_thumbs/sprite-05.jpg","/assets/_thumbs/sprite-06.jpg","/assets/_thumbs/sprite-07.jpg","/assets/_thumbs/sprite-08.jpg","/assets/_thumbs/sprite-09.jpg","/assets/_thumbs/sprite-10.jpg","/assets/_thumbs/sprite-11.jpg","/assets/_thumbs/sprite-12.jpg","/assets/_thumbs/sprite-13.jpg","/assets/_thumbs/sprite-14.jpg","/assets/_thumbs/sprite-15.jpg","/assets/_thumbs/sprite-16.jpg","/assets/_thumbs/sprite-17.jpg","/assets/_thumbs/sprite-18.jpg","/assets/_thumbs/sprite-19.jpg","/assets/_thumbs/sprite-20.jpg","/assets/_thumbs/sprite-21.jpg","/assets/_thumbs/sprite-22.jpg","/assets/_thumbs/sprite-23.jpg","/assets/_thumbs/sprite-24.jpg","/assets/_thumbs/sprite-25.jpg","/assets/_thumbs/sprite-26.jpg"
+    ]
+    prefetchImages(thumbs)
   }
 }
 </script>
@@ -48,7 +54,8 @@ a
 content
     position absolute
     width 100%
-    min-width 500px
+    min-width 300px
+    margin-bottom 80px
 #tile-grid
   width 98%
   max-width 1200px
@@ -60,7 +67,7 @@ content
   justify-content center
   flex-flow row wrap
   +below(500px)
-    margin 0 5%
+    margin 0 auto
 #single-page
     margin 0 auto
     padding 2% 0
@@ -91,6 +98,7 @@ content
         height 480px
         background-size 480px
     .details
+        width 100%
         margin-bottom 5px
         padding 0 0.5em
         h3
@@ -177,7 +185,30 @@ content
         border-radius 8px
         overflow hidden
         margin-bottom 20px
-
+//mobile notification
+.snackbar
+    opacity 0
+    position fixed
+    width 100%
+    height 6%
+    bottom -8%
+    background #1f2b30
+    color #fff
+    display flex
+    align-self center
+    justify-content center
+    align-items center
+    font-size 1.35em
+    font-family 'Varela Round', sans-serif
+    text-transform uppercase
+    box-shadow 0px -4px 1px 0px rgba(31,43,48,0.3)
+    transition ease all 0.4s
+    font
+    z-index 0
+    &.show
+        bottom 0
+        opacity 1
+        z-index 10
 //nav transition
 .fade-enter-active
     transition-property opacity
@@ -189,7 +220,6 @@ content
     transition-delay .45s
 .fade-enter, .fade-leave-active
     opacity 0  
-
 //frame animation
 +above(1098px)
     @keyframes sprite3
