@@ -5,7 +5,7 @@
     content
       transition(name="fade")
         router-view
-    .snackbar {{ mobileNote }}
+    .snackbar(v-text="mobileNote")
 </template>
 
 <script>
