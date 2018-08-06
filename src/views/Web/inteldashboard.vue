@@ -5,16 +5,16 @@
     router-link(to='/sites/intel' target="_blank" class="link") view website
     router-link(to='/web/kisstofly') next project
   router-link(to='/sites/intel' target="_blank" class='viewsite') 
-    .image
+    .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
     p {{ synopsis }}
-  .image
-  .image
-  .image
-  .image
-  .image
+  .image(:data-src='image.path2')
+  .image(:data-src='image.path3')
+  .image(:data-src='image.path4')
+  .image(:data-src='image.path5')
+  .image(:data-src='image.path6')
   span.catnav
     router-link(to='/web/slek') past project
     router-link(to='/sites/intel' target="_blank" class="link") view website
@@ -27,14 +27,36 @@ data() {
   return {
     project: 'Administration Dashboard',
     type: 'Front End Design and Development.',
-    synopsis: 'Administration Dashboard including interactive map created for Energy Company. Where employees can monitor energy facility emissions and statistics based on location.'
+    synopsis: 'Administration Dashboard including interactive map created for Energy Company. Where employees can monitor energy facility emissions and statistics based on location.',
+    image: {
+      path1: '/assets/web/inteldashboard/01.jpg',
+      path2: '/assets/web/inteldashboard/02.jpg',
+      path3: '/assets/web/inteldashboard/03.jpg',
+      path4: '/assets/web/inteldashboard/04.jpg',
+      path5: '/assets/web/inteldashboard/05.jpg',
+      path6: '/assets/web/inteldashboard/06.jpg'
+    }
   }
 },
   metaInfo() {
     return {
       title: this.type
       }
-    }
+    },
+  mounted() {
+      var MobileDetect = require('mobile-detect')
+      var md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile()) {
+          document.querySelectorAll('.image').forEach(function(elem) {
+            const basicLightbox = require('basiclightbox')
+            elem.onclick = function(e) {
+              const src = elem.getAttribute('data-src')
+              const html = '<img src="' + src + '">'
+              basicLightbox.create(html).show()
+            }
+          })
+        }
+  }
 }
 </script>
 

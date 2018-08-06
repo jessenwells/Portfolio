@@ -5,16 +5,16 @@
     router-link(to='/sites/vetlite' target="_blank" class="link") view website
     router-link(to='/apparel/nycskyline') next project
   router-link(to='/sites/vetlite' target="_blank" class='viewsite')
-    .image
+    .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
     p {{ synopsis }}
-  .image
-  .image
-  .image
-  .image
-  .image
+  .image(:data-src='image.path2')
+  .image(:data-src='image.path3')
+  .image(:data-src='image.path4')
+  .image(:data-src='image.path5')
+  .image(:data-src='image.path6')
   span.catnav
     router-link(to='/web/adwap') past project
     router-link(to='/sites/vetlite' target="_blank" class="link") view website
@@ -27,14 +27,36 @@ data() {
   return {
     project: 'Monitoring Dashboard',
     type: 'Front End Design.',
-    synopsis: 'If you are reading this than you are a thorough person. I will update this description Thursday.'
+    synopsis: 'If you are reading this than you are a thorough person. I will update this description Thursday.',
+    image: {
+      path1: '/assets/web/veteranlite/01.jpg',
+      path2: '/assets/web/veteranlite/02.jpg',
+      path3: '/assets/web/veteranlite/03.jpg',
+      path4: '/assets/web/veteranlite/04.jpg',
+      path5: '/assets/web/veteranlite/05.jpg',
+      path6: '/assets/web/veteranlite/06.jpg'
+    }
   }
 },
   metaInfo() {
     return {
       title: this.type
       }
-    }
+    },
+  mounted() {
+      var MobileDetect = require('mobile-detect')
+      var md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile()) {
+          document.querySelectorAll('.image').forEach(function(elem) {
+            const basicLightbox = require('basiclightbox')
+            elem.onclick = function(e) {
+              const src = elem.getAttribute('data-src')
+              const html = '<img src="' + src + '">'
+              basicLightbox.create(html).show()
+            }
+          })
+        }
+  }
 }
 </script>
 

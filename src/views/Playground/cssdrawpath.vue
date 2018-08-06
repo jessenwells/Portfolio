@@ -21,7 +21,7 @@ export default {
   data() {
   return {
     project: 'SVG Badge Logo',
-    type: 'Web Animation.',
+    type: 'Web Animation',
     synopsis: 'SVG Path animation based on artwork by Daniel Burka. Inline SVG paths are drawn using CSS keyframe animation with the stroke-dashoffset property and text is set on a circle using Lettering.js'
   }
   },

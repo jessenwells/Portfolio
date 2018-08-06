@@ -5,15 +5,15 @@
     router-link(to='/sites/kigilife' target="_blank" class="link") view website
     router-link(to='/web/energydashboard') next project
   router-link(to='/sites/kigilife' target="_blank" class='viewsite')
-    .image
+    .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
     p {{ synopsis }}
-  .image
-  .image
-  .image
-  .image
+  .image(:data-src='image.path2')
+  .image(:data-src='image.path3')
+  .image(:data-src='image.path4')
+  .image(:data-src='image.path5')
   span.catnav
     router-link(to='/web/itsapostcard') past project
     router-link(to='/sites/kigilife' target="_blank" class="link") view website
@@ -24,16 +24,37 @@
 export default {
 data() {
   return {
-    project: 'Kigi Life Website',
-    type: 'Complete Design and Development.',
-    synopsis: 'Lifestlye Brand Identity, Store and Blog created for Kigi Life. Built on a WordPress backend using Woocommerce and Stripe for online sales.'
+    project: 'Kigi Life',
+    type: 'Front End Design and Development.',
+    synopsis: 'Lifestlye Brand Identity, Store and Blog created for Kigi Life. Built on a WordPress backend using Woocommerce and Stripe for online sales.',
+    image: {
+      path1: '/assets/web/kigilife/01.jpg',
+      path2: '/assets/web/kigilife/02.jpg',
+      path3: '/assets/web/kigilife/03.jpg',
+      path4: '/assets/web/kigilife/04.jpg',
+      path5: '/assets/web/kigilife/05.jpg'
+    }
   }
 },
   metaInfo() {
     return {
       title: this.type
       }
-    }
+    },
+  mounted() {
+      var MobileDetect = require('mobile-detect')
+      var md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile()) {
+          document.querySelectorAll('.image').forEach(function(elem) {
+            const basicLightbox = require('basiclightbox')
+            elem.onclick = function(e) {
+              const src = elem.getAttribute('data-src')
+              const html = '<img src="' + src + '">'
+              basicLightbox.create(html).show()
+            }
+          })
+        }
+  }
 }
 </script>
 

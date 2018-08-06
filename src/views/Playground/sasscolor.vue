@@ -21,7 +21,7 @@ export default {
   data() {
   return {
     project: 'SVG Unknown Pleasures',
-    type: 'Web Animation.',
+    type: 'Web Animation',
     synopsis: 'SVG Path animation based on the album artwork of Joy Division. Inline SVG paths are drawn one after the other using Gsap timeline and Draw.svg'
   }
   },

@@ -21,7 +21,7 @@ export default {
   data() {
   return {
     project: 'SVG Star Transformation',
-    type: 'Web Animation.',
+    type: 'Web Animation',
     synopsis: 'SVG Morphing animation of a transforming star. The points on the path are individually animated with elastic easing functions using Gsap and Snap.svg'
   }
   },

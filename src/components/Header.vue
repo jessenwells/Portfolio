@@ -148,7 +148,7 @@ header
       +below(350px)
         padding 0px 2px 4px 2px
       .navselect
-        height 0
+        height 1px
         width 60px
         margin -18px auto 0 auto
         text-align center

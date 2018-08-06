@@ -4,14 +4,14 @@
     router-link(to='/apparel/crown') past project
     router-link(to='/apparel') view apparel
     router-link(to='/apparel/pyramid') next project
-  .image
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
     p {{ synopsis }}
-  .image
-  .image
-  .image
+  .image(:data-src='image.path2')
+  .image(:data-src='image.path3')
+  .image(:data-src='image.path4')
   span.catnav
     router-link(to='/apparel/crown') past project
     router-link(to='/apparel') view apparel
@@ -23,15 +23,35 @@ export default {
 data() {
   return {
     project: 'NYC Tourism',
-    type: 'Apparel Graphic.',
-    synopsis: 'T-shirt Graphic designed for silkscreen printing created for Fashion Planet. Showing Manhattan neighborhoods in a hand drawn typographical layout.'
+    type: 'Apparel Graphic',
+    synopsis: 'T-shirt Graphic designed for silkscreen printing created for Fashion Planet. Showing Manhattan neighborhoods in a hand drawn typographical layout.',
+    image: {
+      path1: '/assets/apparel/nycmap/01.jpg',
+      path2: '/assets/apparel/nycmap/02.jpg',
+      path3: '/assets/apparel/nycmap/03.jpg',
+      path4: '/assets/apparel/nycmap/04.jpg'
+    }
   }
 },
   metaInfo() {
     return {
       title: this.type
       }
-    }
+    },
+  mounted() {
+      var MobileDetect = require('mobile-detect')
+      var md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile()) {
+          document.querySelectorAll('.image').forEach(function(elem) {
+            const basicLightbox = require('basiclightbox')
+            elem.onclick = function(e) {
+              const src = elem.getAttribute('data-src')
+              const html = '<img src="' + src + '">'
+              basicLightbox.create(html).show()
+            }
+          })
+        }
+  }
 }
 </script>
 

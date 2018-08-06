@@ -4,13 +4,14 @@
     router-link(to='/branding/musicmilitia') past project
     router-link(to='/branding') view branding
     router-link(to='/branding/slekhair') next project
-  .image
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
+    p {{ type }}
     p {{ synopsis }}
-  .image
-  .image
-  .image
+  .image(:data-src='image.path2')
+  .image(:data-src='image.path3')
+  .image(:data-src='image.path4')
   span.catnav
     router-link(to='/branding/musicmilitia') past project
     router-link(to='/branding') view branding
@@ -18,18 +19,40 @@
 </template>
 
 <script>
+
 export default {
 data() {
   return {
-    project: 'Kigi Love Identity',
-    synopsis: 'Corporate Identity created for Kigi Love, a social community whose mission is to empower a love based society through education, publication, and cultivation.'
+    project: 'Kigi Love',
+    type: 'Identity Design',
+    synopsis: 'Corporate Identity created for Kigi Love, a social community whose mission is to empower a love based society through education, publication, and cultivation.',
+    image: {
+      path1: '/assets/branding/kigilove/01.jpg',
+      path2: '/assets/branding/kigilove/02.jpg',
+      path3: '/assets/branding/kigilove/03.jpg',
+      path4: '/assets/branding/kigilove/04.jpg'
+    }
   }
 },
   metaInfo() {
     return {
       title: this.type
       }
-    }
+  },
+  mounted() {
+      var MobileDetect = require('mobile-detect')
+      var md = new MobileDetect(window.navigator.userAgent);
+        if(md.mobile()) {
+          document.querySelectorAll('.image').forEach(function(elem) {
+            const basicLightbox = require('basiclightbox')
+            elem.onclick = function(e) {
+              const src = elem.getAttribute('data-src')
+              const html = '<img src="' + src + '">'
+              basicLightbox.create(html).show()
+            }
+          })
+        }
+  }
 }
 </script>
 
@@ -46,6 +69,7 @@ data() {
     background-image url("/assets/branding/kigilove/04.jpg");
 @media (max-width: 900px)
   .image
+    height 320px !important
     width 100%
     background-size contain
     background-position 50%

@@ -90,10 +90,22 @@ export default {
   &.play6 
     animation sprite6 1.5s -0.2s steps(6) infinite
     animation-play-state paused
-  +below(1098px)
+  +below(900px)
     width 450px
     height 450px
     background-size 450px
+    &.play3 
+      animation sprite3lg 2s -0.3s steps(3) infinite
+      animation-play-state paused
+    &.play4 
+      animation sprite4lg 3s -0.5s steps(4) infinite
+      animation-play-state paused
+    &.play5 
+      animation sprite6lg 4s -0.4s steps(6) infinite
+      animation-play-state paused
+    &.play6 
+      animation sprite6lg 1.5s -0.2s steps(6) infinite
+      animation-play-state paused
   text 
     font-family 'Quicksand', sans-serif
     font-size 0.86em
@@ -101,12 +113,11 @@ export default {
     letter-spacing 0.05em
     font-weight 400
     fill #FFF
-  [id^=svg] 
-    position absolute
-    margin -1px 0 0 -1px
-    width 352px
-    height 352px
-    +below(1098px)
+  [id^=svg]
+    margin -2px
+    width 354px
+    height 354px
+    +below(900px)
       width 454px
       height 454px
   [id^=frame] 

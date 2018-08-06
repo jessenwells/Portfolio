@@ -21,7 +21,7 @@ export default {
   data() {
   return {
     project: 'SVG Melting Rocket Pop',
-    type: 'Web Animation.',
+    type: 'Web Animation',
     synopsis: 'Melting animation including inline SVG paths and gradients animated using Green Sock Gsap and Snap.svg'
   }
   },

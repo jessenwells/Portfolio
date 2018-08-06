@@ -11,8 +11,6 @@
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
-import prefetchImages from 'prefetch-image';
-
 export default {
   components: {
     Header,
@@ -24,19 +22,14 @@ export default {
     },
   data() {
     return {
-        mobileNote: 'click again to view project'
+        mobileNote: 'tap again to view project'
     }
-},
-  mounted() {
-    const thumbs = [ "/assets/_thumbs/sprite-07.jpg","/assets/_thumbs/sprite-02.jpg","/assets/_thumbs/sprite-15.jpg","/assets/_thumbs/sprite-08.jpg","/assets/_thumbs/sprite-23.jpg","/assets/_thumbs/sprite-16.jpg","/assets/_thumbs/sprite-01.jpg","/assets/_thumbs/sprite-02.jpg","/assets/_thumbs/sprite-03.jpg","/assets/_thumbs/sprite-04.jpg","/assets/_thumbs/sprite-05.jpg","/assets/_thumbs/sprite-06.jpg","/assets/_thumbs/sprite-07.jpg","/assets/_thumbs/sprite-08.jpg","/assets/_thumbs/sprite-09.jpg","/assets/_thumbs/sprite-10.jpg","/assets/_thumbs/sprite-11.jpg","/assets/_thumbs/sprite-12.jpg","/assets/_thumbs/sprite-13.jpg","/assets/_thumbs/sprite-14.jpg","/assets/_thumbs/sprite-15.jpg","/assets/_thumbs/sprite-16.jpg","/assets/_thumbs/sprite-17.jpg","/assets/_thumbs/sprite-18.jpg","/assets/_thumbs/sprite-19.jpg","/assets/_thumbs/sprite-20.jpg","/assets/_thumbs/sprite-21.jpg","/assets/_thumbs/sprite-22.jpg","/assets/_thumbs/sprite-23.jpg","/assets/_thumbs/sprite-24.jpg","/assets/_thumbs/sprite-25.jpg","/assets/_thumbs/sprite-26.jpg"
-    ]
-    prefetchImages(thumbs)
-  }
+}
 }
 </script>
 
 <style lang="stylus">
-@import url('http://fonts.googleapis.com/css?family=Quicksand:400,700|Open+Sans+Condensed:300|Varela+Round')
+@import url('http://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Open+Sans+Condensed:300|Varela+Round')
 @import "assets/mq"
 body
   margin 0
@@ -57,17 +50,17 @@ content
     min-width 300px
     margin-bottom 80px
 #tile-grid
-  width 98%
-  max-width 1200px
-  min-width 350px
-  margin 0 auto
-  padding 2% 0
-  font-size 2em
-  display flex
-  justify-content center
-  flex-flow row wrap
-  +below(500px)
     margin 0 auto
+    padding 2% 0
+    font-size 2em
+    display flex
+    justify-content center
+    flex-flow row wrap
+    width 98%
+    max-width 1200px
+    min-width 350px
+    +below(500px)
+        margin 0 auto
 #single-page
     margin 0 auto
     padding 2% 0
@@ -134,24 +127,24 @@ content
             content ''
             display block
             float left
-            background-image url('/assets/chevron-left.svg')
+            background-image url('/assets/_icons/chevron-left.svg')
             background-repeat no-repeat
             width 22px
             height 16px
             margin-top -1px
-            opacity 0.5
+            opacity 0.65
         &:after
             content ''
             display block
             float left
-            background-image url('/assets/chevron-right.svg')
+            background-image url('/assets/_icons/chevron-right.svg')
             background-repeat no-repeat
             width 22px
             height 16px
             margin-right -6px
             margin-top -1px
             margin-left 5px
-            opacity 0.5
+            opacity 0.65
         a
             color #9aadb5
             display block
@@ -161,7 +154,7 @@ content
             &:nth-child(1)
                 flex 2.5
                 text-align left
-                opacity 0.5
+                opacity 0.65
                 &:hover
                     opacity 1
             &:nth-child(2)
@@ -177,7 +170,7 @@ content
             &:nth-child(3)
                 flex 2.5
                 text-align right
-                opacity 0.5
+                opacity 0.65
                 &:hover
                     opacity 1
     div
@@ -187,11 +180,11 @@ content
         margin-bottom 20px
 //mobile notification
 .snackbar
-    opacity 0
     position fixed
     width 100%
-    height 6%
-    bottom -8%
+    height 8%
+    bottom -10%
+    max-height 120px
     background #1f2b30
     color #fff
     display flex
@@ -199,16 +192,15 @@ content
     justify-content center
     align-items center
     font-size 1.35em
-    font-family 'Varela Round', sans-serif
+    font-family 'Quicksand', sans-serif
+    font-weight 300
+    letter-spacing 0.01em
     text-transform uppercase
     box-shadow 0px -4px 1px 0px rgba(31,43,48,0.3)
     transition ease all 0.4s
-    font
-    z-index 0
+    z-index 10
     &.show
-        bottom 0
-        opacity 1
-        z-index 10
+        bottom -1px
 //nav transition
 .fade-enter-active
     transition-property opacity
@@ -219,29 +211,31 @@ content
 .fade-enter-active
     transition-delay .45s
 .fade-enter, .fade-leave-active
-    opacity 0  
+    opacity 0
 //frame animation
-+above(1098px)
-    @keyframes sprite3
-        100%
-            background-position 0 -1050px
-    @keyframes sprite4
-        100%
-            background-position 0 -1400px
-    @keyframes sprite6
-        100%
-            background-position 0 -2100px
-+below(1098px)
-    @keyframes sprite3
-        100%
-            background-position 0 -1350px
-    @keyframes sprite4
-        100%
-            background-position 0 -1800px
-    @keyframes sprite6
-        100%
-            background-position 0 -2700px
+
+@keyframes sprite3
+    100%
+        background-position 0 -1050px
+@keyframes sprite4
+    100%
+        background-position 0 -1400px
+@keyframes sprite6
+    100%
+        background-position 0 -2100px
+
+@keyframes sprite3lg
+    100%
+        background-position 0 -1350px
+@keyframes sprite4lg 
+    100%
+        background-position 0 -1800px
+@keyframes sprite6lg
+    100%
+        background-position 0 -2700px
 .cp_embed_wrapper
   width 100%
   height 730px
+.basicLightbox
+    background rgba(247, 247, 247, 0.95) !important
 </style>

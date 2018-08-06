@@ -165,6 +165,7 @@ Lclr4 = #1f2b30
   pointer-events none
   svg
     overflow visible
+    height 350px
 
 #name
   position absolute
@@ -174,14 +175,16 @@ Lclr4 = #1f2b30
   left 100%
   svg
     overflow visible
+    height 54px
   .subhead
     font-family 'Quicksand', sans-serif
     font-size 22px
     font-weight 400
     display block
-    margin-top -22px
+    position relative
+    top -22px
+    right 2px
     text-align right
-    padding-right 2px
 a.home
   position absolute
   display block

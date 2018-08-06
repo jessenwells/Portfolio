@@ -22,7 +22,7 @@ export default {
   data() {
   return {
     project: '3D Parallax Paper Mask',
-    type: 'Web Animation.',
+    type: 'Web Animation',
     synopsis: 'Mouse driven parallax using CSS Rotate3D and triggered by Jquery MouseMove.'
   }
   },
