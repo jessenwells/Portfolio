@@ -1,11 +1,10 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/web/slek') past project
+    router-link#past(to='/web/slek') past project
     router-link(to='/sites/intel' target="_blank" class="link") view website
-    router-link(to='/web/kisstofly') next project
-  router-link(to='/sites/intel' target="_blank" class='viewsite') 
-    .image(:data-src='image.path1')
+    router-link#next(to='/web/kisstofly') next project
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -35,7 +34,9 @@ data() {
       path4: '/assets/web/inteldashboard/04.jpg',
       path5: '/assets/web/inteldashboard/05.jpg',
       path6: '/assets/web/inteldashboard/06.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {
@@ -66,21 +67,27 @@ a.viewsite
   width 100%
 .image
   height 525px
-  &:first-child
+  +below(900px)
+      height 430px !important
+  &:nth-of-type(1)
+    background-image url("/assets/web/inteldashboard/01.jpg")
     height 500px
-    background-image url("/assets/web/inteldashboard/01.jpg") !important
     +below(900px)
       height 350px !important
-  &:nth-of-type(1)
-    height 575px
-    background-image url("/assets/web/inteldashboard/02.jpg")
   &:nth-of-type(2)
-    height 780px
-    background-image url("/assets/web/inteldashboard/03.jpg")
+    background-image url("/assets/web/inteldashboard/02.jpg")
+    height 575px
+    +below(900px)
+      height 425px !important
   &:nth-of-type(3)
-    background-image url("/assets/web/inteldashboard/04.jpg")
+    background-image url("/assets/web/inteldashboard/03.jpg")
+    height 780px
+    +below(900px)
+      height 580px !important
   &:nth-of-type(4)
-    background-image url("/assets/web/inteldashboard/05.jpg")
+    background-image url("/assets/web/inteldashboard/04.jpg")
   &:nth-of-type(5)
+    background-image url("/assets/web/inteldashboard/05.jpg")
+  &:nth-of-type(6)
     background-image url("/assets/web/inteldashboard/06.jpg")
 </style>

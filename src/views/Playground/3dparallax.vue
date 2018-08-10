@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/playground/svgmelt') past project
+    router-link#past(to='/playground/svgmelt') past project
     a(href='http://codepen.io/jessenwells/live/Pqwegj' target='_blank' class="link") view full page
-    router-link(to='/playground/svgdrawpath') next project
+    router-link#next(to='/playground/svgdrawpath') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="Pqwegj" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
     h3 {{ project }}
@@ -23,7 +23,9 @@ export default {
   return {
     project: '3D Parallax Paper Mask',
     type: 'Web Animation',
-    synopsis: 'Mouse driven parallax using CSS Rotate3D and triggered by Jquery MouseMove.'
+    synopsis: 'Mouse driven parallax using CSS Rotate3D and triggered by Jquery MouseMove.',
+    past: '',
+    next: ''
   }
   },
   metaInfo() {

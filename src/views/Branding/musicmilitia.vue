@@ -1,9 +1,9 @@
 <template lang='pug'>
-#single-page
+#single-page(v-touch:swipe.right="past" v-touch:swipe.left="next")
   span.catnav
-    router-link(to='/playground/sasscolor') past project
+    router-link#past(to='/playground/sasscolor') past project
     router-link(to='/branding') view branding
-    router-link(to='/branding/kigilove') next project
+    router-link#next(to='/branding/kigilove') next project
   .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
@@ -34,7 +34,9 @@ data() {
       path4: '/assets/branding/musicmilitia/04.jpg',
       path5: '/assets/branding/musicmilitia/05.jpg',
       path6: '/assets/branding/musicmilitia/06.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {

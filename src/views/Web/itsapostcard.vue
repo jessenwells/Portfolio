@@ -1,11 +1,10 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/web/kisstofly') past project
+    router-link#past(to='/web/kisstofly') past project
     router-link(to='/sites/itsapostcard' target="_blank" class="link") view website
-    router-link(to='/web/kigilife') next project
-  router-link(to='/sites/itsapostcard' target="_blank" class='viewsite')
-    .image(:data-src='image.path1')
+    router-link#next(to='/web/kigilife') next project
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -33,7 +32,9 @@ data() {
       path3: '/assets/web/itsapostcard/03.jpg',
       path4: '/assets/web/itsapostcard/04.jpg',
       path5: '/assets/web/itsapostcard/05.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {
@@ -64,20 +65,25 @@ a.viewsite
   width 100%
 .image
   height 780px
-  &:first-child
+  +below(900px)
+      height 580px !important 
+  &:nth-of-type(1)
+    background-image url("/assets/web/itsapostcard/01.jpg")
     height 500px
-    background-image url("/assets/web/itsapostcard/01.jpg") !important
     +below(900px)
       height 350px !important
-  &:nth-of-type(1)
-    height 525px
-    background-image url("/assets/web/itsapostcard/02.jpg")
   &:nth-of-type(2)
-    height 520px
-    background-image url("/assets/web/itsapostcard/03.jpg")
+    background-image url("/assets/web/itsapostcard/02.jpg")
   &:nth-of-type(3)
-    height 1450px
-    background-image url("/assets/web/itsapostcard/04.jpg")
+    background-image url("/assets/web/itsapostcard/03.jpg")
+    height 525px
+    +below(900px)
+      height 400px !important
   &:nth-of-type(4)
+    background-image url("/assets/web/itsapostcard/04.jpg")
+    height 1450px
+    +below(900px)
+      height 1160px !important
+  &:nth-of-type(5)
     background-image url("/assets/web/itsapostcard/05.jpg")
 </style>

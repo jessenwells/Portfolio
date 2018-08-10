@@ -1,9 +1,9 @@
 <template lang='pug'>
-#single-page
+#single-page(v-touch:swipe.right="past" v-touch:swipe.left="next")
   span.catnav
-    router-link(to='/branding/zedgirl') past project
+    router-link#past(to='/branding/zedgirl') past project
     router-link(to='/branding') view branding
-    router-link(to='/web/slek') next project
+    router-link#next(to='/web/slek') next project
   .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
@@ -32,7 +32,9 @@ data() {
       path3: '/assets/branding/rnr/03.jpg',
       path4: '/assets/branding/rnr/04.jpg',
       path5: '/assets/branding/rnr/05.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {

@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/apparel/moody') past project
+    router-link#past(to='/apparel/moody') past project
     router-link(to='/apparel') view apparel
-    router-link(to='/playground/svgmelt') next project
+    router-link#next(to='/playground/svgmelt') next project
   .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
@@ -30,7 +30,9 @@ data() {
       path2: '/assets/apparel/nycliberty/02.jpg',
       path3: '/assets/apparel/nycliberty/03.jpg',
       path4: '/assets/apparel/nycliberty/04.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {

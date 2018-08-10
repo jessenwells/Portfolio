@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/playground/3dparallax') past project
+    router-link#past(to='/playground/3dparallax') past project
     a(href='http://codepen.io/jessenwells/live/pJrJjp' target='_blank' class="link") view full page
-    router-link(to='/playground/svgmorph') next project
+    router-link#next(to='/playground/svgmorph') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="pJrJjp" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
     h3 {{ project }}
@@ -22,7 +22,9 @@ export default {
   return {
     project: 'SVG Unknown Pleasures',
     type: 'Web Animation',
-    synopsis: 'SVG Path animation based on the album artwork of Joy Division. Inline SVG paths are drawn one after the other using Gsap timeline and Draw.svg'
+    synopsis: 'SVG Path animation based on the album artwork of Joy Division. Inline SVG paths are drawn one after the other using Gsap timeline and Draw.svg',
+    past: '',
+    next: ''
   }
   },
   metaInfo() {

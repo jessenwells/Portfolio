@@ -1,11 +1,10 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/web/inteldashboard') past project
+    router-link#past(to='/web/inteldashboard') past project
     router-link(to='/sites/kisstofly' target="_blank" class="link") view website
-    router-link(to='/web/itsapostcard') next project
-  router-link(to='/sites/kisstofly' target="_blank" class='viewsite')
-    .image(:data-src='image.path1')
+    router-link#next(to='/web/itsapostcard') next project
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -33,7 +32,9 @@ data() {
       path3: '/assets/web/kisstofly/03.jpg',
       path4: '/assets/web/kisstofly/04.jpg',
       path5: '/assets/web/kisstofly/05.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {
@@ -64,18 +65,20 @@ a.viewsite
   width 100%
 .image
   height 580px
-  &:first-child
-    height 500px
-    background-image url("/assets/web/kisstofly/01.jpg") !important
-    +below(900px)
-      height 350px !important
+  +below(900px)
+    height 365px    
   &:nth-of-type(1)
-    background-image url("/assets/web/kisstofly/02.jpg")
+    height 500px
+    background-image url("/assets/web/kisstofly/01.jpg")
+    +below(900px)
+      height 350px
   &:nth-of-type(2)
-    background-image url("/assets/web/kisstofly/03.jpg")
+    background-image url("/assets/web/kisstofly/02.jpg")
   &:nth-of-type(3)
-    background-image url("/assets/web/kisstofly/04.jpg")
+    background-image url("/assets/web/kisstofly/03.jpg")
   &:nth-of-type(4)
+    background-image url("/assets/web/kisstofly/04.jpg")
+  &:nth-of-type(5)
     height 780px
     background-image url("/assets/web/kisstofly/05.jpg")
 </style>

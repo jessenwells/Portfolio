@@ -1,11 +1,10 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/web/adwap') past project
+    router-link#past(to='/web/adwap') past project
     router-link(to='/sites/vetlite' target="_blank" class="link") view website
-    router-link(to='/apparel/nycskyline') next project
-  router-link(to='/sites/vetlite' target="_blank" class='viewsite')
-    .image(:data-src='image.path1')
+    router-link#next(to='/apparel/nycskyline') next project
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -35,7 +34,9 @@ data() {
       path4: '/assets/web/veteranlite/04.jpg',
       path5: '/assets/web/veteranlite/05.jpg',
       path6: '/assets/web/veteranlite/06.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {
@@ -66,19 +67,19 @@ a.viewsite
   width 100%
 .image
   height 780px
-  &:first-child
+  &:nth-of-type(1)
+    background-image url("/assets/web/veteranlite/01.jpg")
     height 500px
-    background-image url("/assets/web/veteranlite/01.jpg") !important
     +below(900px)
       height 350px !important
-  &:nth-of-type(1)
-    background-image url("/assets/web/veteranlite/02.jpg")
   &:nth-of-type(2)
-    background-image url("/assets/web/veteranlite/03.jpg")
+    background-image url("/assets/web/veteranlite/02.jpg")
   &:nth-of-type(3)
-    background-image url("/assets/web/veteranlite/04.jpg")
+    background-image url("/assets/web/veteranlite/03.jpg")
   &:nth-of-type(4)
-    background-image url("/assets/web/veteranlite/05.jpg")
+    background-image url("/assets/web/veteranlite/04.jpg")
   &:nth-of-type(5)
+    background-image url("/assets/web/veteranlite/05.jpg")
+  &:nth-of-type(6)
     background-image url("/assets/web/veteranlite/06.jpg")
 </style>

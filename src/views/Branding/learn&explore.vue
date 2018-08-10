@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/branding/slekhair') past project
+    router-link#past(to='/branding/slekhair') past project
     router-link(to='/branding') view branding
-    router-link(to='/branding/zedgirl') next project
+    router-link#next(to='/branding/zedgirl') next project
   .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
@@ -28,7 +28,9 @@ data() {
       path1: '/assets/branding/learn&explore/01.jpg',
       path2: '/assets/branding/learn&explore/02.jpg',
       path3: '/assets/branding/learn&explore/03.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {

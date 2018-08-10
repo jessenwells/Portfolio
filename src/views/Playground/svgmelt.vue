@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/apparel/nycliberty') past project
+    router-link#past(to='/apparel/nycliberty') past project
     a(href='http://codepen.io/jessenwells/live/JdLoGP' target='_blank' class="link") view full page
-    router-link(to='/playground/3dparallax') next project
+    router-link#next(to='/playground/3dparallax') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="JdLoGP" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
     h3 {{ project }}
@@ -22,7 +22,9 @@ export default {
   return {
     project: 'SVG Melting Rocket Pop',
     type: 'Web Animation',
-    synopsis: 'Melting animation including inline SVG paths and gradients animated using Green Sock Gsap and Snap.svg'
+    synopsis: 'Melting animation including inline SVG paths and gradients animated using Green Sock Gsap and Snap.svg',
+    past: '',
+    next: ''
   }
   },
   metaInfo() {

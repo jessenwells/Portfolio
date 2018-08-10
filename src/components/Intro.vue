@@ -23,7 +23,7 @@
   router-link.home(to='/')
   #crop
     #name
-      svg(viewBox="0 0 500 100")
+      svg(viewBox='0 0 500 100')
         g.name1
           path.j1(d=j1)
           path.e1(d=e1)
@@ -48,11 +48,11 @@
           path.s3(d=s3)
       span.subhead designer + developer
   #logo
-    svg(viewBox="0 0 500 500")
+    svg(viewBox='0 0 500 500')
       g.logo0
-        line.ln1(x1="91" y1="298.5" x2="91" y2="-100")
-        line.ln2(x1="251" y1="202.5" x2="251" y2="-100")
-        line.ln3(x1="411" y1="202.5" x2="411" y2="-100")
+        line.ln1(x1='91' y1='298.5' x2='91' y2='-100')
+        line.ln2(x1='251' y1='202.5' x2='251' y2='-100')
+        line.ln3(x1='411' y1='202.5' x2='411' y2='-100')
       g.logo1
         path.p0(d=p0)
         path.p1(d=p1)
@@ -70,78 +70,74 @@
 import {TimelineMax} from 'gsap/TweenMax'
 import DrawSvg from '../assets/drawSvg.js'
 export default {
-data() {
-  return {
-
-  }
-},
   mounted () {
-var p0 = $('.p0');
-var p1 = $('.p1');
-var p2 = $('.p2');
-var p3 = $('.p3');
-var pp = $('.p1,.p2,.p3');
-var ppp = $('.logo2 .p1,.logo2 .p2,.logo2 .p3');
-var logo = $('#logo');
-var logo2 = $('.logo1 path')
-var jw = $('#name');
-var ee = $('.e1,.e2,.e3');
-var e1 = $('.e1');
-var e2 = $('.e2');
-var e3 = $('.e3');
-var ll = $('.j1,.e1,.s1,.s2,.e2,.w1,.e3,.l1,.l2,.s3,.subhead')
-var lnln = $('.ln1,.ln2,.ln3');
-var page = $('content')
-var head = $('header')
-var git = $('#badge')
-var tl = new TimelineMax()
-var tl2 = new TimelineMax()
+    var p0 = $('.p0')
+    var p1 = $('.p1')
+    var p2 = $('.p2')
+    var p3 = $('.p3')
+    var pp = $('.p1,.p2,.p3')
+    var ppp = $('.logo2 .p1,.logo2 .p2,.logo2 .p3')
+    var logo = $('#logo')
+    var logo2 = $('.logo1 path')
+    var jw = $('#name')
+    var ee = $('.e1,.e2,.e3')
+    var e1 = $('.e1')
+    var e2 = $('.e2')
+    var e3 = $('.e3')
+    var ll = $('.j1,.e1,.s1,.s2,.e2,.w1,.e3,.l1,.l2,.s3,.subhead')
+    var lnln = $('.ln1,.ln2,.ln3')
+    var page = $('content')
+    var head = $('header')
+    var git = $('#badge')
+    var tl = new TimelineMax()
+    var tl2 = new TimelineMax()
 
-tl.timeScale(1.3);
+    tl.timeScale(1.3)
 
-if(this.$route.path==='/') {
-TweenMax.delayedCall(1, myFunction);
-TweenMax.set(page, {scale: 0.98,opacity:0})
-function myFunction() {
-tl.to(logo2, 0, {stroke:'#dce4e5', strokeWidth:"38px"});
-tl.to(logo, 0, {opacity:1});
-tl.from(ppp,3, {stroke:"#ced9dd"});
-tl.from(p1, 0.5, {ease: Power2.easeInOut,drawSVG:"0% 0%"},0.5);
-tl.from(p2, 0.5, {ease: Power2.easeInOut,drawSVG:"0% 0%"}, 1);
-tl.from(p3, 0.5, {ease: Power2.easeInOut,drawSVG:"0% 0%"}, 1.5);
-tl.to(p1, 1, {ease: Back.easeIn.config(2), y:120},2.95);
-tl.to(p0, 1, {ease: Power3.easeOut, y:10}, "-=0.7");
-tl.to(p0, 0, {opacity:1}, "-=0.4");
-tl.staggerFrom(lnln, 0.5, {opacity:0,drawSVG:"0% 0%"},0.15);
+    if(this.$route.path==='/') {
+      
+      TweenMax.delayedCall(1, myFunction)
+      TweenMax.set(page, {scale: 0.98,opacity:0})
 
-tl2.to(logo, 1.5, {y:50},0.35);
-tl2.to(logo, 0.5, {ease: Power1.easeInOut, top:'-100px',left:'-25px',marginLeft:'0',marginTop:'0',scale:0.5,rotation:22},2);
-tl2.to(logo2, 0.5, {stroke:'#fff', strokeWidth:"34px"},"-=0.5");
-tl2.staggerFrom(ll, 0.55, {opacity:0},0.06);
-tl2.to(jw, 0.65, {ease: Power3.easeOut, x:'-110%'},2.75);
-tl2.to(ee, 0.25, {ease: Back.easeInOut.config(3),rotation:-12,x:-5,y:6},4.25);
-tl2.to(page, 0.25, {opacity:1},'-=0.75');
-tl2.to(page, 0.75, {zIndex:1,scale: 1},'-=0.75');
-tl2.to(head, 0.5, {opacity:1});
-tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},'-=1');
-}
-}
-else {
-tl.set(logo, {opacity:1});
-tl.set(p1, {y:120});
-tl.set(p0, {y:10});
-tl.set(p0, {opacity:1});
-tl.set(logo, {y:50});
-tl.set(logo, {top:'-100px',left:'-25px',marginLeft:'0',marginTop:'0',scale:0.5,rotation:22});
-tl.set(logo2, {stroke:'#fff', strokeWidth:"34px"});
-tl.set(ll, {opacity:1});
-tl.set(jw, {x:'-110%'});
-tl.set(ee, {rotation:-12,x:-5,y:6});
-tl.set(head, {opacity:1});
-tl.set(git, {right:'-90px',opacity:1});
-}
+      function myFunction() {
+        tl.to(logo2, 0, {stroke:'#dce4e5', strokeWidth:'38px'})
+        tl.to(logo, 0, {opacity:1})
+        tl.from(ppp,3, {stroke:'#ced9dd'})
+        tl.from(p1, 0.5, {ease: Power2.easeInOut,drawSVG:'0% 0%'},0.5)
+        tl.from(p2, 0.5, {ease: Power2.easeInOut,drawSVG:'0% 0%'}, 1)
+        tl.from(p3, 0.5, {ease: Power2.easeInOut,drawSVG:'0% 0%'}, 1.5)
+        tl.to(p1, 1, {ease: Back.easeIn.config(2), y:120},2.95)
+        tl.to(p0, 1, {ease: Power3.easeOut, y:10}, '-=0.7')
+        tl.to(p0, 0, {opacity:1}, '-=0.4')
+        tl.staggerFrom(lnln, 0.5, {opacity:0,drawSVG:'0% 0%'},0.15)
 
-}
+        tl2.to(logo, 1.5, {y:50},0.35)
+        tl2.to(logo, 0.5, {ease: Power1.easeInOut, top:'-100px',left:'-25px',marginLeft:'0',marginTop:'0',scale:0.5,rotation:22},2)
+        tl2.to(logo2, 0.5, {stroke:'#fff', strokeWidth:'34px'},'-=0.5')
+        tl2.staggerFrom(ll, 0.55, {opacity:0},0.06)
+        tl2.to(jw, 0.65, {ease: Power3.easeOut, x:'-110%'},2.75)
+        tl2.to(ee, 0.25, {ease: Back.easeInOut.config(3),rotation:-12,x:-5,y:6},4.25)
+        tl2.to(page, 0.25, {opacity:1},'-=0.75')
+        tl2.to(page, 0.75, {zIndex:1,scale: 1},'-=0.75')
+        tl2.to(head, 0.5, {opacity:1})
+        tl2.to(git, 0.5, {ease: Power1.easeIn,right:'-90px',opacity:1},'-=1')
+      }
+    }
+    else {
+      tl.set(logo, {opacity:1})
+      tl.set(p1, {y:120})
+      tl.set(p0, {y:10})
+      tl.set(p0, {opacity:1})
+      tl.set(logo, {y:50})
+      tl.set(logo, {top:'-100px',left:'-25px',marginLeft:'0',marginTop:'0',scale:0.5,rotation:22})
+      tl.set(logo2, {stroke:'#fff', strokeWidth:'34px'})
+      tl.set(ll, {opacity:1})
+      tl.set(jw, {x:'-110%'})
+      tl.set(ee, {rotation:-12,x:-5,y:6})
+      tl.set(head, {opacity:1})
+      tl.set(git, {right:'-90px',opacity:1})
+    }
+  }
 }
 </script>
 
@@ -247,5 +243,4 @@ a.home
 
 .s3
   transform translateY(2px)
-
 </style>

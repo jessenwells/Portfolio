@@ -1,9 +1,9 @@
 <template lang='pug'>
-#single-page
+#single-page(v-touch:swipe.right="past" v-touch:swipe.left="next")
   span.catnav
-    router-link(to='/branding/kigilove') past project
+    router-link#past(to='/branding/kigilove') past project
     router-link(to='/branding') view branding
-    router-link(to='/branding/learn&explore') next project
+    router-link#next(to='/branding/learn&explore') next project
   .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
@@ -32,7 +32,9 @@ data() {
       path3: '/assets/branding/slekhair/03.jpg',
       path4: '/assets/branding/slekhair/04.jpg',
       path5: '/assets/branding/slekhair/05.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {

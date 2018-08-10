@@ -1,9 +1,9 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/playground/cssdrawpath') past project
+    router-link#past(to='/playground/cssdrawpath') past project
     a(href='http://codepen.io/jessenwells/live/pJvyRm' target='_blank' class="link") view full page
-    router-link(to='/branding/musicmilitia') next project
+    router-link#next(to='/branding/musicmilitia') next project
   span(data-height="780" data-theme-id="16807" data-slug-hash="pJvyRm" data-default-tab="result" data-user="jessenwells" class="codepen")
   .details
     h3 {{ project }}
@@ -20,9 +20,11 @@
 export default {
   data() {
   return {
-    project: 'SVG Unknown Pleasures',
+    project: 'Sass Color Palette',
     type: 'Web Animation',
-    synopsis: 'SVG Path animation based on the album artwork of Joy Division. Inline SVG paths are drawn one after the other using Gsap timeline and Draw.svg'
+    synopsis: 'Color Palette created using Sass mixins and color directives to blend and adjust HEX values.',
+    past: '',
+    next: ''
   }
   },
   metaInfo() {

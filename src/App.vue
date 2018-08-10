@@ -1,36 +1,53 @@
-<template lang="pug">
+<template lang='pug'>
   #app
     Intro
     Header
-    content
-      transition(name="fade")
+    content(v-touch:swipe.right='past' v-touch:swipe.left='next')
+      transition(name='fade')
         router-view
-    .snackbar(v-text="mobileNote")
+    .snackbar(v-text='mobileNote')
+    footer
+        nav
+            a(href='/resume') resume
 </template>
 
 <script>
 import Header from './components/Header'
 import Intro from './components/Intro'
+import prefetchImages from 'prefetch-image'
 export default {
   components: {
     Header,
     Intro
   },
   metaInfo: {
-      title: 'Portfolio',
-      titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
+    title: 'Portfolio',
+    titleTemplate: 'Jesse Wells | %s | Designer + Developer | NYC'
     },
   data() {
     return {
         mobileNote: 'tap again to view project'
     }
-}
+},
+  methods: {
+    past: function() {
+      this.$el.querySelector('#past').click()
+    },
+    next: function() {
+      this.$el.querySelector('#next').click()
+    }
+  },
+  mounted() {
+    const thumbs = [ '/assets/_thumbs/sprite-07.jpg','/assets/_thumbs/sprite-02.jpg','/assets/_thumbs/sprite-15.jpg','/assets/_thumbs/sprite-08.jpg','/assets/_thumbs/sprite-23.jpg','/assets/_thumbs/sprite-16.jpg','/assets/_thumbs/sprite-01.jpg','/assets/_thumbs/sprite-02.jpg','/assets/_thumbs/sprite-03.jpg','/assets/_thumbs/sprite-04.jpg','/assets/_thumbs/sprite-05.jpg','/assets/_thumbs/sprite-06.jpg','/assets/_thumbs/sprite-07.jpg','/assets/_thumbs/sprite-08.jpg','/assets/_thumbs/sprite-09.jpg','/assets/_thumbs/sprite-10.jpg','/assets/_thumbs/sprite-11.jpg','/assets/_thumbs/sprite-12.jpg','/assets/_thumbs/sprite-13.jpg','/assets/_thumbs/sprite-14.jpg','/assets/_thumbs/sprite-15.jpg','/assets/_thumbs/sprite-16.jpg','/assets/_thumbs/sprite-17.jpg','/assets/_thumbs/sprite-18.jpg','/assets/_thumbs/sprite-19.jpg','/assets/_thumbs/sprite-20.jpg','/assets/_thumbs/sprite-21.jpg','/assets/_thumbs/sprite-22.jpg','/assets/_thumbs/sprite-23.jpg','/assets/_thumbs/sprite-24.jpg','/assets/_thumbs/sprite-25.jpg','/assets/_thumbs/sprite-26.jpg'
+    ]
+    prefetchImages(thumbs)
+  }
 }
 </script>
 
-<style lang="stylus">
+<style lang='stylus'>
 @import url('http://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Open+Sans+Condensed:300|Varela+Round')
-@import "assets/mq"
+@import 'assets/mq'
 body
   margin 0
   background #f7f7f7
@@ -44,6 +61,7 @@ a
   bottom 0
   overflow-y scroll
   overflow-x hidden
+  -webkit-overflow-scrolling touch
 content
     position absolute
     width 100%
@@ -178,6 +196,16 @@ content
         border-radius 8px
         overflow hidden
         margin-bottom 20px
+footer
+    position fixed
+    bottom 0
+    width 100%
+    text-align center
+    font-size 1em
+    color #f7f7f7
+    a
+        color #f7f7f7
+        text-decoration none
 //mobile notification
 .snackbar
     position fixed

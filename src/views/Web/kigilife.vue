@@ -1,11 +1,10 @@
 <template lang='pug'>
 #single-page
   span.catnav
-    router-link(to='/web/itsapostcard') past project
+    router-link#past(to='/web/itsapostcard') past project
     router-link(to='/sites/kigilife' target="_blank" class="link") view website
-    router-link(to='/web/energydashboard') next project
-  router-link(to='/sites/kigilife' target="_blank" class='viewsite')
-    .image(:data-src='image.path1')
+    router-link#next(to='/web/energydashboard') next project
+  .image(:data-src='image.path1')
   span.details
     h3 {{ project }}
     p {{ type }}
@@ -33,7 +32,9 @@ data() {
       path3: '/assets/web/kigilife/03.jpg',
       path4: '/assets/web/kigilife/04.jpg',
       path5: '/assets/web/kigilife/05.jpg'
-    }
+    },
+    past: '',
+    next: ''
   }
 },
   metaInfo() {
@@ -64,17 +65,17 @@ a.viewsite
   width 100%
 .image
   height 780px
-  &:first-child
+  &:nth-of-type(1)
+    background-image url("/assets/web/kigilife/01.jpg")
     height 500px
-    background-image url("/assets/web/kigilife/01.jpg") !important
     +below(900px)
       height 350px !important
-  &:nth-of-type(1)
-    background-image url("/assets/web/kigilife/02.jpg")
   &:nth-of-type(2)
-    background-image url("/assets/web/kigilife/03.jpg")
+    background-image url("/assets/web/kigilife/02.jpg")
   &:nth-of-type(3)
-    background-image url("/assets/web/kigilife/04.jpg")
+    background-image url("/assets/web/kigilife/03.jpg")
   &:nth-of-type(4)
+    background-image url("/assets/web/kigilife/04.jpg")
+  &:nth-of-type(5)
     background-image url("/assets/web/kigilife/05.jpg")
 </style>
